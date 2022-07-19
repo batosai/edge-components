@@ -1,0 +1,6 @@
+<div
+  class="tooltip{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}"
+  data-tip="{{ text }}"
+>
+  {{{ await $slots.main() }}}
+</div>
