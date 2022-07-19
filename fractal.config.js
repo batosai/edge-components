@@ -20,7 +20,8 @@ const fractal = module.exports = require('@frctl/fractal').create();
 /*
  * Give your project a title.
  */
-fractal.set('project.title', 'Daisyui');
+fractal.set('project.title', 'edge-daisyUI');
+fractal.web.set('builder.dest', __dirname + '/build');
 
 /*
  * Tell Fractal where to look for components.
