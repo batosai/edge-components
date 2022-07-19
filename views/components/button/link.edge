@@ -1,0 +1,7 @@
+<a
+  role="button"
+  {{ $props.serializeExcept(['text', 'class']) }}
+  class="btn{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}"
+>
+  {{{ await $slots.main() || text }}}
+</a>

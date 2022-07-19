@@ -1,0 +1,17 @@
+@if(tooltip)
+<div
+  class="tooltip{{ $props.has('tooltip.class') ? ` ${$props.get('tooltip.class')}` : '' }}"
+  data-tip="{{ tooltip.text }}"
+>
+@end
+
+<button
+  {{ $props.serializeExcept(['text', 'class', 'tooltip']) }}
+  class="btn{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}"
+>
+  {{{ await $slots.main() || text || '' }}}
+</button>
+
+@if(tooltip)
+</div>
+@end

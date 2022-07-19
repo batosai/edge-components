@@ -1,0 +1,44 @@
+{
+  "status": "wip",
+  "title": "Button",
+  "context": {
+    "text": "Button"
+  },
+  "variants": [
+		{
+			"name": "responsive",
+      "context": {
+        "text": "responsive",
+        "className": "btn-xs sm:btn-sm md:btn-md lg:btn-lg"
+      }
+		},
+    {
+			"name": "wide",
+      "context": {
+        "text": "wide",
+        "className": "btn-wide"
+      }
+		},
+    {
+			"name": "glass",
+      "context": {
+        "text": "glass",
+        "className": "glass"
+      }
+		},
+    {
+			"name": "block",
+      "context": {
+        "text": "block",
+        "className": "btn-block"
+      }
+		},
+    {
+			"name": "no-animation",
+      "context": {
+        "text": "no-animation",
+        "className": "no-animation"
+      }
+		}
+	]
+}
