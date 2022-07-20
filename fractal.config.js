@@ -9,7 +9,20 @@ const mandelbrot = require('@frctl/mandelbrot');
 // create a new instance with custom config options
 const myCustomisedTheme = mandelbrot({
   skin: 'white',
-  // any other theme configuration values here
+  information: [
+    {
+        label: 'Version',
+        value: require('./package.json').version,
+    },
+    {
+        label: 'Built on',
+        value: new Date(),
+        type: 'time',
+        format: (value) => {
+            return value.toLocaleDateString('en');
+        },
+    },
+  ],
 });
 
 /*
@@ -24,13 +37,9 @@ fractal.set('project.title', 'edge-daisyUI');
 fractal.web.set('builder.dest', __dirname + '/build');
 
 /*
- * Tell Fractal where to look for components.
+ * Tell Fractal where to look for components and docs.
  */
-fractal.components.set('path', path.join(__dirname, 'templates'));
-
-/*
- * Tell Fractal where to look for documentation pages.
- */
+fractal.components.set('path', path.join(__dirname, 'components'));
 fractal.docs.set('path', path.join(__dirname, 'docs'));
 
 /*
