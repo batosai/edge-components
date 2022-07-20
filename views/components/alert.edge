@@ -1,0 +1,13 @@
+<div class="alert shadow-lg{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}">
+  <div>
+    {{{ $slots.icon !== undefined ? await $slots.icon() : '' }}}
+    @if(text)~
+      <span>{{ text }}</span>
+    @else~
+      <div>{{{ await $slots.main() }}}</div>
+    @end~
+  </div>
+  @if($slots.actions !== undefined)~
+    <div class="flex-none">{{{ await $slots.actions() }}}</div>
+  @end~
+</div>

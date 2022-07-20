@@ -2,6 +2,4 @@
   tabindex="0"
   {{ $props.serializeExcept(['text', 'class']) }}
   class="btn{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}"
->
-  {{{ await $slots.main() || text }}}
-</label>
+>{{{ await $slots.main() || text }}}</label>

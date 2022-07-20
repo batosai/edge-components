@@ -1,5 +1,3 @@
-<div
-  class="btn-group{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}"
->
+<div class="btn-group{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}">
   {{{ await $slots.main() }}}
 </div>

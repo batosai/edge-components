@@ -6,10 +6,10 @@ title: edge daisyUI
 
 The most popular, free and open-source Tailwind CSS component library in edge template engine.
 
-- [ ] Alert
+- [x] Alert
 - [ ] Avatar
 - [ ] Badge
-- [ ] Button(WIP)
+- [x] Button
 - [ ] Card
 - [ ] Carousel
 - [ ] Drawer
@@ -20,4 +20,4 @@ The most popular, free and open-source Tailwind CSS component library in edge te
 - [ ] Tab
 - [ ] Table
 - [ ] Toast
-- [ ] Tooltip(WIP)
+- [x] Tooltip

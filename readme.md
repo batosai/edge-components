@@ -4,10 +4,10 @@ The most popular, free and open-source Tailwind CSS component library in edge te
 
 [edge-daisyui.jrmc.dev](https://edge-daisyui.jrmc.dev)
 
-- [ ] Alert
+- [x] Alert
 - [ ] Avatar
 - [ ] Badge
-- [ ] Button(WIP)
+- [x] Button
 - [ ] Card
 - [ ] Carousel
 - [ ] Drawer
@@ -18,4 +18,4 @@ The most popular, free and open-source Tailwind CSS component library in edge te
 - [ ] Tab
 - [ ] Table
 - [ ] Toast
-- [ ] Tooltip(WIP)
+- [x] Tooltip

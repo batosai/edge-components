@@ -1,9 +1,9 @@
-@if(tooltip)
+@if(tooltip)~
 <div
   class="tooltip{{ $props.has('tooltip.class') ? ` ${$props.get('tooltip.class')}` : '' }}"
   data-tip="{{ tooltip.text }}"
 >
-@end
+@end~
 
 <button
   {{ $props.serializeExcept(['text', 'class', 'tooltip']) }}
@@ -12,6 +12,6 @@
   {{{ await $slots.main() || text || '' }}}
 </button>
 
-@if(tooltip)
+@if(tooltip)~
 </div>
-@end
+@end~

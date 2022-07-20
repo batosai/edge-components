@@ -37,9 +37,13 @@ fractal.set('project.title', 'edge-daisyUI');
 fractal.web.set('builder.dest', __dirname + '/build');
 
 /*
- * Tell Fractal where to look for components and docs.
+ * Tell Fractal where to look for components.
  */
 fractal.components.set('path', path.join(__dirname, 'components'));
+
+/*
+ * Tell Fractal where to look for documentation pages.
+ */
 fractal.docs.set('path', path.join(__dirname, 'docs'));
 
 /*

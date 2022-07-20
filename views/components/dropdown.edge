@@ -1,13 +1,13 @@
 <div class="dropdown{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}">
   @!button.label({ text, class: 'm-1' })
 
-  @if(items)
+  @if(items)~
     <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
       @each(item in items)
         <li><a href="{{ item.href }}">{{ item.text }}</a></li>
       @end
     </ul>
-  @else
+  @else~
     {{{ await $slots.main() }}}
-  @end
+  @end~
 </div>
