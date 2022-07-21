@@ -7,7 +7,7 @@ title: edge daisyUI
 The most popular, free and open-source Tailwind CSS component library in edge template engine.
 
 - [x] Alert
-- [ ] Avatar
+- [x] Avatar
 - [ ] Badge
 - [x] Button
 - [ ] Card

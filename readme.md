@@ -5,7 +5,7 @@ The most popular, free and open-source Tailwind CSS component library in edge te
 [edge-daisyui.jrmc.dev](https://edge-daisyui.jrmc.dev)
 
 - [x] Alert
-- [ ] Avatar
+- [x] Avatar
 - [ ] Badge
 - [x] Button
 - [ ] Card
