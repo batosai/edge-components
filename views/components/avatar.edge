@@ -1,0 +1,11 @@
+<div class="avatar{{ $props.has('status') ? ` ${$props.get('status')}` : '' }}{{ $props.has('placeholder') ? ' placeholder' : '' }}">
+  @if($props.has('placeholder'))
+    <div class="{{ $props.has('class') ? `${$props.get('class')}` : 'w-24 bg-neutral-focus text-neutral-content' }}">
+      <span>{{ $props.get('placeholder') }}</span>
+    </div>
+  @else
+    <div class="{{ $props.has('class') ? `${$props.get('class')}` : 'w-24' }}">
+      {{{ await $slots.main() || `<img src="${url}" alt="" />` || '' }}}
+    </div>
+  @end
+</div>
