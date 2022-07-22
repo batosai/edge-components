@@ -1,4 +1,4 @@
-<div class="alert shadow-lg{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}">
+<div class="alert shadow-lg{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}" {{ $props.serializeExcept(['class']) }}>
   <div>
     {{{ $slots.icon !== undefined ? await $slots.icon() : '' }}}
     @if(text)~

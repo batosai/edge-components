@@ -1,4 +1,4 @@
-<div class="avatar{{ $props.has('status') ? ` ${$props.get('status')}` : '' }}{{ $props.has('placeholder') ? ' placeholder' : '' }}">
+<div class="avatar{{ $props.has('status') ? ` ${$props.get('status')}` : '' }}{{ $props.has('placeholder') ? ' placeholder' : '' }}" {{ $props.serializeExcept(['class']) }}>
   @if($props.has('placeholder'))
     <div class="{{ $props.has('class') ? `${$props.get('class')}` : 'w-24 bg-neutral-focus text-neutral-content' }}">
       <span>{{ $props.get('placeholder') }}</span>

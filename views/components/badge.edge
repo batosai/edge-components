@@ -1,5 +1,5 @@
 @set('as', $props.has('as') ? $props.get('as') : 'span' )
 
-<{{as}} class="badge{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}">
+<{{as}} class="badge{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}" {{ $props.serializeExcept(['class', 'as']) }}>
   {{{ await $slots.main() || text || '' }}}
 </{{as}}>

@@ -1,4 +1,4 @@
-<div class="card{{ $props.has('class') ? ` ${$props.get('class')}` : ' w-96 bg-base-100 shadow-xl' }}">
+<div class="card{{ $props.has('class') ? ` ${$props.get('class')}` : ' w-96 bg-base-100 shadow-xl' }}" {{ $props.serializeExcept(['class']) }}>
   {{{ $slots.top !== undefined ? await $slots.top() : '' }}}
   {{{ await $slots.main() || '' }}}
   {{{ $slots.bottom !== undefined ? await $slots.bottom() : '' }}}
