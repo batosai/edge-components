@@ -1,0 +1,6 @@
+<div
+  {{ $props.serializeExcept(['class']) }}
+  class="toast{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}"
+>
+  {{{ await $slots.main() }}}
+</div>
