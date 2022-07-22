@@ -1,4 +1,5 @@
 <div
+  {{ $props.serializeExcept(['text', 'class']) }}
   class="tooltip{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}"
   data-tip="{{ text }}"
 >
