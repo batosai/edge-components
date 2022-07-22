@@ -1,0 +1,11 @@
+@card({ class: 'w-96 bg-neutral text-neutral-content' })
+  @card.body({ class: 'items-center text-center' })
+    @!card.title({ text: 'Cookies!' })
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+
+    @card.actions()
+      @!button({ text: 'Accept', class: 'btn-primary' })
+      @!button({ text: 'Deny' })
+    @end
+  @end
+@end

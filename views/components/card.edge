@@ -1,0 +1,5 @@
+<div class="card{{ $props.has('class') ? ` ${$props.get('class')}` : ' w-96 bg-base-100 shadow-xl' }}">
+  {{{ $slots.top !== undefined ? await $slots.top() : '' }}}
+  {{{ await $slots.main() || '' }}}
+  {{{ $slots.bottom !== undefined ? await $slots.bottom() : '' }}}
+</div>

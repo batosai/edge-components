@@ -1,0 +1,3 @@
+@set('as', $props.has('as') ? $props.get('as') : 'h2' )
+
+<{{as}} class="card-title">{{{ await $slots.main() || text || '' }}}</{{as}}>
