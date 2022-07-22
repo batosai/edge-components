@@ -9,7 +9,7 @@ The most popular, free and open-source Tailwind CSS component library in edge te
 - [x] Badge
 - [x] Button
 - [x] Card
-- [ ] Carousel
+- [x] Carousel
 - [ ] Drawer
 - [x] Dropdown
 - [ ] Modal

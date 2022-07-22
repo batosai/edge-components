@@ -1,0 +1,23 @@
+<div>
+  @carousel({ class: 'w-full' })
+    @carousel.item({ id: 'item1', class: 'w-full' })
+      <img src="https://placeimg.com/800/200/arch" class="w-full" alt="" />
+    @end
+    @carousel.item({ id: 'item2', class: 'w-full' })
+      <img src="https://placeimg.com/800/200/arch" class="w-full" alt="" />
+    @end
+    @carousel.item({ id: 'item3', class: 'w-full' })
+      <img src="https://placeimg.com/800/200/arch" class="w-full" alt="" />
+    @end
+    @carousel.item({ id: 'item4', class: 'w-full' })
+      <img src="https://placeimg.com/800/200/arch" class="w-full" alt="" />
+    @end
+  @end
+
+  <div class="flex justify-center w-full py-2 gap-2">
+    @!button.link({ text: '1', class: 'btn-xs', href: '#item1' })
+    @!button.link({ text: '2', class: 'btn-xs', href: '#item2' })
+    @!button.link({ text: '3', class: 'btn-xs', href: '#item3' })
+    @!button.link({ text: '4', class: 'btn-xs', href: '#item4' })
+  </div>
+</div>

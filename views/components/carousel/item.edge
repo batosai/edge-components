@@ -1,0 +1,7 @@
+<div {{ $props.serializeExcept(['class']) }} class="carousel-item{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}">
+  @if($props.has('url'))~
+    <img src="{{ url }}" alt="{{ alt || '' }}" />
+  @else~
+    {{{ await $slots.main() || '' }}}
+  @end~
+</div>
