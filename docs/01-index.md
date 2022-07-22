@@ -8,7 +8,7 @@ The most popular, free and open-source Tailwind CSS component library in edge te
 
 - [x] Alert
 - [x] Avatar
-- [ ] Badge
+- [x] Badge
 - [x] Button
 - [ ] Card
 - [ ] Carousel

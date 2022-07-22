@@ -1,0 +1,5 @@
+@set('as', $props.has('as') ? $props.get('as') : 'span' )
+
+<{{as}} class="badge{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}">
+  {{{ await $slots.main() || text || '' }}}
+</{{as}}>
