@@ -9,6 +9,7 @@ const mandelbrot = require('@frctl/mandelbrot');
 // create a new instance with custom config options
 const myCustomisedTheme = mandelbrot({
   skin: 'white',
+  panels: ['html', 'view', 'resources', 'info', 'notes'],
   information: [
     {
         label: 'Version',
