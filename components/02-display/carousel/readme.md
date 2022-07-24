@@ -1,4 +1,4 @@
-Doc : [daisyui carousel](https://daisyui.com/components/carousel/
+Doc : [daisyui carousel](https://daisyui.com/components/carousel/)
 
 | Class name         |   Type     |                          |
 |--------------------|------------|--------------------------|

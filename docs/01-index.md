@@ -16,7 +16,7 @@ The most popular, free and open-source Tailwind CSS component library in edge te
 - [x] Dropdown
 - [ ] Modal
 - [ ] Pagination
-- [ ] Progress
+- [x] Progress
 - [ ] Tab
 - [ ] Table
 - [x] Toast
