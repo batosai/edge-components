@@ -1,0 +1,13 @@
+<div class="overflow-x-auto{{ $props.has('full') && full ? ' w-full' : '' }}">
+  <table class="table{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}{{ $props.has('full') && full ? ' w-full' : '' }}">
+    @if($slots.header !== undefined)~
+      <thead>{{{ await $slots.header() }}}</thead>
+    @end~
+    @if($slots.body !== undefined)~
+      <tbody>{{{ await $slots.body() }}}</tbody>
+    @end~
+    @if($slots.footer !== undefined)~
+      <tfoot>{{{ await $slots.footer() }}}</tfoot>
+    @end~
+  </table>
+</div>
