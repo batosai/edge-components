@@ -1,10 +1,8 @@
 <div class="btn-group">
-
   @if(object.lastPage > 10)
-
     @if(object.currentPage > 4)
       @each(anchor in object.getUrlsForRange(1, 1))
-        @!button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? 'btn-active' : '' })
+        @!button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? `btn-active btn-${$props.has('size') ? $props.get('size') : 'md'}` : '' })
       @end
       @if(object.currentPage !== 5)
         @!button.link({ text: '...', class: 'btn-disabled' })
@@ -26,7 +24,7 @@
     @end
   @else
     @each(anchor in object.getUrlsForRange(1, object.lastPage))
-      @!button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? 'btn-active' : '' })
+      @!button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? `btn-active btn-${$props.has('size') ? $props.get('size') : 'md'}` : `btn-${$props.has('size') ? $props.get('size') : 'md'}` })
     @end
   @end
 </div>

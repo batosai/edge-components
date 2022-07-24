@@ -11,5 +11,9 @@
   getUrlsForRange: (first, last) => (urls.filter(url => (url.page >= first && url.page <= last)))
 })
 
-@!pagination({ object: users })
-
+<div class="grid grid-cols-1 gap-2">
+  @!pagination({ object: users, size: 'xs' })
+  @!pagination({ object: users, size: 'sm' })
+  @!pagination({ object: users, size: 'md' })
+  @!pagination({ object: users, size: 'lg' })
+</div>
