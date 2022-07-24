@@ -19,3 +19,8 @@ The most popular, free and open-source Tailwind CSS component library in edge te
 - [x] Table
 - [x] Toast
 - [x] Tooltip
+
+
+The components not shown here represent no gain over their HTML representation.
+
+If the component is too complex it may make more sense to use HTML directly as shown in the daisyUI doc. 
