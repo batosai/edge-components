@@ -1,4 +1,8 @@
+# Badge
+
 Doc : [daisyui badge](https://daisyui.com/components/badge/)
+
+Badges are used to inform user of the status of specific data.
 
 | Class name      |   Type     |                                          |
 |-----------------|------------|------------------------------------------|

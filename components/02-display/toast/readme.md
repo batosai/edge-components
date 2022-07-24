@@ -1,4 +1,8 @@
+# Toast
+
 Doc : [daisyui toast](https://daisyui.com/components/toast/)
+
+Toast is a wrapper to stack elements, positioned on the corner of page.
 
 | Class name     |   Type      |                                                     |
 |----------------|-------------|-----------------------------------------------------|

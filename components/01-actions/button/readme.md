@@ -1,4 +1,8 @@
-Doc : [daisyui button](https://daisyui.com/components/button/)
+# Button
+
+Doc : [daisyui button](https://daisyui.com/components/button/) 
+
+Buttons allows user to take actions or make choices.
 
 | Class name    |   Type     |                                        |
 |---------------|------------|----------------------------------------|

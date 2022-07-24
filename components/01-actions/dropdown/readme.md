@@ -1,6 +1,8 @@
-Revenir dessus après avoir fait les cards pour re-utiliser ces composants.
+# Dropdown
 
 Doc : [daisyui dropdown](https://daisyui.com/components/dropdown/)
+
+Dropdown can open a menu or any other element when the button is clicked.
 
 | Class name       |   Type     |                        |
 |------------------|------------|------------------------|

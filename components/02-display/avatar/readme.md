@@ -1,4 +1,8 @@
+# Avatar
+
 Doc : [daisyui avatar](https://daisyui.com/components/avatar/)
+
+Avatars are used to show a thumbnail representation of an individual or business in the interface.
 
 | Class name   |   Type     |                                            |
 |--------------|------------|--------------------------------------------|

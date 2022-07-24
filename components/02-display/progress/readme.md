@@ -1,4 +1,8 @@
+# Progress
+
 Doc : [daisyui progress](https://daisyui.com/components/progress/)
+
+Progress bar can be used to show the progress of a task or to show the passing of time.
 
 | Class name         |   Type     |                          |
 |--------------------|------------|--------------------------|

@@ -1,4 +1,8 @@
+# Card
+
 Doc : [daisyui card](https://daisyui.com/components/card/)
+
+Cards are used to group and display content in a way that is easily readable.
 
 | Class name      |   Type     |                                                      |
 |-----------------|------------|------------------------------------------------------|

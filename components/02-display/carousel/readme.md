@@ -1,4 +1,8 @@
+# Carousel
+
 Doc : [daisyui carousel](https://daisyui.com/components/carousel/)
+
+Carousel show images or content in a scrollable area.
 
 | Class name         |   Type     |                          |
 |--------------------|------------|--------------------------|

@@ -1,4 +1,8 @@
+# Alert
+
 Doc : [daisyui alert](https://daisyui.com/components/alert/)
+
+Alert informs users about important events.
 
 | Class name    |   Type     |                             |
 |---------------|------------|-----------------------------|
