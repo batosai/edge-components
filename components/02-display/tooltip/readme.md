@@ -1,4 +1,8 @@
+# Tooltip
+
 Doc : [daisyui tooltip](https://daisyui.com/components/tooltip/)
+
+Tooltip can be used to show a message when hovering over an element.
 
 | Class name        |   Type     |                                    |
 |-------------------|------------|------------------------------------|
