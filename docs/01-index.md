@@ -19,5 +19,5 @@ The most popular, free and open-source Tailwind CSS component library in edge te
 - [ ] Progress
 - [ ] Tab
 - [ ] Table
-- [ ] Toast
+- [x] Toast
 - [x] Tooltip
