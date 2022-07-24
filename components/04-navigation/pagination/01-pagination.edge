@@ -1,0 +1,14 @@
+@set('urls', [])
+
+@each((a, index) in new Array(10))
+  @set('urls', [...urls, { url: `#${index+1}`, page: index+1 }])
+@end
+
+{{--  fake object users  --}}
+@set('users', {
+  currentPage: 4,
+  lastPage: urls.length,
+  getUrlsForRange: (first, last) => (urls.filter(url => (url.page >= first && url.page <= last)))
+})
+
+@!pagination({ object: users })

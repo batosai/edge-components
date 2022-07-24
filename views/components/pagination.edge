@@ -1,0 +1,32 @@
+<div class="btn-group">
+
+  @if(object.lastPage > 10)
+
+    @if(object.currentPage > 4)
+      @each(anchor in object.getUrlsForRange(1, 1))
+        @!button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? 'btn-active' : '' })
+      @end
+      @if(object.currentPage !== 5)
+        @!button.link({ text: '...', class: 'btn-disabled' })
+      @end
+    @end
+
+    @each(anchor in object.getUrlsForRange((object.currentPage-3 >= 1 ? object.currentPage-3 : 1), (object.currentPage+3 <= object.lastPage ? object.currentPage+3 : object.lastPage)))
+      @!button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? 'btn-active' : '' })
+    @end
+
+    @if(object.currentPage < object.lastPage-5)
+      @if(object.currentPage < object.lastPage-6)
+        @!button.link({ text: '...', class: 'btn-disabled' })
+      @end
+
+      @each(anchor in object.getUrlsForRange(object.lastPage-2, object.lastPage))
+        @!button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? 'btn-active' : '' })
+      @end
+    @end
+  @else
+    @each(anchor in object.getUrlsForRange(1, object.lastPage))
+      @!button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? 'btn-active' : '' })
+    @end
+  @end
+</div>
