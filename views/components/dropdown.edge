@@ -1,5 +1,9 @@
 <div class="dropdown{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}">
-  @!button.label({ text, class: 'm-1' })
+  @if($slots.button !== undefined)~
+    {{{ await $slots.button() }}}
+  @else
+    @!button.label({ text, class: 'm-1' })
+  @end~
 
   @if(items)~
     <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
