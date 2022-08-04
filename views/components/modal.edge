@@ -1,0 +1,15 @@
+<button x-data="{ open: false }" @click="open = ! open" class="btn{{ $props.has('button.class') ? ` ${$props.get('button.class')}` : '' }}">
+  {{ $props.button.text }}
+  <template x-teleport="body">
+    <div class="modal modal-open {{ $props.mobile === true ? 'modal-bottom sm:modal-middle' : '' }}" x-show="open" {{{ $props.escape === false ? '' : '@keyup.escape.window="open = false"' }}} {{ $props.serializeExcept(['text', 'class', 'button', 'outside', 'escape', 'mobile']) }}>
+      <div class="modal-box{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}" {{{ $props.outside === false ? '' : '@click.outside="open = false"' }}}>
+        {{{ await $slots.main() || '' }}}
+        @if($slots.action !== undefined)
+          <div class="modal-action">
+            {{{ await $slots.action() }}}
+          </div>
+        @end
+      </div>
+    </div>
+  </template>
+</button>
