@@ -3,7 +3,6 @@
   <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
 
   @slot('action')
-    @!button({ text: 'close', '@click': 'open = false' })
-    @!button({ text: 'ok' })
+    @!button({ text: 'ok', ...$context.event.close })
   @end
 @end
