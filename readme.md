@@ -1,8 +1,8 @@
-# edge daisyUI
+# edge components
 
-The most popular, free and open-source Tailwind CSS component library in edge template engine.
+The most popular, free and open-source Tailwind CSS component library in edge template engine with daisyUI.
 
-[edge-daisyui.jrmc.dev](https://edge-daisyui.jrmc.dev)
+[edge-components.jrmc.dev](https://edge-components.jrmc.dev)
 
 - [x] Alert
 - [x] Avatar

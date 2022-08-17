@@ -1,10 +1,10 @@
 ---
-title: edge daisyUI
+title: edge components
 ---
 
-[github.com/batosai/edge-daisyui](https://github.com/batosai/edge-daisyui)
+[github.com/batosai/edge-components](https://github.com/batosai/edge-components)
 
-The most popular, free and open-source Tailwind CSS component library in edge template engine.
+The most popular, free and open-source Tailwind CSS component library in edge template engine with daisyUI.
 
 - [x] Alert
 - [x] Avatar
