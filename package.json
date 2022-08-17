@@ -2,13 +2,13 @@
     "name": "edge-daisyui",
     "version": "0.7.0",
     "repository": {
-      "type": "git",
-      "url": "https://github.com/batosai/edge-daisyui.git"
+        "type": "git",
+        "url": "https://github.com/batosai/edge-daisyui.git"
     },
     "author": "Jeremy Chaufourier jeremy@chaufourier.fr",
     "dependencies": {
-        "@frctl/fractal": "^1.5.13",
-        "@jrmc/fractal-edge-adapter": "^1.0.0"
+        "@frctl/fractal": "^1.5.14",
+        "@jrmc/fractal-edge-adapter": "^1.0.1"
     },
     "scripts": {
         "fractal:start": "fractal start --sync",
