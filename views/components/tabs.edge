@@ -1,0 +1,3 @@
+<div class="tabs{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}">
+  {{{ await $slots.main() || '' }}}
+</div>
