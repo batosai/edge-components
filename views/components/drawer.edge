@@ -1,0 +1,11 @@
+@inject({ event: { 
+  open: { '@click': 'open = true' },
+  close: { '@click': 'open = false' },
+  toggle: { '@click': 'open = ! open' },
+}})
+
+<div class="drawer{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}" x-data="{ open: false }" @click.outside="open = false">
+  <input type="checkbox" :checked="open" class="drawer-toggle" />
+  {{{ await $slots.main() || '' }}}
+</div>
+

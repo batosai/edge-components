@@ -1,6 +1,6 @@
 # edge components
 
-The most popular, free and open-source Tailwind CSS component library in edge template engine with daisyUI.
+The most popular, free and open-source Tailwind CSS component library in edge template engine with daisyUI and Alpine.js
 
 [edge-components.jrmc.dev](https://edge-components.jrmc.dev)
 
@@ -10,10 +10,10 @@ The most popular, free and open-source Tailwind CSS component library in edge te
 - [x] Button
 - [x] Card
 - [x] Carousel
-- [ ] Drawer
+- [x] Drawer
 - [x] Dropdown
 - [x] Modal
-- [-] Pagination
+- [x] Pagination
 - [x] Progress
 - [x] Tab
 - [x] Table
