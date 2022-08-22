@@ -60,4 +60,18 @@ fractal.docs.set('default.status', 'draft');
 
 fractal.components.set('ext', '.edge'); // look for files with a .nunj file extension
 fractal.components.set('edge.components.path', path.join(__dirname, 'views'));
+fractal.components.set('edge.helpers', {
+  fakeUsers: ({ currentPage, total }) => {
+    let urls = []
+    for (let index = 0; index < total; index++) {
+      urls.push({ url: `#${index+1}`, page: index+1 })
+    }
+
+    return {
+      currentPage,
+      lastPage: urls.length,
+      getUrlsForRange: (first, last) => (urls.filter(url => (url.page >= first && url.page <= last)))
+    }
+  },
+});
 fractal.components.engine('@jrmc/fractal-edge-adapter'); // use the configured Nunjucks instance for components
