@@ -5,6 +5,7 @@
 */
 const path = require('path');
 const mandelbrot = require('@frctl/mandelbrot');
+const { noCase } = require('text-no-case');
 
 // create a new instance with custom config options
 const myCustomisedTheme = mandelbrot({
@@ -73,5 +74,7 @@ fractal.components.set('edge.helpers', {
       getUrlsForRange: (first, last) => (urls.filter(url => (url.page >= first && url.page <= last)))
     }
   },
+  capitalize: text => (text[0].toUpperCase() + text.substring(1)),
+  noCase
 });
 fractal.components.engine('@jrmc/fractal-edge-adapter'); // use the configured Nunjucks instance for components

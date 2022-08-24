@@ -8,7 +8,8 @@
     "author": "Jeremy Chaufourier jeremy@chaufourier.fr",
     "dependencies": {
         "@frctl/fractal": "^1.5.14",
-        "@jrmc/fractal-edge-adapter": "^1.1.0"
+        "@jrmc/fractal-edge-adapter": "^1.1.0",
+        "text-no-case": "^1.0.2"
     },
     "scripts": {
         "fractal:start": "fractal start --sync",

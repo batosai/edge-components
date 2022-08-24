@@ -1,0 +1,11 @@
+
+@set('klass', $props.has('class') ? $props.get('class') : '')
+@set('klass', Array.isArray(klass) ? klass.join(' ') : klass)
+
+<input
+  type="{{ $props.has('type') ? $props.get('type') : 'text' }}" 
+  class="{{ $props.has('type') && type !== 'text' ? $props.get('type') : 'input' }}{{ ` ${klass}` }}"
+  {{{ $props.has('name') || $context.name ? ` name="${$props.get('name') || $context.name }" id="${$props.get('name') || $context.name }"` : '' }}}
+  {{ $props.serializeExcept(['class', 'type', 'name']) }}
+/>
+

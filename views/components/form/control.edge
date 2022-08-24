@@ -1,0 +1,25 @@
+@set('as', $props.has('as') ? $props.get('as') : 'div' )
+@set('klass', $props.has('class') ? $props.get('class') : '')
+@set('klass', Array.isArray(klass) ? klass.join(' ') : klass)
+@set('name', $props.has('name') ? $props.get('name') : '')
+
+@inject({
+  name
+})
+
+<{{as}} class="form-control {{ klass }}" {{ $props.serializeExcept(['class', 'as']) }}>
+
+  @if($props.has('label'))~
+    @!form.label({ text: $props.get('label'), class: 'cursor-pointer', for: name })
+  @elseif($props.has('name'))~
+    @!form.label({ text: capitalize(noCase(name)), class: 'cursor-pointer', for: name })
+  @end~
+
+  {{{ await $slots.main() || '' }}}
+
+  @if($props.has('hint'))~
+    @form.label({ as: 'div' })
+      <span class="label-text-alt text-warning">{{ $props.get('hint') }}</span>
+    @end
+  @end~
+</{{as}}>
