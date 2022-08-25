@@ -1,18 +1,14 @@
-@set('as', $props.has('as') ? $props.get('as') : 'div' )
-@set('klass', $props.has('class') ? $props.get('class') : '')
-@set('klass', Array.isArray(klass) ? klass.join(' ') : klass)
-@set('name', $props.has('name') ? $props.get('name') : '')
-
 @inject({
-  name
+  name: jrmc.getName($props),
+  id: jrmc.getId($props),
 })
 
-<{{as}} class="form-control {{ klass }}" {{ $props.serializeExcept(['class', 'as']) }}>
+<{{jrmc.getTagName($props)}} class="{{ jrmc.getCssClass($props, 'form-control') }}" {{ $props.serializeExcept(['class', 'as']) }}>
 
   @if($props.has('label'))~
-    @!form.label({ text: $props.get('label'), class: 'cursor-pointer', for: name })
+    @!form.label({ text: $props.get('label'), class: 'cursor-pointer', for: jrmc.getId($props) })
   @elseif($props.has('name'))~
-    @!form.label({ text: capitalize(noCase(name)), class: 'cursor-pointer', for: name })
+    @!form.label({ text: jrmc.getLabel($props), class: 'cursor-pointer', for: jrmc.getId($props) })
   @end~
 
   {{{ await $slots.main() || '' }}}
@@ -22,4 +18,4 @@
       <span class="label-text-alt text-warning">{{ $props.get('hint') }}</span>
     @end
   @end~
-</{{as}}>
+</{{jrmc.getTagName($props)}}>

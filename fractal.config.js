@@ -61,7 +61,26 @@ fractal.docs.set('default.status', 'draft');
 
 fractal.components.set('ext', '.edge'); // look for files with a .nunj file extension
 fractal.components.set('edge.components.path', path.join(__dirname, 'views'));
+
+const capitalize = text => (text[0].toUpperCase() + text.substring(1))
+
 fractal.components.set('edge.helpers', {
+  jrmc: {
+    getCssClass: (props, defaultClass='') => {
+      const klass = props.has('class') ? props.get('class') : null
+      const klassString = Array.isArray(klass) ? klass.join(' ') : klass
+      const defaultClassString = Array.isArray(defaultClass) ? defaultClass.join(' ') : defaultClass
+
+      return [defaultClassString, klassString].join(' ').trim()
+    },
+    getTagName: (props, defaultTagName='div') => props.has('as') ? props.get('as') : defaultTagName,
+    getName: (props) => props.has('name') ? props.get('name') : '',
+    getId: (props) => props.has('name') ? props.get('name') : '',
+    getLabel: props => {
+      const name = props.has('name') ? props.get('name') : ''
+      return capitalize(noCase(name))
+    }
+  },
   fakeUsers: ({ currentPage, total }) => {
     let urls = []
     for (let index = 0; index < total; index++) {
@@ -73,8 +92,6 @@ fractal.components.set('edge.helpers', {
       lastPage: urls.length,
       getUrlsForRange: (first, last) => (urls.filter(url => (url.page >= first && url.page <= last)))
     }
-  },
-  capitalize: text => (text[0].toUpperCase() + text.substring(1)),
-  noCase
+  }
 });
 fractal.components.engine('@jrmc/fractal-edge-adapter'); // use the configured Nunjucks instance for components

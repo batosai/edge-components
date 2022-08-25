@@ -1,5 +1,2 @@
 
-@set('klass', $props.has('class') ? $props.get('class') : '')
-@set('klass', Array.isArray(klass) ? klass.join(' ') : klass)
-
-<textarea class="textarea {{ $props.has('type') ? ` ${$props.get('type')}` : '' }}{{ ` ${klass}` }}" {{ $props.serializeExcept(['class']) }}></textarea>
+<textarea class="{{ jrmc.getCssClass($props, 'textarea') }}" {{ $props.serializeExcept(['class']) }}></textarea>
