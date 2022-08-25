@@ -7,7 +7,7 @@
 
 <button
   {{ $props.serializeExcept(['text', 'class', 'tooltip']) }}
-  class="btn{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}"
+  class="{{ jrmc.getCssClass($props, 'btn') }}"
 >
   {{{ await $slots.main() || text || '' }}}
 </button>

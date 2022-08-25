@@ -66,12 +66,12 @@ const capitalize = text => (text[0].toUpperCase() + text.substring(1))
 
 fractal.components.set('edge.helpers', {
   jrmc: {
-    getCssClass: (props, defaultClass='') => {
-      const klass = props.has('class') ? props.get('class') : null
+    getCssClass: (props, baseClass='', defaultClass='') => {
+      const klass = props.has('class') ? props.get('class') : defaultClass
       const klassString = Array.isArray(klass) ? klass.join(' ') : klass
-      const defaultClassString = Array.isArray(defaultClass) ? defaultClass.join(' ') : defaultClass
+      const baseClassString = Array.isArray(baseClass) ? baseClass.join(' ') : baseClass
 
-      return [defaultClassString, klassString].join(' ').trim()
+      return [baseClassString, klassString].join(' ').trim()
     },
     getTagName: (props, defaultTagName='div') => props.has('as') ? props.get('as') : defaultTagName,
     getName: (props) => props.has('name') ? props.get('name') : '',

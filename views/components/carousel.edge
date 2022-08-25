@@ -1,4 +1,4 @@
-<div class="carousel{{ $props.has('class') ? ` ${$props.get('class')}` : ' rounded-box' }}" {{ $props.serializeExcept(['class']) }}>
+<div class="{{ jrmc.getCssClass($props, 'carousel', 'rounded-box') }}" {{ $props.serializeExcept(['class']) }}>
   @if($props.has('items'))
     @each(item in items)
       @!carousel.item({ ...item })

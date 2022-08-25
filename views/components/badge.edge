@@ -1,5 +1,3 @@
-@set('as', $props.has('as') ? $props.get('as') : 'span' )
-
-<{{as}} class="badge{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}" {{ $props.serializeExcept(['class', 'as']) }}>
+<{{jrmc.getTagName($props, 'span')}} class="{{ jrmc.getCssClass($props, 'badge') }}" {{ $props.serializeExcept(['class', 'as']) }}>
   {{{ await $slots.main() || text || '' }}}
-</{{as}}>
+</{{jrmc.getTagName($props, 'span')}}>

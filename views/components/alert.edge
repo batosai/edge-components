@@ -1,4 +1,4 @@
-<div class="alert shadow-lg{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}" {{ $props.serializeExcept(['class', 'text', 'icon']) }}>
+<div class="{{ jrmc.getCssClass($props, 'alert shadow-lg') }}" {{ $props.serializeExcept(['class', 'text', 'icon']) }}>
   <div>
     {{{ $slots.icon !== undefined ? await $slots.icon() : '' }}}
     @if(text)~

@@ -1,4 +1,4 @@
-<div class="dropdown{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}">
+<div class="{{ jrmc.getCssClass($props, 'dropdown') }}">
   @if($slots.button !== undefined)~
     {{{ await $slots.button() }}}
   @else

@@ -1,6 +1,6 @@
 <div
   {{ $props.serializeExcept(['text', 'class']) }}
-  class="tooltip{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}"
+  class="{{ jrmc.getCssClass($props, 'tooltip') }}"
   data-tip="{{ text }}"
 >
   {{{ await $slots.main() }}}

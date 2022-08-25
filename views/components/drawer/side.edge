@@ -1,6 +1,6 @@
 <div class="drawer-side">
   <button class="drawer-overlay" @click="open = false"></button>
-  <div class="overflow-y-auto p-4 w-80 bg-base-100{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}">
+  <div class="{{ jrmc.getCssClass($props, 'overflow-y-auto p-4 w-80 bg-base-100') }}">
     {{{ await $slots.main() || '' }}}
   </div>
 </div>

@@ -1,6 +1,6 @@
 <a
   {{ $props.serializeExcept(['text', 'class', 'active']) }}
-  class="tab{{ $props.has('class') ? ` ${$props.get('class')}` : '' }}{{ $props.has('active') && active ? ' tab-active' : '' }}"
+  class="{{ jrmc.getCssClass($props, ['tab', ($props.has('active') && active ? ' tab-active' : '')]) }}"
 >
   {{{ await $slots.main() || text }}}
 </a>
