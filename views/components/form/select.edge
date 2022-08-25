@@ -1,0 +1,7 @@
+<select class="{{ jrmc.getCssClass($props, 'select') }}" {{ $props.serializeExcept(['options']) }}>
+  @each(option in options)
+    <option value="{{ option.value }}">
+      {{ option.text }}
+    </option>
+  @end
+</select>
