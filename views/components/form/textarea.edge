@@ -1,2 +1,6 @@
 
-<textarea class="{{ jrmc.getCssClass($props, 'textarea') }}" {{ $props.serializeExcept(['class']) }}></textarea>
+<textarea 
+  class="{{ jrmc.getCssClass($props, 'textarea') }}"
+  {{{ $props.has('name') || $context.name ? ` name="${$props.get('name') || $context.name }"` : '' }}}
+  {{{ $props.has('id') || $context.id ? ` id="${$props.get('id') || $context.id }"` : '' }}}
+  {{ $props.serializeExcept(['class', 'name', 'id']) }}></textarea>
