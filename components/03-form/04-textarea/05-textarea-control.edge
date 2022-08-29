@@ -1,0 +1,11 @@
+<div class="w-full max-w-xs">
+  @form.control({ name: 'description', class: 'w-full max-w-xs', label: 'Description' })
+    @!form.textarea({ placeholder: 'Description', class: 'textarea-bordered' })
+  @end
+
+  @form.control({ class: 'w-full max-w-xs' })
+    @form.label({ text: 'Description' })
+      @!form.textarea({ placeholder: 'Bio', class: 'textarea-bordered' })
+    @end
+  @end
+</div>

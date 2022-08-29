@@ -1,0 +1,20 @@
+<div class="w-full max-w-xs">
+  @form.control()
+    @form.label({ class: 'cursor-pointer' })
+      @!form.label.text({ text: 'Remember me' })
+      @!form.input({ type: 'checkbox', name: 'my_name', checked })
+    @end
+  @end
+
+  @form.control({ class: 'w-full max-w-xs' })
+    @form.label({ text: 'Firstname' })
+      @!form.input({ placeholder: 'Luc', class: 'input-bordered' })
+    @end
+  @end
+
+  @form.control({ class: 'w-full max-w-xs' })
+    @form.label({ text: 'Description' })
+      @!form.textarea({ placeholder: 'Bio', class: 'textarea-bordered' })
+    @end
+  @end
+</div>

@@ -1,0 +1,22 @@
+<div class="w-full max-w-xs">
+  @form.control({ name: 'movies', class: 'w-full max-w-xs', label: 'Select your movie' })
+    @!form.select({ options: [
+      { text: 'Pick one', value: 'pick_one', disabled, selected },
+      { text: 'Star Wars', value: 'star_wars' },
+      { text: 'Harry Potter', value: 'harry_potter' },
+      { text: 'Lord of the Rings', value: 'lord_of_the_rings' },
+    ], class: 'select-bordered' })
+  @end
+
+
+  @form.control({ class: 'w-full max-w-xs' })
+    @form.label({ text: 'Select your movie' })
+      @!form.select({ options: [
+        { text: 'Pick one', value: 'pick_one', disabled, selected },
+        { text: 'Star Wars', value: 'star_wars' },
+        { text: 'Harry Potter', value: 'harry_potter' },
+        { text: 'Lord of the Rings', value: 'lord_of_the_rings' },
+      ], class: 'select-bordered' })
+    @end
+  @end
+</div>

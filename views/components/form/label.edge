@@ -1,7 +1,6 @@
-<{{jrmc.getTagName($props, 'label')}} class="{{ jrmc.getCssClass($props, 'label') }}" {{ $props.serializeExcept(['class', 'as']) }}>
-  @if($props.has('text'))~
+<{{jrmc.getTagName($props, 'label')}} class="{{ jrmc.getCssClass($props, 'label') }}" {{ $props.serializeExcept(['class', 'as', 'text']) }}>
+  @if($props.has('text'))
     @!form.label.text({ text }) 
   @end~
-
   {{{ await $slots.main() || '' }}}
 </{{jrmc.getTagName($props, 'label')}}>

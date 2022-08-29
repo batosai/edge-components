@@ -1,0 +1,12 @@
+<div class="w-full max-w-xs">
+  @form.control({ name: 'lastname', class: 'w-full max-w-xs', label: 'Lastname' })
+    @!form.input({placeholder: 'Jean', class: 'input-bordered' })
+  @end
+
+
+  @form.control({ class: 'w-full max-w-xs' })
+    @form.label({ text: 'Firstname' })
+      @!form.input({ placeholder: 'Luc', class: 'input-bordered' })
+    @end
+  @end
+</div>
