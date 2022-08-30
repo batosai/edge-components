@@ -1,6 +1,6 @@
 <input
   type="{{ $props.has('type') ? $props.get('type') : 'text' }}" 
-  class="{{ jrmc.getCssClass($props, ($props.has('type') && type !== 'text' ? $props.get('type') : 'input')) }}"
+  class="{{ jrmc.getCssClass($props, ($props.has('type') && ['radio', 'checkbox', 'range'].includes(type) ? $props.get('type') : 'input')) }}"
   {{{ jrmc.getName($props, $context) ? ` name="${jrmc.getName($props, $context)}"` : '' }}}
   {{{ jrmc.getId($props, $context) ? ` id="${jrmc.getId($props, $context)}"` : '' }}}
   {{{ jrmc.getRequired($props, $context) ? ` required` : '' }}}
