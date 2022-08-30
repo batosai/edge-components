@@ -1,8 +1,8 @@
 <input
   type="{{ $props.has('type') ? $props.get('type') : 'text' }}" 
   class="{{ jrmc.getCssClass($props, ($props.has('type') && type !== 'text' ? $props.get('type') : 'input')) }}"
-  {{{ $props.has('name') || $context.name ? ` name="${$props.get('name') || $context.name }"` : '' }}}
-  {{{ $props.has('id') || $context.id ? ` id="${$props.get('id') || $context.id }"` : '' }}}
+  {{{ jrmc.getName($props, $context) ? ` name="${jrmc.getName($props, $context)}"` : '' }}}
+  {{{ jrmc.getId($props, $context) ? ` id="${jrmc.getId($props, $context)}"` : '' }}}
   {{{ jrmc.getRequired($props, $context) ? ` required` : '' }}}
   {{ $props.serializeExcept(['class', 'type', 'name', 'id', 'required']) }}
 />
