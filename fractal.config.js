@@ -74,8 +74,9 @@ fractal.components.set('edge.helpers', {
       return [baseClassString, klassString].join(' ').trim()
     },
     getTagName: (props, defaultTagName='div') => props.has('as') ? props.get('as') : defaultTagName,
-    getName: (props) => props.has('name') ? props.get('name') : '',
-    getId: (props) => props.has('name') ? props.get('name') : '',
+    getName: props => props.has('name') ? props.get('name') : '',
+    getId: props => props.has('name') ? props.get('name') : '',
+    getRequired: (props, context={required: false}) => props.has('required') || context.required ? props.get('required') || context.required : false,
     getLabel: props => {
       const name = props.has('name') ? props.get('name') : ''
       return capitalize(noCase(name))

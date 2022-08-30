@@ -3,6 +3,7 @@
   class="{{ jrmc.getCssClass($props, ($props.has('type') && type !== 'text' ? $props.get('type') : 'input')) }}"
   {{{ $props.has('name') || $context.name ? ` name="${$props.get('name') || $context.name }"` : '' }}}
   {{{ $props.has('id') || $context.id ? ` id="${$props.get('id') || $context.id }"` : '' }}}
-  {{ $props.serializeExcept(['class', 'type', 'name', 'id']) }}
+  {{{ jrmc.getRequired($props, $context) ? ` required` : '' }}}
+  {{ $props.serializeExcept(['class', 'type', 'name', 'id', 'required']) }}
 />
 

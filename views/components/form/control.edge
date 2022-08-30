@@ -1,14 +1,15 @@
 @inject({
   name: jrmc.getName($props),
   id: jrmc.getId($props),
+  required: jrmc.getRequired($props),
 })
 
-<{{jrmc.getTagName($props)}} class="{{ jrmc.getCssClass($props, 'form-control') }}" {{ $props.serializeExcept(['class', 'as']) }}>
+<{{jrmc.getTagName($props)}} class="{{ jrmc.getCssClass($props, 'form-control') }}" {{ $props.serializeExcept(['class', 'as', 'name', 'label', 'hint', 'required']) }}>
 
   @if($props.has('label'))~
-    @!form.label({ text: $props.get('label'), class: 'cursor-pointer', for: jrmc.getId($props) })
+    @!form.label({ text: $props.get('label'), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
   @elseif($props.has('name'))~
-    @!form.label({ text: jrmc.getLabel($props), class: 'cursor-pointer', for: jrmc.getId($props) })
+    @!form.label({ text: jrmc.getLabel($props), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
   @end~
 
   {{{ await $slots.main() || '' }}}

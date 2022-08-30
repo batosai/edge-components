@@ -2,7 +2,8 @@
   class="{{ jrmc.getCssClass($props, 'select') }}"
   {{{ $props.has('name') || $context.name ? ` name="${$props.get('name') || $context.name }"` : '' }}}
   {{{ $props.has('id') || $context.id ? ` id="${$props.get('id') || $context.id }"` : '' }}}
-  {{ $props.serializeExcept(['options', 'name', 'id']) }}>
+  {{{ jrmc.getRequired($props, $context) ? ` required` : '' }}}
+  {{ $props.serializeExcept(['options', 'name', 'id', 'required']) }}>
   @each(option in options)
     <option value="{{ option.value }}">
       {{ option.text }}
