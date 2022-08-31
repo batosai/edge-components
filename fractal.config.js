@@ -93,6 +93,12 @@ fractal.components.set('edge.helpers', {
       lastPage: urls.length,
       getUrlsForRange: (first, last) => (urls.filter(url => (url.page >= first && url.page <= last)))
     }
+  },
+  flashMessages: {
+    get: (name, defaultMessage) => {
+      if (name == 'errors.sampleError') return 'This field is required'
+      else return defaultMessage
+    }
   }
 });
 fractal.components.engine('@jrmc/fractal-edge-adapter'); // use the configured Nunjucks instance for components

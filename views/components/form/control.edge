@@ -2,6 +2,8 @@
   name: jrmc.getName($props),
   id: jrmc.getId($props),
   required: jrmc.getRequired($props),
+  hint: $props.get('hint'),
+  error: flashMessages.get(`errors.${jrmc.getName($props)}`, false)
 })
 
 <{{jrmc.getTagName($props)}} class="{{ jrmc.getCssClass($props, 'form-control') }}" {{ $props.serializeExcept(['class', 'as', 'name', 'label', 'hint', 'required']) }}>
@@ -15,8 +17,10 @@
   {{{ await $slots.main() || '' }}}
 
   @if($props.has('hint'))~
-    @form.label({ as: 'div' })
-      <span class="label-text-alt text-warning">{{ $props.get('hint') }}</span>
-    @end
+    @!form.hint({ text: $props.get('hint') })
+  @end~
+
+  @if((!$props.has('error') || $props.get('error')) && flashMessages.get(`errors.${jrmc.getName($props)}`, false))~
+    @!form.error({ text: flashMessages.get(`errors.${jrmc.getName($props)}`, false) })
   @end~
 </{{jrmc.getTagName($props)}}>
