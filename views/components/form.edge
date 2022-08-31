@@ -1,0 +1,3 @@
+<form {{ $props.serializeExcept() }}>
+  {{{ await $slots.main() || '' }}}
+</form>
