@@ -1,8 +1,16 @@
-@form.control({ class: 'w-full max-w-xs' })
-  @!form.label({ text: 'What is your name?', for: 'my_name' })
-  @!form.input({ name: 'my_name', placeholder: 'My name', id: 'my_name', class: ['input-bordered', 'w-full', 'max-w-xs'] })
-  @form.label({ as: 'div' })
-    <span class="label-text-alt text-warning">Alt label</span>
-    <span class="label-text-alt">Alt label</span>
+<div>
+  @form.control()
+    @!form.label({ text: 'What is your name?', for: 'my_name' })
+    @!form.input({ name: 'my_name', placeholder: 'My name', id: 'my_name', class: ['input-bordered', 'w-full', 'max-w-xs'] })
+    @!form.hint({ as: 'div', text: 'Alt label'})
   @end
-@end
+
+  @form.control()
+    @!form.label({ text: 'What is your name?', for: 'my_name' })
+    @!form.input({ name: 'my_name', placeholder: 'My name', id: 'my_name', class: ['input-bordered', 'w-full', 'max-w-xs'] })
+    @form.label({ as: 'div' })
+      <span class="label-text-alt text-warning">Alt label</span>
+      <span class="label-text-alt">Alt label</span>
+    @end
+  @end
+</div>
