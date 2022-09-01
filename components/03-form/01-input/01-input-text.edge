@@ -1,12 +1,16 @@
-<div>
-  @!form.input({ placeholder: 'Default',  class: ['w-full', 'max-w-xs'] })
-  @!form.input({ placeholder: 'Bordered',  class: ['input-bordered', 'w-full', 'max-w-xs'] })
-  @!form.input({ placeholder: 'Color',  class: ['input-warning', 'w-full', 'max-w-xs'] })
-  @!form.input({ placeholder: 'Ghost',  class: ['input-ghost', 'w-full', 'max-w-xs'] })
-  @!form.input({ placeholder: 'Size xs',  class: ['input-xs', 'w-full', 'max-w-xs'] })
-  @!form.input({ placeholder: 'Size sm',  class: ['input-sm', 'w-full', 'max-w-xs'] })
-  @!form.input({ placeholder: 'Size md',  class: ['input-md', 'w-full', 'max-w-xs'] })
-  @!form.input({ placeholder: 'Size lg',  class: ['input-lg', 'w-full', 'max-w-xs'] })
-  @!form.input({ placeholder: 'Disabled',  disabled })
+<div class="w-full max-w-xs">
+  @!form.input({ placeholder: 'Default' })
+  <br /><br />
+  @!form.input({ type: 'number', placeholder: '0' })
+  <br /><br />
+  @!form.input({ type: 'email', placeholder: 'john.snow@got.com' })
+  <br /><br />
+  @!form.input({ type: 'date' })
+  <br /><br />
+  @!form.input({ type: 'datetime-local' })
+  <br /><br />
+  @!form.input({ type: 'color' })
+  <br /><br />
+  @!form.input({ type: 'hidden', value: 'true' })
 </div>
 

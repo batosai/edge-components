@@ -1,4 +1,4 @@
-<div>
+<div class="w-full max-w-xs">
   @!form.select({ options: [
     { text: 'Pick one', value: 'pick_one', disabled, selected },
     { text: 'Star Wars', value: 'star_wars' },
@@ -6,12 +6,16 @@
     { text: 'Lord of the Rings', value: 'lord_of_the_rings' },
   ], class: 'select-bordered select-lg' })
 
+  <br /><br />
+
   @!form.select({ options: [
     { text: 'Pick one', value: 'pick_one', disabled, selected },
     { text: 'Star Wars', value: 'star_wars' },
     { text: 'Harry Potter', value: 'harry_potter' },
     { text: 'Lord of the Rings', value: 'lord_of_the_rings' },
   ], class: 'select-bordered' })
+
+  <br /><br />
 
   @!form.select({ options: [
     { text: 'Pick one', value: 'pick_one', disabled, selected },

@@ -22,10 +22,10 @@ The most popular, free and open-source Tailwind CSS component library in edge te
 
 ## Form
 - [x] Input text
-- [ ] Input number
-- [ ] Input date
-- [ ] Input email
-- [ ] Input hidden
+- [x] Input number
+- [x] Input date
+- [x] Input email
+- [x] Input hidden
 - [x] Input checkbox
 - [x] Input radio
 - [x] Select
