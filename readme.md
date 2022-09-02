@@ -31,7 +31,7 @@ The most popular, free and open-source Tailwind CSS component library in edge te
 - [x] Select
 - [x] Textarea
 - [x] Label
-- [ ] Error
+- [x] Error
 - [x] Control
 
 
@@ -41,10 +41,11 @@ If the component is too complex it may make more sense to use HTML directly as s
 
 # Steps
 
-- [ ] essential Components
+- [x] essential Components
 - [ ] page demo
 - [ ] package adonisjs
 - [ ] unpoly support
 - [x] alpine.js support
 - [ ] cleave.js support
 - [ ] demo projet adonisjs
+- [ ] other components

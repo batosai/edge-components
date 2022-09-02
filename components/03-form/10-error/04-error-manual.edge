@@ -1,0 +1,11 @@
+@form({ method: 'get', error: false})
+  @form.control({ name: 'sampleError', error: false })
+    @!form.input()
+  @end
+
+  @form.control({ name: 'sample2Error', error: false })
+    @!form.input()
+  @end
+
+  @!form.error.all({ class: 'mt-5'})
+@end

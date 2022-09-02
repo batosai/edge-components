@@ -97,7 +97,16 @@ fractal.components.set('edge.helpers', {
   flashMessages: {
     get: (name, defaultMessage) => {
       if (name == 'errors.sampleError') return 'This field is required'
+      if (name == 'errors.sample2Error') return 'This field is required'
       else return defaultMessage
+    },
+    all: () => {
+      return {
+        errors: {
+          sampleError: 'This field is required',
+          sample2Error: 'This field is required',
+        }
+      }
     }
   }
 });
