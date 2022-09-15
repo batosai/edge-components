@@ -1,0 +1,20 @@
+<div>
+  @jrmc.form.control({ name: 'sampleError', label: 'Your name', error: false })
+    @!jrmc.form.input({placeholder: 'My name', class: 'input-bordered' })
+    @!jrmc.form.error()
+  @end
+
+  @jrmc.form.control({ name: 'sampleError', label: 'Your name', error: false })
+    @!jrmc.form.input({placeholder: 'My name', class: 'input-bordered' })
+    @!jrmc.form.error({ text: 'Error' })
+  @end
+
+
+  @jrmc.form.control({ name: 'sampleError', label: 'Your name', error: false })
+    @!jrmc.form.input({placeholder: 'My name', class: 'input-bordered' })
+    @jrmc.form.label({ as: 'div' })
+      <span class="label-text-alt"></span>
+      <span class="label-text-alt text-error">{{ $context.error || '' }}</span>
+    @end
+  @end
+</div>

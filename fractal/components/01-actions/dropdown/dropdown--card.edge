@@ -1,0 +1,8 @@
+@jrmc.dropdown({ text: 'dropdown card' })
+  @jrmc.card({ class: 'card-compact dropdown-content w-64 p-2 shadow bg-primary text-primary-content' })
+    @jrmc.card.body()
+      @!jrmc.card.title({ as: 'h3', text: 'Card title' })
+      <p>you can use any element as a dropdown.</p>
+    @end
+  @end
+@end

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <title>Preview Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.27.0/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <script src="/app.js"></script>
+
+  <style>
+    html, body {
+      height: 100%
+    }
+    body {
+      background-image: radial-gradient(hsla(var(--bc)/.2) .5px,hsla(var(--b2)/1) .5px);
+      background-size: 5px 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="flex justify-center px-4 py-16 border-t border-base-300">
+    {{{ yield }}}
+  </div>
+
+</body>
+</html>

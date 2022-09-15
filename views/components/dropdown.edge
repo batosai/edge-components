@@ -2,7 +2,7 @@
   @if($slots.button !== undefined)~
     {{{ await $slots.button() }}}
   @else
-    @!button.label({ text, class: 'm-1' })
+    @!jrmc.button.label({ text, class: 'm-1' })
   @end~
 
   @if(items)~

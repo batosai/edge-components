@@ -1,0 +1,13 @@
+@jrmc.card({ class: 'lg:card-side bg-base-100 shadow-xl' })
+  @slot('top')
+    <figure><img src="https://placeimg.com/400/400/arch" alt="Movie"></figure>
+  @end
+  @jrmc.card.body()
+    @!jrmc.card.title({ text: 'New movie is released!' })
+    <p>Click the button to watch on Jetflix app.</p>
+
+    @jrmc.card.actions()
+      @!jrmc.button({ text: 'Watch', class: 'btn-primary' })
+    @end
+  @end
+@end

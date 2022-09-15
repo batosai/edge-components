@@ -1,4 +1,4 @@
-@alert({ text, class: jrmc.getCssClass($props, 'alert-error') })
+@jrmc.alert({ text, class: jrmc.getCssClass($props, 'alert-error') })
   @if($slots.main())~
     {{{ await $slots.main() }}}
   @end~

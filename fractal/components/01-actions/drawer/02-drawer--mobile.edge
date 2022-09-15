@@ -1,0 +1,13 @@
+@jrmc.drawer({ class: 'drawer-mobile' })
+  @jrmc.drawer.content()
+    @!jrmc.button({ text: 'Open drawer', class: 'lg:hidden', ...$context.event.open })
+  @end
+
+  @jrmc.drawer.side()
+    <ul class="menu text-base-content">
+      <li><a>Sidebar Item 1</a></li>
+      <li><a>Sidebar Item 2</a></li>
+    </ul>
+  @end
+@end
+

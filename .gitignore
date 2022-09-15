@@ -1,3 +1,6 @@
 node_modules
 ecosystem.config.js
 build
+fractal/build
+
+tsconfig.tsbuildinfo

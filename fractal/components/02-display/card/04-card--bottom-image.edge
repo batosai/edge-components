@@ -1,0 +1,13 @@
+@jrmc.card()
+  @jrmc.card.body()
+    @!jrmc.card.title({ text: 'Shoes!' })
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+
+    @jrmc.card.actions()
+      @!jrmc.button({ text: 'Buy Now', class: 'btn-primary' })
+    @end
+  @end
+  @slot('bottom')
+    <figure><img src="https://placeimg.com/400/225/arch" alt="Shoes" /></figure>
+  @end
+@end

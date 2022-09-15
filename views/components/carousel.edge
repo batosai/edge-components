@@ -1,7 +1,7 @@
 <div class="{{ jrmc.getCssClass($props, 'carousel', 'rounded-box') }}" {{ $props.serializeExcept(['class']) }}>
   @if($props.has('items'))
     @each(item in items)
-      @!carousel.item({ ...item })
+      @!jrmc.carousel.item({ ...item })
     @end
   @else
     {{{ await $slots.main() || '' }}}

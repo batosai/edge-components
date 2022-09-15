@@ -1,7 +1,7 @@
 <form {{ $props.serializeExcept() }}>
   
   @if(!$props.has('error') || $props.get('error'))
-    @!form.error.all()
+    @!jrmc.form.error.all()
   @end
 
   {{{ await $slots.main() || '' }}}

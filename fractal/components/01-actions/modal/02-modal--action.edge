@@ -1,0 +1,8 @@
+@jrmc.modal({ button: { text: 'Toggle Modal', class: 'btn-primary' } })
+  <h3 class="font-bold text-lg">Congratulations random Internet user!</h3>
+  <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+
+  @slot('action')
+    @!jrmc.button({ text: 'ok', ...$context.event.close })
+  @end
+@end

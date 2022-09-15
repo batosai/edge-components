@@ -9,18 +9,18 @@
 <{{jrmc.getTagName($props)}} class="{{ jrmc.getCssClass($props, 'form-control') }}" {{ $props.serializeExcept(['class', 'as', 'name', 'label', 'hint', 'required']) }}>
 
   @if($props.has('label'))~
-    @!form.label({ text: $props.get('label'), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
+    @!jrmc.form.label({ text: $props.get('label'), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
   @elseif($props.has('name'))~
-    @!form.label({ text: jrmc.getLabel($props), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
+    @!jrmc.form.label({ text: jrmc.getLabel($props), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
   @end~
 
   {{{ await $slots.main() || '' }}}
 
   @if($props.has('hint'))~
-    @!form.hint({ text: $props.get('hint') })
+    @!jrmc.form.hint({ text: $props.get('hint') })
   @end~
 
   @if((!$props.has('error') || $props.get('error')) && flashMessages.get(`errors.${jrmc.getName($props)}`, false))~
-    @!form.error({ text: flashMessages.get(`errors.${jrmc.getName($props)}`, false) })
+    @!jrmc.form.error({ text: flashMessages.get(`errors.${jrmc.getName($props)}`, false) })
   @end~
 </{{jrmc.getTagName($props)}}>

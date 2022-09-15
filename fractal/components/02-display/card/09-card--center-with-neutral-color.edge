@@ -1,0 +1,11 @@
+@jrmc.card({ class: 'w-96 bg-neutral text-neutral-content' })
+  @jrmc.card.body({ class: 'items-center text-center' })
+    @!jrmc.card.title({ text: 'Cookies!' })
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+
+    @jrmc.card.actions()
+      @!jrmc.button({ text: 'Accept', class: 'btn-primary' })
+      @!jrmc.button({ text: 'Deny' })
+    @end
+  @end
+@end

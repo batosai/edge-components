@@ -1,0 +1,18 @@
+{
+  "extends": "adonis-preset-ts/tsconfig.json",
+  "include": [
+    "**/*"
+  ],
+  "compilerOptions": {
+    "rootDir": "./src",
+    "outDir": "./build",
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": [
+      "@adonisjs/core"
+    ]
+  }
+
+}
