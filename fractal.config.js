@@ -5,7 +5,7 @@
 */
 const path = require('path');
 const mandelbrot = require('@frctl/mandelbrot');
-const { noCase } = require('text-no-case');
+const { string } = require('@poppinss/utils/build/helpers');
 
 // create a new instance with custom config options
 const myCustomisedTheme = mandelbrot({
@@ -63,8 +63,6 @@ fractal.components.set('ext', '.edge'); // look for files with a .nunj file exte
 fractal.components.set('edge.components.prefix', 'jrmc');
 fractal.components.set('edge.components.path', path.join(__dirname, 'views'));
 
-const capitalize = text => (text[0].toUpperCase() + text.substring(1))
-
 fractal.components.set('edge.helpers', {
   jrmc: {
     getCssClass: (props, baseClass='', defaultClass='') => {
@@ -80,7 +78,7 @@ fractal.components.set('edge.helpers', {
     getRequired: (props, context={required: false}) => props.has('required') || context.required ? props.get('required') || context.required : false,
     getLabel: props => {
       const name = props.has('name') ? props.get('name') : ''
-      return capitalize(noCase(name))
+      return string.capitalCase(string.noCase(name))
     }
   },
   fakeUsers: ({ currentPage, total }) => {

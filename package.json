@@ -1,6 +1,6 @@
 {
-  "name": "edge-components",
-  "version": "0.15.0",
+  "name": "@jrmc/edge-components",
+  "version": "1.0.2",
   "description": "",
   "main": "build/index.js",
   "repository": {
@@ -20,14 +20,16 @@
     "prepublishOnly": "tsc"
   },
   "devDependencies": {
-    "@adonisjs/core": "^5.1.0",
     "@frctl/fractal": "^1.5.14",
     "@jrmc/fractal-edge-adapter": "^1.2.0",
+    "@poppinss/utils": "^5.0.0",
     "adonis-preset-ts": "^2.1.0",
-    "text-no-case": "^1.0.2",
     "typescript": "^4.8.3"
   },
   "peerDependencies": {
-    "@adonisjs/core": "^5.1.0"
+    "@adonisjs/core": "^5.1.0",
+    "alpinejs": "^3.10.0",
+    "daisyui": "^2.25.0",
+    "tailwindcss": "^3.1.0"
   }
 }
