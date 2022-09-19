@@ -1,0 +1,26 @@
+<div class="hero min-h-screen bg-base-200">
+  <div class="hero-content text-center">
+
+    @jrmc.card({ class: 'lg:card-side bg-base-100 shadow-xl' })
+      @slot('top')
+        <figure><img src="https://placeimg.com/400/400/arch" alt="Movie"></figure>
+      @end
+      @jrmc.card.body()
+        @jrmc.form()
+          @jrmc.form.control({ name: 'email', error: false })
+            @!jrmc.form.input({ class: 'input-bordered' })
+          @end
+
+          @jrmc.form.control({ name: 'password', error: false })
+            @!jrmc.form.input({ class: 'input-bordered' })
+          @end
+
+          @jrmc.form.control({ label: false, error: false })
+            @!jrmc.button.input({ text: 'Login', type: 'submit', class: 'btn-primary' })
+          @end
+        @end
+      @end
+    @end
+
+  </div>
+</div>

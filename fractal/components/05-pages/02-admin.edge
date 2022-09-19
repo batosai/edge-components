@@ -1,0 +1,263 @@
+@jrmc.drawer({ class: 'drawer-mobile' })
+  @jrmc.drawer.content()
+
+    {{--  navbar  --}}
+    <div class="navbar bg-base-200">
+      <div class="flex-1">
+        @jrmc.button({ class: 'lg:hidden btn-square btn-ghost', ...$context.event.open })
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        @end
+      </div>
+      <div class="flex-none gap-2">
+        @jrmc.dropdown({ class: 'dropdown-end' })
+          @slot('button')
+            @jrmc.button.label({ class: 'btn-ghost btn-circle avatar' })
+              <div class="w-10 rounded-full">
+                <img src="https://placeimg.com/80/80/people" />
+              </div>
+            @end
+          @end
+          <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-200 rounded-box w-52">
+            <li>
+              <a class="justify-between">
+                Profile
+                @!jrmc.badge({ text: 'New'})
+              </a>
+            </li>
+            <li><a>Settings</a></li>
+            <li><a>Logout</a></li>
+          </ul>
+        @end
+      </div>
+    </div>
+    {{--  end navbar  --}}
+
+
+
+    <div class="flex flex-col justify-center px-4">
+
+      {{--  breadcrumbs  --}}
+      <div class="text-sm breadcrumbs">
+        <ul>
+          <li><a>Dashboard</a></li>
+          <li>Users</li>
+        </ul>
+      </div>
+      {{--  end breadcrumbs  --}}
+
+      {{--  stat  --}}
+      <div class="stats shadow bg-base-300 my-5">
+        <div class="stat">
+          <div class="stat-figure text-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+          </div>
+          <div class="stat-title">Total Users</div>
+          <div class="stat-value text-primary">25.6K</div>
+          <div class="stat-desc">21% more than last month</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-figure text-secondary">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-8 h-8 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <div class="stat-title">Admin Users</div>
+          <div class="stat-value text-secondary">2</div>
+        </div>
+
+        <div class="stat">
+          <div class="stat-figure text-secondary">
+            <div class="avatar online">
+              <div class="w-16 rounded-full">
+                <img src="https://placeimg.com/128/128/people" />
+              </div>
+            </div>
+          </div>
+          <div class="stat-value">86%</div>
+          <div class="stat-title">Tasks done</div>
+          <div class="stat-desc text-secondary">31 tasks remaining</div>
+        </div>
+      </div>
+      {{--  end stat  --}}
+
+
+      <div class="w-full my-5">
+
+        <div class="navbar bg-base-100">
+          <div class="flex-1"></div>
+          <div class="flex-none gap-2">
+            <div class="form-control">
+              <input type="text" placeholder="Search" class="input input-bordered" />
+            </div>
+          </div>
+        </div>
+
+        @jrmc.table({ full: true })
+          @slot('header')
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" class="checkbox" />
+                </label>
+              </th>
+              <th>Name</th>
+              <th>Job</th>
+              <th>Favorite Color</th>
+              <th></th>
+            </tr>
+          @end
+          @slot('footer')
+            <tr>
+              <th></th>
+              <th>Name</th>
+              <th>Job</th>
+              <th>Favorite Color</th>
+              <th></th>
+            </tr>
+          @end
+          @slot('body')
+            <!-- row 1 -->
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" class="checkbox" />
+                </label>
+              </th>
+              <td>
+                <div class="flex items-center space-x-3">
+                  <div class="avatar">
+                    <div class="mask mask-squircle w-12 h-12">
+                      <img src="https://daisyui.com/tailwind-css-component-profile-2@56w.png" alt="Avatar Tailwind CSS Component" />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-bold">Hart Hagerty</div>
+                    <div class="text-sm opacity-50">United States</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Zemlak, Daniel and Leannon
+                <br>
+                <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
+              </td>
+              <td>Purple</td>
+              <th>
+                <button class="btn btn-ghost btn-xs">details</button>
+              </th>
+            </tr>
+            <!-- row 2 -->
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" class="checkbox" />
+                </label>
+              </th>
+              <td>
+                <div class="flex items-center space-x-3">
+                  <div class="avatar">
+                    <div class="mask mask-squircle w-12 h-12">
+                      <img src="https://daisyui.com/tailwind-css-component-profile-3@56w.png" alt="Avatar Tailwind CSS Component" />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-bold">Brice Swyre</div>
+                    <div class="text-sm opacity-50">China</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Carroll Group
+                <br>
+                <span class="badge badge-ghost badge-sm">Tax Accountant</span>
+              </td>
+              <td>Red</td>
+              <th>
+                <button class="btn btn-ghost btn-xs">details</button>
+              </th>
+            </tr>
+            <!-- row 3 -->
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" class="checkbox" />
+                </label>
+              </th>
+              <td>
+                <div class="flex items-center space-x-3">
+                  <div class="avatar">
+                    <div class="mask mask-squircle w-12 h-12">
+                      <img src="https://daisyui.com/tailwind-css-component-profile-4@56w.png" alt="Avatar Tailwind CSS Component" />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-bold">Marjy Ferencz</div>
+                    <div class="text-sm opacity-50">Russia</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Rowe-Schoen
+                <br>
+                <span class="badge badge-ghost badge-sm">Office Assistant I</span>
+              </td>
+              <td>Crimson</td>
+              <th>
+                <button class="btn btn-ghost btn-xs">details</button>
+              </th>
+            </tr>
+            <!-- row 4 -->
+            <tr>
+              <th>
+                <label>
+                  <input type="checkbox" class="checkbox" />
+                </label>
+              </th>
+              <td>
+                <div class="flex items-center space-x-3">
+                  <div class="avatar">
+                    <div class="mask mask-squircle w-12 h-12">
+                      <img src="https://daisyui.com/tailwind-css-component-profile-5@56w.png" alt="Avatar Tailwind CSS Component" />
+                    </div>
+                  </div>
+                  <div>
+                    <div class="font-bold">Yancy Tear</div>
+                    <div class="text-sm opacity-50">Brazil</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Wyman-Ledner
+                <br>
+                <span class="badge badge-ghost badge-sm">Community Outreach Specialist</span>
+              </td>
+              <td>Indigo</td>
+              <th>
+                <button class="btn btn-ghost btn-xs">details</button>
+              </th>
+            </tr>
+          @end
+        @end
+      </div>
+
+      <div class="w-full text-center my-5">
+        @!jrmc.pagination({ object: fakeUsers({ currentPage: 40, total: 99 }) })
+      </div>
+    </div>
+
+  @end
+
+  @jrmc.drawer.side({ class: 'overflow-y-auto w-80 bg-base-200' })
+    <div class="z-20 bg-base-200 bg-opacity-90 backdrop-blur sticky top-0 items-center gap-2 mb-10 px-4 py-2 flex shadow-sm">
+      <a href="/" aria-current="page" aria-label="Homepage" class="flex-0 btn btn-ghost px-2">
+        <div class="font-title text-accent inline-flex text-lg transition-all duration-200 text-3xl">
+          <span class="lowercase">Edge</span> <span class="text-base-content uppercase">Component</span>
+        </div>
+      </a>
+    </div>
+
+    <ul class="menu text-base-content p-2 rounded-box">
+      <li><a href="#">Item 1</a></li>
+      <li><a href="#">Item 2</a></li>
+    </ul>
+  @end
+@end
