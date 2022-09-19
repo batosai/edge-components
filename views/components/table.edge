@@ -1,5 +1,5 @@
 <div class="overflow-x-auto{{ $props.has('full') && full ? ' w-full' : '' }}">
-  <table class="{{ jrmc.getCssClass($props, 'table') }}" {{ $props.has('full') && full ? ' w-full' : '' }}">
+  <table class="{{ jrmc.getCssClass($props, 'table') }}{{ $props.has('full') && full ? ' w-full' : '' }}">
     @if($slots.header !== undefined)~
       <thead>{{{ await $slots.header() }}}</thead>
     @end~
