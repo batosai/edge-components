@@ -1,14 +1,14 @@
 <div class="navbar bg-base-100">
   <div class="flex-1">
-    @!button.link({ text: 'daisyUI', class: 'btn-ghost normal-case text-xl'})
+    @!jrmc.button.link({ text: 'daisyUI', class: 'btn-ghost normal-case text-xl'})
   </div>
   <div class="flex-none gap-2">
     <div class="form-control">
       <input type="text" placeholder="Search" class="input input-bordered" />
     </div>
-    @dropdown({ class: 'dropdown-end' })
+    @jrmc.dropdown({ class: 'dropdown-end' })
       @slot('button')
-        @button.label({ class: 'btn-ghost btn-circle avatar' })
+        @jrmc.button.label({ class: 'btn-ghost btn-circle avatar' })
           <div class="w-10 rounded-full">
             <img src="https://placeimg.com/80/80/people" />
           </div>
@@ -18,7 +18,7 @@
         <li>
           <a class="justify-between">
             Profile
-            @!badge({ text: 'New'})
+            @!jrmc.badge({ text: 'New'})
           </a>
         </li>
         <li><a>Settings</a></li>
