@@ -2,6 +2,8 @@
 
 The most popular, free and open-source Tailwind CSS component library in edge template engine with daisyUI and Alpine.js
 
+Inspired by [edge-uikit](https://www.npmjs.com/package/edge-uikit)
+
 [edge-components.jrmc.dev](https://edge-components.jrmc.dev)
 
 - [x] Alert
@@ -39,11 +41,11 @@ The components not shown here represent no gain over their HTML representation.
 
 If your component becomes too complex, it may make more sense to use HTML directly as described in the daisyUI documentation.
 
-# Steps
+## Steps
 
 - [x] essential Components
-- [ ] page demo
-- [ ] package adonisjs
+- [x] page demo
+- [x] package adonisjs
 - [ ] unpoly support
 - [x] alpine.js support
 - [ ] cleave.js support
