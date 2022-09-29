@@ -71,7 +71,7 @@ import jrmc from '@jrmc/edge-components'
 View.use(jrmc)
 ```
 
-In AdonisJS, you can do it inside a preload file. Add `"./start/kernel"` in .adonisrc.json on preloads section
+In AdonisJS, you can do it inside a preload file. Add `"./start/views"` in .adonisrc.json on preloads section
 
 ### Tailwind setup
 
@@ -129,4 +129,3 @@ import Alpine from 'alpinejs'
 
 Alpine.start()
 ```
-
