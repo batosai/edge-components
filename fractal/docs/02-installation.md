@@ -1,6 +1,6 @@
 # Edge components
 
-Edge components is a components library for Edge template engine and Adonisjs.
+Edge components is a components library for Edge template engine and AdonisJS.
 
 ## Require
 
