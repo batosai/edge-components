@@ -1,7 +1,9 @@
-@jrmc.alert.error($props)
-  <ul>
-  @each((error, index) in flashMessages.all().errors)
-    <li> {{ index }}: {{ error }} </li>
+@if(flashMessages.all())
+  @jrmc.alert.error($props)
+    <ul>
+    @each((error, index) in flashMessages.all().errors)
+      <li> {{ index }}: {{ error }} </li>
+    @end
+    </ul>
   @end
-  </ul>
 @end
