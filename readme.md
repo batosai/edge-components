@@ -112,9 +112,21 @@ module.exports = {
   content: ['./resources/views/**/*.edge', ...edgeComponent.content],
   plugins: [...edgeComponent.plugins],
 }
-
 ```
 
+Add css base in resources/css/app.css
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+And enabled postcss in Encore (webpack.config.js)
+
+```js
+Encore.enablePostCssLoader()
+```
 
 ### Alpine setup
 
