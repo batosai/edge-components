@@ -3,16 +3,22 @@
 
     @jrmc.card({ class: 'lg:card-side bg-base-100 shadow-xl' })
       @slot('top')
-        <figure><img src="https://placeimg.com/400/400/arch" alt="Movie"></figure>
+        <figure><img src="https://placeimg.com/500/500/arch" alt="Movie"></figure>
       @end
       @jrmc.card.body()
-        @jrmc.form()
+        @jrmc.form({ csrf: false })
           @jrmc.form.control({ name: 'email', error: false })
             @!jrmc.form.input({ class: 'input-bordered' })
           @end
 
           @jrmc.form.control({ name: 'password', error: false })
             @!jrmc.form.input({ class: 'input-bordered' })
+          @end
+
+          @jrmc.form.control({ name: 'remember_me', label: false })
+            @jrmc.form.label({ class: 'cursor-pointer', text: 'Remember me' })
+              @!jrmc.form.toggle()
+            @end
           @end
 
           @jrmc.form.control({ label: false, error: false })

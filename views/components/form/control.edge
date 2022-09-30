@@ -6,10 +6,12 @@
   error: flashMessages.get(`errors.${jrmc.getName($props)}`, false)
 })
 
-<{{jrmc.getTagName($props)}} class="{{ jrmc.getCssClass($props, 'form-control') }}" {{ $props.serializeExcept(['class', 'as', 'name', 'label', 'hint', 'required']) }}>
+<{{jrmc.getTagName($props)}} class="{{ jrmc.getCssClass($props, 'form-control mb-5') }}" {{ $props.serializeExcept(['class', 'as', 'name', 'label', 'hint', 'required']) }}>
 
   @if($props.has('label'))~
-    @!jrmc.form.label({ text: $props.get('label'), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
+    @if($props.get('label') !== false)~
+      @!jrmc.form.label({ text: $props.get('label'), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
+    @end~
   @elseif($props.has('name'))~
     @!jrmc.form.label({ text: jrmc.getLabel($props), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
   @end~

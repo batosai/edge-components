@@ -72,6 +72,7 @@ fractal.components.set('edge.helpers', {
 
       return [baseClassString, klassString].join(' ').trim()
     },
+    getMethodForm: (props, defaultMethod) => props.has('method') ? props.get('metho') : defaultMethod,
     getTagName: (props, defaultTagName='div') => props.has('as') ? props.get('as') : defaultTagName,
     getName: (props, context={name: false}) => props.has('name') || context.name ? props.get('name') || context.name : '',
     getId: (props, context={id: false}) => props.has('id') || context.id || props.has('name') ? props.get('id') || context.id || props.get('name') : '',
@@ -81,6 +82,7 @@ fractal.components.set('edge.helpers', {
       return string.capitalCase(string.noCase(name))
     }
   },
+  csrfField: () => 'ertgrttghggfhfghfgyr',
   fakeUsers: ({ currentPage, total }) => {
     let urls = []
     for (let index = 0; index < total; index++) {

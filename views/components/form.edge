@@ -1,5 +1,9 @@
-<form {{ $props.serializeExcept() }}>
-  
+<form method="{{ jrmc.getMethodForm($props, 'POST') }}" {{ $props.serializeExcept(['method']) }}>
+
+  @if(csrfField && $props.get('csrf') !== false)~
+    {{ csrfField() }}
+  @end~
+
   @if(!$props.has('error') || $props.get('error'))
     @!jrmc.form.error.all()
   @end
