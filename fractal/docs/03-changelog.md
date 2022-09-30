@@ -1,4 +1,4 @@
-# 1.0.7
+# 1.0.8
 
 - Add default method Post in form component
 - Add CSRF by default
