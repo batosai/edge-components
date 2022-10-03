@@ -71,6 +71,10 @@ import jrmc from '@jrmc/edge-components'
 View.use(jrmc)
 ```
 
+If your first rendering is not functionnal, you can manually render with `View.getRenderer()`
+
+
+
 In AdonisJS, you can do it inside a preload file. Add `"./start/views"` in .adonisrc.json on preloads section
 
 ### Tailwind setup
