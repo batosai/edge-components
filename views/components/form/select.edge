@@ -5,7 +5,11 @@
   {{{ jrmc.getRequired($props, $context) ? ` required` : '' }}}
   {{ $props.serializeExcept(['options', 'name', 'id', 'required']) }}>
   @each(option in options)
-    <option value="{{ option.value }}">
+    <option
+      value="{{ option.value }}"
+      {{{ jrmc.getDisabled(option, $context) ? ` disabled` : '' }}}
+      {{{ jrmc.getSelected(option, $context) ? ` selected` : '' }}}
+    >
       {{ option.text }}
     </option>
   @end

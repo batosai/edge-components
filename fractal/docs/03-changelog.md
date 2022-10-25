@@ -1,3 +1,7 @@
+# 1.0.9
+
+- Fix select options (disabled, selected)
+
 # 1.0.8
 
 - Add default method Post in form component
