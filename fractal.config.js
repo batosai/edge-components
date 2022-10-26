@@ -81,7 +81,7 @@ fractal.components.set('edge.helpers', {
     getSelected: obj => obj.selected ?? '',
     getLabel: props => {
       const name = props.has('name') ? props.get('name') : ''
-      return string.capitalCase(string.noCase(name))
+      return `${string.capitalCase(string.noCase(name))}:`
     }
   },
   csrfField: () => 'ertgrttghggfhfghfgyr',
