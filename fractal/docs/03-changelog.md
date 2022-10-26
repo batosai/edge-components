@@ -1,3 +1,9 @@
+# 1.0.10
+
+- New pagination light component
+- Update default label control
+- Fix : except id attr for container control
+
 # 1.0.9
 
 - Fix select options (disabled, selected)
