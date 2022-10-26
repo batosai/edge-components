@@ -6,7 +6,7 @@
   error: flashMessages.get(`errors.${jrmc.getName($props)}`, false)
 })
 
-<{{jrmc.getTagName($props)}} class="{{ jrmc.getCssClass($props, 'form-control mb-5') }}" {{ $props.serializeExcept(['class', 'as', 'name', 'label', 'hint', 'required']) }}>
+<{{jrmc.getTagName($props)}} class="{{ jrmc.getCssClass($props, 'form-control mb-5') }}" {{ $props.serializeExcept(['id', 'class', 'as', 'name', 'label', 'hint', 'required']) }}>
 
   @if($props.has('label'))~
     @if($props.get('label') !== false)~
