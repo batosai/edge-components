@@ -1,10 +1,10 @@
-@inject({ event: { 
+@inject({ event: {
   open: { '@click': 'open = true' },
   close: { '@click': 'open = false' },
   toggle: { '@click': 'open = ! open' },
 }})
 
-<button x-data="{ open: false }" @click="open = ! open" class="btn{{ $props.has('button.class') ? ` ${$props.get('button.class')}` : '' }}">
+<button type="button" x-data="{ open: false }" @click="open = ! open" class="btn{{ $props.has('button.class') ? ` ${$props.get('button.class')}` : '' }}">
   @if($slots.button !== undefined)
     {{{ await $slots.button() }}}
   @else
