@@ -1,4 +1,13 @@
-# 1.0.10
+# 1.2.0
+
+- Add option value for select component
+
+# 1.1.1
+
+- Fix default type button for modal
+- Fix method option for Form component
+
+# 1.1.0
 
 - New pagination light component
 - Update default label control
