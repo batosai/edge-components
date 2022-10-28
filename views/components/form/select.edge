@@ -8,7 +8,7 @@
     <option
       value="{{ option.value }}"
       {{{ jrmc.getDisabled(option, $context) ? ` disabled` : '' }}}
-      {{{ jrmc.getSelected(option, $context) ? ` selected` : '' }}}
+      {{{ jrmc.getSelected(option, $context) ? ` selected` : ( $props.has('value') && $props.value == option.value ? ` selected` : '') }}}
     >
       {{ option.text }}
     </option>
