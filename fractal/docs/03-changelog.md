@@ -1,3 +1,7 @@
+# 1.2.1
+
+- Refacto pagination controller
+
 # 1.2.0
 
 - Add option value for select component

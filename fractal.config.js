@@ -94,7 +94,10 @@ fractal.components.set('edge.helpers', {
     return {
       currentPage,
       lastPage: urls.length,
-      getUrlsForRange: (first, last) => (urls.filter(url => (url.page >= first && url.page <= last)))
+      getUrl: index => urls[index].url,
+      getUrlsForRange: (first, last) => (urls.filter(url => (url.page >= first && url.page <= last))),
+      getPreviousPageUrl: () => urls[currentPage-1].url,
+      getNextPageUrl: () => urls[currentPage+1].url,
     }
   },
   flashMessages: {
