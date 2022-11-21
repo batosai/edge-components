@@ -1,2 +1,8 @@
-
-@!jrmc.form.checkbox({ ...$props.all(), class: `${jrmc.getCssClass($props)} toggle` })
+<input
+  type="checkbox"
+  class="{{ jrmc.getCssClass($props, 'toggle') }}"
+  {{{ jrmc.getName($props, $context) ? ` name="${jrmc.getName($props, $context)}"` : '' }}}
+  {{{ jrmc.getId($props, $context) ? ` id="${jrmc.getId($props, $context)}"` : '' }}}
+  {{{ jrmc.getRequired($props, $context) ? ` required` : '' }}}
+  {{ $props.serializeExcept(['class', 'type', 'name', 'id', 'required']) }}
+/>
