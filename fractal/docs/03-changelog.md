@@ -1,3 +1,8 @@
+# 1.2.2
+
+- Fix toggle component
+- Update dependencies
+
 # 1.2.1
 
 - Refacto pagination controller
