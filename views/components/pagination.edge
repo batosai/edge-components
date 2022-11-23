@@ -1,9 +1,7 @@
 <div class="btn-group">
   @if(object.lastPage > 10)~
     @if(object.currentPage > 4)~
-      @each(anchor in object.getUrlsForRange(1, 1))
-        @!jrmc.button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? `btn-active btn-${$props.has('size') ? $props.get('size') : 'md'}` : '' })
-      @end
+        @!jrmc.button.link({ text: 1, href: object.getUrl(1), class: 1 === object.currentPage ? `btn-active btn-${$props.has('size') ? $props.get('size') : 'md'}` : '' })
       @if(object.currentPage !== 5)~
         @!jrmc.button.link({ text: '...', class: 'btn-disabled' })
       @end~
