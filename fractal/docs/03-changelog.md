@@ -1,3 +1,8 @@
+# 1.3.0
+
+- Add support flashMessages
+- Add default value after error submit
+
 # 1.2.2
 
 - Fix toggle component

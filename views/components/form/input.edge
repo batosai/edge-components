@@ -1,9 +1,9 @@
 <input
-  type="{{ $props.has('type') ? $props.get('type') : 'text' }}" 
+  type="{{ $props.get('type', 'text') }}"
   class="{{ jrmc.getCssClass($props, ($props.has('type') && ['radio', 'checkbox', 'range'].includes(type) ? $props.get('type') : 'input')) }}"
   {{{ jrmc.getName($props, $context) ? ` name="${jrmc.getName($props, $context)}"` : '' }}}
   {{{ jrmc.getId($props, $context) ? ` id="${jrmc.getId($props, $context)}"` : '' }}}
   {{{ jrmc.getRequired($props, $context) ? ` required` : '' }}}
-  {{ $props.serializeExcept(['class', 'type', 'name', 'id', 'required']) }}
+  {{ $props.serializeExcept(['class', 'type', 'name', 'id', 'required', 'value']) }}
+  value="{{ jrmc.getValue($props, $context, flashMessages) }}"
 />
-
