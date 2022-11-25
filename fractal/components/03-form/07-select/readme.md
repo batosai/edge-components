@@ -21,3 +21,13 @@ Select is used to pick a value from a list of options.
 | select-sm        | Responsive | Small size for select            |
 | select-xs        | Responsive | Extra small size for select      |
 
+## Specific params
+
+| Param name       |   Type           |                             |
+|------------------|------------------|-----------------------------|
+| options 	       |   object         | object of options elements  |
+| -- text 	       |   string         | text of option element      |
+| -- value 	       |   string         | value of option element     |
+| -- disabled 	   |   boolean        |                             |
+| -- selected 	   |   boolean        |                             |
+| value 	         |   string/array   | default value(s)            |

@@ -3,7 +3,8 @@
   id: jrmc.getId($props),
   required: jrmc.getRequired($props),
   hint: $props.get('hint'),
-  error: flashMessages.get(`errors.${jrmc.getName($props)}`, false)
+  error: flashMessages.get(`errors.${jrmc.getName($props)}`, false),
+  value: $context.object && $context.object[jrmc.getName($props)] ? $context.object[jrmc.getName($props)] : ''
 })
 
 <{{jrmc.getTagName($props)}} class="{{ jrmc.getCssClass($props, 'form-control mb-5') }}" {{ $props.serializeExcept(['id', 'class', 'as', 'name', 'label', 'hint', 'required']) }}>

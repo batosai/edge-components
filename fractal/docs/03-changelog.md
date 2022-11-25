@@ -1,3 +1,12 @@
+# 1.3.0
+
+- Add support flashMessages for form components
+- Add default value after error submit
+- Add default value for multiple select
+- Add default value for textarea
+- Add object entity on form component
+- Update readme checkbox/radio/toggle/select
+
 # 1.2.2
 
 - Fix toggle component

@@ -4,5 +4,7 @@
   {{{ jrmc.getName($props, $context) ? ` name="${jrmc.getName($props, $context)}"` : '' }}}
   {{{ jrmc.getId($props, $context) ? ` id="${jrmc.getId($props, $context)}"` : '' }}}
   {{{ jrmc.getRequired($props, $context) ? ` required` : '' }}}
-  {{ $props.serializeExcept(['class', 'type', 'name', 'id', 'required']) }}
+  {{{ jrmc.getChecked($props, $context, flashMessages) ? ` checked="checked"` : '' }}}
+  {{ $props.serializeExcept(['class', 'type', 'name', 'id', 'required', 'checked']) }}
+  value="{{ jrmc.getValue($props, $context, flashMessages) }}"
 />

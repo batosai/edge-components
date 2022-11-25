@@ -1,0 +1,17 @@
+<div class="w-full max-w-xs">
+  @!jrmc.form.select({ options: [
+    { text: 'Pick one', value: 'pick_one' },
+    { text: 'Star Wars', value: 'star_wars' },
+    { text: 'Harry Potter', value: 'harry_potter' },
+    { text: 'Lord of the Rings', value: 'lord_of_the_rings' },
+  ], class: 'select-bordered', value: 'star_wars' })
+
+  <br /><br />
+
+  @!jrmc.form.select({ options: [
+    { text: 'Pick one', value: 'pick_one' },
+    { text: 'Star Wars', value: 'star_wars'},
+    { text: 'Harry Potter', value: 'harry_potter' },
+    { text: 'Lord of the Rings', value: 'lord_of_the_rings' },
+  ], class: 'select-bordered', multiple, value: ['harry_potter', 'lord_of_the_rings'] })
+</div>

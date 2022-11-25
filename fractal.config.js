@@ -5,7 +5,7 @@
 */
 const path = require('path');
 const mandelbrot = require('@frctl/mandelbrot');
-const { string } = require('@poppinss/utils/build/helpers');
+const helpers = require('./fractal.helpers');
 
 // create a new instance with custom config options
 const myCustomisedTheme = mandelbrot({
@@ -63,57 +63,6 @@ fractal.components.set('ext', '.edge'); // look for files with a .nunj file exte
 fractal.components.set('edge.components.prefix', 'jrmc');
 fractal.components.set('edge.components.path', path.join(__dirname, 'views'));
 
-fractal.components.set('edge.helpers', {
-  jrmc: {
-    getCssClass: (props, baseClass='', defaultClass='') => {
-      const klass = props.has('class') ? props.get('class') : defaultClass
-      const klassString = Array.isArray(klass) ? klass.join(' ') : klass
-      const baseClassString = Array.isArray(baseClass) ? baseClass.join(' ') : baseClass
 
-      return [baseClassString, klassString].join(' ').trim()
-    },
-    getMethodForm: (props, defaultMethod) => props.has('method') ? props.get('method') : defaultMethod,
-    getTagName: (props, defaultTagName='div') => props.has('as') ? props.get('as') : defaultTagName,
-    getName: (props, context={name: false}) => props.has('name') || context.name ? props.get('name') || context.name : '',
-    getId: (props, context={id: false}) => props.has('id') || context.id || props.has('name') ? props.get('id') || context.id || props.get('name') : '',
-    getRequired: (props, context={required: false}) => props.has('required') || context.required ? props.get('required') || context.required : false,
-    getDisabled: obj => obj.disabled ?? '',
-    getSelected: obj => obj.selected ?? '',
-    getLabel: props => {
-      const name = props.has('name') ? props.get('name') : ''
-      return `${string.capitalCase(string.noCase(name))}:`
-    }
-  },
-  csrfField: () => 'csrf',
-  fakeUsers: ({ currentPage, total }) => {
-    let urls = []
-    for (let index = 0; index < total; index++) {
-      urls.push({ url: `#${index+1}`, page: index+1 })
-    }
-
-    return {
-      currentPage,
-      lastPage: urls.length,
-      getUrl: index => urls[index].url,
-      getUrlsForRange: (first, last) => (urls.filter(url => (url.page >= first && url.page <= last))),
-      getPreviousPageUrl: () => urls[currentPage-1].url,
-      getNextPageUrl: () => urls[currentPage+1].url,
-    }
-  },
-  flashMessages: {
-    get: (name, defaultMessage) => {
-      if (name == 'errors.sampleError') return 'This field is required'
-      if (name == 'errors.sample2Error') return 'This field is required'
-      else return defaultMessage
-    },
-    all: () => {
-      return {
-        errors: {
-          sampleError: 'This field is required',
-          sample2Error: 'This field is required',
-        }
-      }
-    }
-  }
-});
+fractal.components.set('edge.helpers', helpers);
 fractal.components.engine('@jrmc/fractal-edge-adapter'); // use the configured Nunjucks instance for components

@@ -1,0 +1,20 @@
+@jrmc.form({ error: false, object: {
+  firstname: 'Jeremy',
+  confirm: 'ok'
+} })
+  @jrmc.form.control({ name: 'firstname' })
+    @!jrmc.form.input()
+  @end
+
+  @jrmc.form.control({ name: 'confirm' })
+    @!jrmc.form.checkbox({ value: 'ok' })
+  @end
+
+  @jrmc.form.control({ name: 'manual_confirm' })
+    @!jrmc.form.checkbox({ checked: true })
+  @end
+
+  @jrmc.form.control({ name: 'displayname' })
+    @!jrmc.form.input({ value: 'Jerem' })
+  @end
+@end

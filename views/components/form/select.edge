@@ -3,12 +3,12 @@
   {{{ jrmc.getName($props, $context) ? ` name="${jrmc.getName($props, $context)}"` : '' }}}
   {{{ jrmc.getId($props, $context) ? ` id="${jrmc.getId($props, $context)}"` : '' }}}
   {{{ jrmc.getRequired($props, $context) ? ` required` : '' }}}
-  {{ $props.serializeExcept(['options', 'name', 'id', 'required']) }}>
+  {{ $props.serializeExcept(['options', 'name', 'id', 'required', 'value']) }}>
   @each(option in options)
     <option
       value="{{ option.value }}"
       {{{ jrmc.getDisabled(option, $context) ? ` disabled` : '' }}}
-      {{{ jrmc.getSelected(option, $context) ? ` selected` : ( $props.has('value') && $props.value == option.value ? ` selected` : '') }}}
+      {{{ jrmc.getSelected($props, $context, flashMessages, option) ? ` selected` : '' }}}
     >
       {{ option.text }}
     </option>
