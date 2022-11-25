@@ -14,15 +14,32 @@ const obj = {
   getId: (props, context={id: false}) => props.has('id') || context.id || props.has('name') ? props.get('id') || context.id || props.get('name') : '',
   getRequired: (props, context={required: false}) => props.has('required') || context.required ? props.get('required') || context.required : false,
   getDisabled: obj => obj.disabled ?? '',
-  getSelected: obj => obj.selected ?? '',
+  getSelected: (props, context = { value: null }, flashMessages=null, option) => {
+    const name = obj.getName(props, context)
+    const value = obj.getValue(props, context)
+    let values = null
+
+    if (value) {
+      values = Array.isArray(value) ? value : [value]
+    }
+
+    if (flashMessages && flashMessages.values) {
+      values = flashMessages.get(name)
+    }
+
+    if (values) {
+      return values.includes(option.value)
+    }
+
+    return option.selected ?? false
+  },
   getLabel: props => {
     const name = props.has('name') ? props.get('name') : ''
     return `${string.capitalCase(string.noCase(name))}:`
   },
-  getChecked: (props, context={value: null}, flashMessages) => {
-    const name = obj.getName(props, context)
-
+  getChecked: (props, context = { value: null }, flashMessages) => {
     if (flashMessages.values) {
+      const name = obj.getName(props, context)
       const value = flashMessages.get(name)
       return props.value === value
     }
