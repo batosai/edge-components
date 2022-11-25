@@ -19,6 +19,12 @@ const flashMessages = {
   }
 }
 
+const defaultFlash = {
+  values:null,
+  has: name => name ? false : false,
+  get: name => name
+}
+
 const jrmc = {
   getCssClass: (props, baseClass='', defaultClass='') => {
     const klass = props.has('class') ? props.get('class') : defaultClass
@@ -33,7 +39,7 @@ const jrmc = {
   getId: (props, context={id: false}) => props.has('id') || context.id || props.has('name') ? props.get('id') || context.id || props.get('name') : '',
   getRequired: (props, context={required: false}) => props.has('required') || context.required ? props.get('required') || context.required : false,
   getDisabled: obj => obj.disabled ?? '',
-  getSelected: (props, context = { value: null }, flashMessages=null, option) => {
+  getSelected: (props, context = { value: null }, flashMessages=defaultFlash, option) => {
     const name = jrmc.getName(props, context)
     const value = jrmc.getValue(props, context)
     let values = null
@@ -42,7 +48,7 @@ const jrmc = {
       values = Array.isArray(value) ? value : [value]
     }
 
-    if (flashMessages && flashMessages.values) {
+    if (flashMessages.values) {
       values = flashMessages.get(name)
     }
 
@@ -66,7 +72,7 @@ const jrmc = {
 
     return props.get('checked') || context.value || false
   },
-  getValue: (props, context={name: false, value:null}, flashMessages=null) => {
+  getValue: (props, context={name: false, value:null}, flashMessages=defaultFlash) => {
     const name = jrmc.getName(props, context)
     const type = props.get('type', 'text')
 
@@ -74,7 +80,7 @@ const jrmc = {
       return props.get('value') || context.value || ''
     }
 
-    if (flashMessages && flashMessages.has(name)) {
+    if (flashMessages.has(name)) {
       return flashMessages.get(name)
     }
 
