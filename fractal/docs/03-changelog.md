@@ -1,3 +1,7 @@
+# 1.4.0
+
+- Add file input support
+
 # 1.3.0
 
 - Add support flashMessages for form components
