@@ -1,5 +1,11 @@
 import { string } from '@poppinss/utils/build/helpers'
 
+const defaultFlash = {
+  values:null,
+  has: name => name ? false : false,
+  get: name => name
+}
+
 const obj = {
   getCssClass: (props, baseClass='', defaultClass='') => {
     const klass = props.has('class') ? props.get('class') : defaultClass
@@ -14,16 +20,16 @@ const obj = {
   getId: (props, context={id: false}) => props.has('id') || context.id || props.has('name') ? props.get('id') || context.id || props.get('name') : '',
   getRequired: (props, context={required: false}) => props.has('required') || context.required ? props.get('required') || context.required : false,
   getDisabled: obj => obj.disabled ?? '',
-  getSelected: (props, context = { value: null }, flashMessages=null, option) => {
+  getSelected: (props, context = { value: null, name: false }, flashMessages=defaultFlash, option) => {
     const name = obj.getName(props, context)
     const value = obj.getValue(props, context)
-    let values = null
+    let values: null|any = null
 
     if (value) {
       values = Array.isArray(value) ? value : [value]
     }
 
-    if (flashMessages && flashMessages.values) {
+    if (flashMessages.values) {
       values = flashMessages.get(name)
     }
 
@@ -37,7 +43,7 @@ const obj = {
     const name = props.has('name') ? props.get('name') : ''
     return `${string.capitalCase(string.noCase(name))}:`
   },
-  getChecked: (props, context = { value: null }, flashMessages) => {
+  getChecked: (props, context = { value: null, name: false }, flashMessages) => {
     if (flashMessages.values) {
       const name = obj.getName(props, context)
       const value = flashMessages.get(name)
@@ -46,7 +52,7 @@ const obj = {
 
     return props.get('checked') || context.value || false
   },
-  getValue: (props, context={name: false, value:null}, flashMessages=null) => {
+  getValue: (props, context={name: false, value:null}, flashMessages=defaultFlash) => {
     const name = obj.getName(props, context)
     const type = props.get('type', 'text')
 
@@ -54,7 +60,7 @@ const obj = {
       return props.get('value') || context.value || ''
     }
 
-    if (flashMessages && flashMessages.has(name)) {
+    if (flashMessages.has(name)) {
       return flashMessages.get(name)
     }
 
