@@ -15,3 +15,9 @@ Toggle is a checkbox that is styled to look like a switch button.
 | toggle-sm        | Responsive | Small toggle                     |
 | toggle-xs        | Responsive | Extra small toggle               |
 
+## Specific params
+
+| Param name       |   Type           |                |
+|------------------|------------------|----------------|
+| checked 	       |   boolean        | default check  |
+| disabled 	       |   boolean        |                |

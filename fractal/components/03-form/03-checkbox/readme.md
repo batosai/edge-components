@@ -14,3 +14,10 @@ Checkboxes are used to select or deselect a value.
 | checkbox-md        | Responsive | Medium checkbox(default)           |
 | checkbox-sm        | Responsive | Small checkbox                     |
 | checkbox-xs        | Responsive | Extra small checkbox               |
+
+## Specific params
+
+| Param name       |   Type           |                |
+|------------------|------------------|----------------|
+| checked 	       |   boolean        | default check  |
+| disabled 	       |   boolean        |                |

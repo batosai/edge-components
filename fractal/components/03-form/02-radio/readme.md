@@ -14,3 +14,10 @@ Radio buttons allow the user to select one option from a set.
 | radio-md        | Responsive | Medium radio(default)           |
 | radio-sm        | Responsive | Small radio                     |
 | radio-xs        | Responsive | Extra small radio               |
+
+## Specific params
+
+| Param name       |   Type           |                |
+|------------------|------------------|----------------|
+| checked 	       |   boolean        | default check  |
+| disabled 	       |   boolean        |                |
