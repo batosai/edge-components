@@ -21,15 +21,15 @@
   },
   "devDependencies": {
     "@frctl/fractal": "^1.5.14",
-    "@jrmc/fractal-edge-adapter": "^1.2.0",
+    "@jrmc/fractal-edge-adapter": "^1.2.1",
     "@poppinss/utils": "^5.0.0",
     "adonis-preset-ts": "^2.1.0",
-    "typescript": "^4.9.3"
+    "typescript": "^4.9.4"
   },
   "peerDependencies": {
-    "@adonisjs/core": "^5.8.9",
+    "@adonisjs/core": "^5.9.0",
     "alpinejs": "^3.10.5",
-    "daisyui": "^2.41.0",
+    "daisyui": "^2.46.0",
     "tailwindcss": "^3.2.4"
   },
   "volta": {
