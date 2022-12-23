@@ -1,3 +1,11 @@
+# 1.5.0
+
+- New chat component
+
+# 1.4.1
+
+- Update dependencies
+
 # 1.4.0
 
 - Add file input support

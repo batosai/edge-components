@@ -1,0 +1,25 @@
+<div class="chat chat-{{ $props.has('position') ? $props.get('position') : 'start' }}" {{ $props.serializeExcept(['class', 'message']) }}>
+  @if($slots.avatar !== undefined)~
+    <div class="chat-image avatar">
+      <div class="w-10 rounded-full">
+        {{{ await $slots.avatar() }}}
+      </div>
+    </div>
+  @end~
+
+  @if($slots.header !== undefined)~
+    <div class="chat-header">
+      {{{ await $slots.header() }}}
+    </div>
+  @end~
+
+  <div class="chat-bubble {{ jrmc.getCssClass($props) }}">
+    {{{ await $slots.main() || message || '' }}}
+  </div>
+
+  @if($slots.footer !== undefined)~
+    <div class="chat-footer opacity-50">
+      {{{ await $slots.footer() }}}
+    </div>
+  @end~
+</div>
