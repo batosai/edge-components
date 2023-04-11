@@ -12,6 +12,7 @@ Inspired by [edge-uikit](https://www.npmjs.com/package/edge-uikit)
 - [x] Button
 - [x] Card
 - [x] Carousel
+- [x] Chat bubble
 - [x] Drawer
 - [x] Dropdown
 - [x] Modal
@@ -30,6 +31,7 @@ Inspired by [edge-uikit](https://www.npmjs.com/package/edge-uikit)
 - [x] Input hidden
 - [x] Input checkbox
 - [x] Input radio
+- [x] File upload
 - [x] Select
 - [x] Textarea
 - [x] Label
