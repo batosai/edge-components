@@ -1,3 +1,7 @@
+# 1.6.1
+
+- Fix drawer component
+
 # 1.6.0
 
 - daisyUI > 3
