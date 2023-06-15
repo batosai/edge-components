@@ -5,6 +5,7 @@ The most popular, free and open-source Tailwind CSS component library in edge te
 Inspired by [edge-uikit](https://www.npmjs.com/package/edge-uikit)
 
 [edge-components.jrmc.dev](https://edge-components.jrmc.dev)
+
 [Github](https://github.com/batosai/edge-components)
 
 - [x] Alert
@@ -23,6 +24,7 @@ Inspired by [edge-uikit](https://www.npmjs.com/package/edge-uikit)
 - [x] Table
 - [x] Toast
 - [x] Tooltip
+- [x] Loading
 
 ## Form
 - [x] Input text
