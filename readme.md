@@ -5,6 +5,7 @@ The most popular, free and open-source Tailwind CSS component library in edge te
 Inspired by [edge-uikit](https://www.npmjs.com/package/edge-uikit)
 
 [edge-components.jrmc.dev](https://edge-components.jrmc.dev)
+[Github](https://github.com/batosai/edge-components)
 
 - [x] Alert
 - [x] Avatar
@@ -48,11 +49,8 @@ If your component becomes too complex, it may make more sense to use HTML direct
 - [x] essential Components
 - [x] page demo
 - [x] package adonisjs
-- [ ] unpoly support
 - [x] alpine.js support
 - [ ] cleave.js support
-- [ ] demo projet adonisjs
-- [ ] other components
 
 
 ## Setup

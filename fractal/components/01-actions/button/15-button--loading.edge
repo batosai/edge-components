@@ -1,4 +1,9 @@
 <div>
-  @!jrmc.button({ class: 'btn-square loading' })
-  @!jrmc.button({ text: 'button', class: 'loading' })
+  @jrmc.button({ class: 'btn-square' })
+    @!jrmc.loading.spinner()
+  @end
+  @jrmc.button({ text: 'button' })
+    @!jrmc.loading.spinner()
+    Text
+  @end
 </div>

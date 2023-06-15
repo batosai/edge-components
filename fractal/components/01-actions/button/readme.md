@@ -30,3 +30,8 @@ Buttons allows user to take actions or make choices.
 | btn-block     | Responsive | Full width button                      |
 | btn-circle    | Responsive | Circle button with a 1:1 ratio         |
 | btn-square    | Responsive | Square button with a 1:1 ratio         |
+
+
+/!\ Deprecated
+
+Button group daisyUI >= 3, use [join](https://daisyui.com/components/join/)

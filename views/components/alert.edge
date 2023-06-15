@@ -1,13 +1,12 @@
-<div class="{{ jrmc.getCssClass($props, 'alert shadow-lg') }}" {{ $props.serializeExcept(['class', 'text', 'icon']) }}>
-  <div>
-    {{{ $slots.icon !== undefined ? await $slots.icon() : '' }}}
-    @if(text)~
-      <span>{{ text }}</span>
-    @else~
-      <div>{{{ await $slots.main() }}}</div>
-    @end~
-  </div>
+<div class="{{ jrmc.getCssClass($props, 'alert') }}" {{ $props.serializeExcept(['class', 'text', 'icon']) }}>
+  {{{ $slots.icon !== undefined ? await $slots.icon() : '<span></span>' }}}
+  @if(text)~
+    <span>{{ text }}</span>
+  @else~
+    <div>{{{ await $slots.main() }}}</div>
+  @end~
+
   @if($slots.actions !== undefined)~
-    <div class="flex-none">{{{ await $slots.actions() }}}</div>
+    <div>{{{ await $slots.actions() }}}</div>
   @end~
 </div>
