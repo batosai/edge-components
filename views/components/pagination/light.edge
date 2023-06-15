@@ -1,16 +1,16 @@
-<div class="btn-group">
+<div class="join">
 
   @if(object.currentPage !== 1)~
-    @!jrmc.button.link({ text: '«', href: object.getPreviousPageUrl(), class: `btn-${$props.has('size') ? $props.get('size') : 'md'}` })
+    @!jrmc.button.link({ text: '«', href: object.getPreviousPageUrl(), class: `join-item btn-${$props.has('size') ? $props.get('size') : 'md'}` })
   @else~
-    @!jrmc.button.link({ text: '«', class: ['btn-disabled', `btn-${$props.has('size') ? $props.get('size') : 'md'}`] })
+    @!jrmc.button.link({ text: '«', class: ['btn-disabled', `join-item btn-${$props.has('size') ? $props.get('size') : 'md'}`] })
   @end~
 
-  <button class="btn btn-{{ $props.has('size') ? $props.get('size') : 'md' }}">Page {{ object.currentPage }}</button>
+  <button class="btn join-item btn-{{ $props.has('size') ? $props.get('size') : 'md' }}">Page {{ object.currentPage }}</button>
 
   @if(object.currentPage < object.lastPage)~
-    @!jrmc.button.link({ text: '»', href: object.getNextPageUrl(), class: `btn-${$props.has('size') ? $props.get('size') : 'md'}` })
+    @!jrmc.button.link({ text: '»', href: object.getNextPageUrl(), class: `join-item btn-${$props.has('size') ? $props.get('size') : 'md'}` })
   @else~
-    @!jrmc.button.link({ text: '»', class: ['btn-disabled', `btn-${$props.has('size') ? $props.get('size') : 'md'}`] })
+    @!jrmc.button.link({ text: '»', class: ['btn-disabled', 'join-item', `btn-${$props.has('size') ? $props.get('size') : 'md'}`] })
   @end~
 </div>

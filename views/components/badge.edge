@@ -1,3 +1,3 @@
-<{{jrmc.getTagName($props, 'span')}} class="{{ jrmc.getCssClass($props, 'badge') }}" {{ $props.serializeExcept(['class', 'as']) }}>
+<{{jrmc.getTagName($props, 'span')}} class="{{ jrmc.getCssClass($props, 'badge') }}" {{ $props.serializeExcept(['class', 'as', 'text']) }}>
   {{{ await $slots.main() || text || '' }}}
 </{{jrmc.getTagName($props, 'span')}}>

@@ -6,6 +6,8 @@ Inspired by [edge-uikit](https://www.npmjs.com/package/edge-uikit)
 
 [edge-components.jrmc.dev](https://edge-components.jrmc.dev)
 
+[Github](https://github.com/batosai/edge-components)
+
 - [x] Alert
 - [x] Avatar
 - [x] Badge
@@ -22,6 +24,7 @@ Inspired by [edge-uikit](https://www.npmjs.com/package/edge-uikit)
 - [x] Table
 - [x] Toast
 - [x] Tooltip
+- [x] Loading
 
 ## Form
 - [x] Input text
@@ -48,11 +51,8 @@ If your component becomes too complex, it may make more sense to use HTML direct
 - [x] essential Components
 - [x] page demo
 - [x] package adonisjs
-- [ ] unpoly support
 - [x] alpine.js support
 - [ ] cleave.js support
-- [ ] demo projet adonisjs
-- [ ] other components
 
 
 ## Setup

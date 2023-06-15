@@ -1,28 +1,30 @@
-<div class="btn-group">
+<div class="join">
   @if(object.lastPage > 10)~
     @if(object.currentPage > 4)~
-        @!jrmc.button.link({ text: 1, href: object.getUrl(1), class: 1 === object.currentPage ? `btn-active btn-${$props.has('size') ? $props.get('size') : 'md'}` : '' })
+      @each(anchor in object.getUrlsForRange(1, 1))
+        @!jrmc.button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? `join-item btn-active btn-${$props.has('size') ? $props.get('size') : 'md'}` : 'join-item' })
+      @end
       @if(object.currentPage !== 5)~
-        @!jrmc.button.link({ text: '...', class: 'btn-disabled' })
+        @!jrmc.button.link({ text: '...', class: 'join-item btn-disabled' })
       @end~
     @end~
 
     @each(anchor in object.getUrlsForRange((object.currentPage-3 >= 1 ? object.currentPage-3 : 1), (object.currentPage+3 <= object.lastPage ? object.currentPage+3 : object.lastPage)))
-      @!jrmc.button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? 'btn-active' : '' })
+      @!jrmc.button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? 'join-item btn-active' : 'join-item' })
     @end
 
     @if(object.currentPage < object.lastPage-5)~
       @if(object.currentPage < object.lastPage-6)
-        @!jrmc.button.link({ text: '...', class: 'btn-disabled' })
+        @!jrmc.button.link({ text: '...', class: 'join-item btn-disabled' })
       @end
 
       @each(anchor in object.getUrlsForRange(object.lastPage-2, object.lastPage))
-        @!jrmc.button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? 'btn-active' : '' })
+        @!jrmc.button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? 'join-item btn-active' : 'join-item' })
       @end
     @end~
   @else~
     @each(anchor in object.getUrlsForRange(1, object.lastPage))
-      @!jrmc.button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? `btn-active btn-${$props.has('size') ? $props.get('size') : 'md'}` : `btn-${$props.has('size') ? $props.get('size') : 'md'}` })
+      @!jrmc.button.link({ text: anchor.page, href: anchor.url, class: anchor.page === object.currentPage ? `join-item btn-active btn-${$props.has('size') ? $props.get('size') : 'md'}` : `join-item btn-${$props.has('size') ? $props.get('size') : 'md'}` })
     @end
   @end~
 </div>
