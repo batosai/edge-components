@@ -1,4 +1,4 @@
-<div class="drawer-side">
+<div class="drawer-side z-50">
   <label class="drawer-overlay" @click="open = false"></label>
   <div class="{{ jrmc.getCssClass($props, '', 'overflow-y-auto p-4 h-full w-80 bg-base-100') }}">
     {{{ await $slots.main() || '' }}}
