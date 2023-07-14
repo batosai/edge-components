@@ -1,3 +1,8 @@
+# 1.6.2
+
+- Fix drawer z-index sidebar
+- Update daisyUI
+
 # 1.6.1
 
 - Fix drawer component
