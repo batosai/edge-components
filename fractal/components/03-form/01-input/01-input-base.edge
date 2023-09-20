@@ -1,15 +1,19 @@
 <div class="w-full max-w-xs">
-  @!jrmc.form.input({ placeholder: 'Default', class: 'w-full' })
-  <br /><br />
-  @!jrmc.form.input({ type: 'number', placeholder: '0', class: 'w-full' })
-  <br /><br />
-  @!jrmc.form.input({ type: 'email', placeholder: 'john.snow@got.com', class: 'w-full' })
-  <br /><br />
-  @!jrmc.form.input({ type: 'date', class: 'w-full' })
-  <br /><br />
-  @!jrmc.form.input({ type: 'datetime-local', class: 'w-full' })
-  <br /><br />
-  @!jrmc.form.input({ type: 'color', class: 'w-full' })
-  <br /><br />
-  @!jrmc.form.input({ type: 'hidden', value: 'true', class: 'w-full' })
+  @jrmc.card({ class: 'bg-neutral'})
+    @jrmc.card.body()
+      @!jrmc.form.input({ placeholder: 'Default', class: 'w-full' })
+      <br /><br />
+      @!jrmc.form.input({ type: 'number', placeholder: '0', class: 'w-full' })
+      <br /><br />
+      @!jrmc.form.input({ type: 'email', placeholder: 'john.snow@got.com', class: 'w-full' })
+      <br /><br />
+      @!jrmc.form.input({ type: 'date', class: 'w-full' })
+      <br /><br />
+      @!jrmc.form.input({ type: 'datetime-local', class: 'w-full' })
+      <br /><br />
+      @!jrmc.form.input({ type: 'color', class: 'w-full' })
+      <br /><br />
+      @!jrmc.form.input({ type: 'hidden', value: 'true', class: 'w-full' })
+    @end
+  @end
 </div>

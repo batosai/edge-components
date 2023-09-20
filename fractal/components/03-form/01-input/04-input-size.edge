@@ -1,10 +1,14 @@
 <div class="w-full max-w-xs">
-  @!jrmc.form.input({ placeholder: 'Size xs',  class: 'input-xs' })
-  <br /><br />
-  @!jrmc.form.input({ placeholder: 'Size sm',  class: 'input-sm' })
-  <br /><br />
-  @!jrmc.form.input({ placeholder: 'Size md',  class: 'input-md' })
-  <br /><br />
-  @!jrmc.form.input({ placeholder: 'Size lg',  class: 'input-lg' })
+  @jrmc.card({ class: 'bg-neutral'})
+    @jrmc.card.body()
+      @!jrmc.form.input({ placeholder: 'Size xs',  class: 'input-xs' })
+      <br /><br />
+      @!jrmc.form.input({ placeholder: 'Size sm',  class: 'input-sm' })
+      <br /><br />
+      @!jrmc.form.input({ placeholder: 'Size md',  class: 'input-md' })
+      <br /><br />
+      @!jrmc.form.input({ placeholder: 'Size lg',  class: 'input-lg' })
+    @end
+  @end
 </div>
 

@@ -1,5 +1,11 @@
 # 1.6.2
 
+- Update daisyUI
+- Update dependencies
+- Fix fractal doc
+
+# 1.6.2
+
 - Fix drawer z-index sidebar
 - Update daisyUI
 

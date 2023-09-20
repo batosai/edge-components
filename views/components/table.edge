@@ -1,5 +1,5 @@
 <div class="overflow-x-auto{{ $props.has('full') && full ? ' w-full' : '' }}{{ $props.has('height') ? ' h-'+height : '' }}">
-  <table class="{{ jrmc.getCssClass($props, 'table') }} table-{{ $props.has('size') ? $props.get('size') : 'md' }}{{ $props.has('full') && full ? ' w-full' : '' }}{{ $props.has('pinRows') && pinRows ? ' table-pin-rows' : '' }}{{ $props.has('pinCols') && pinCols ? ' table-pin-cols' : '' }}">
+  <table class="{{ jrmc.getCssClass($props, 'table') }} table-{{ $props.has('size') ? $props.get('size') : 'md' }}{{ $props.has('full') && full ? ' w-max' : '' }}{{ $props.has('pinRows') && pinRows ? ' table-pin-rows' : '' }}{{ $props.has('pinCols') && pinCols ? ' table-pin-cols' : '' }}">
     @if($slots.header !== undefined)~
       <thead>{{{ await $slots.header() }}}</thead>
     @end~

@@ -3,7 +3,7 @@
   confirm: 'ok'
 } })
   @jrmc.form.control({ name: 'firstname' })
-    @!jrmc.form.input()
+    @!jrmc.form.input({ class: 'input-bordered' })
   @end
 
   @jrmc.form.control({ name: 'confirm' })
@@ -15,6 +15,6 @@
   @end
 
   @jrmc.form.control({ name: 'displayname' })
-    @!jrmc.form.input({ value: 'Jerem' })
+    @!jrmc.form.input({ value: 'Jerem', class: 'input-bordered' })
   @end
 @end
