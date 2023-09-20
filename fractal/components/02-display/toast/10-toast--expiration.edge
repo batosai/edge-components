@@ -1,11 +1,11 @@
 <div>
-  @toast({
+  @jrmc.toast({
     'class': 'toast-top toast-end',
     'x-data': '{ open: true }',
     'x-show': 'open',
     'x-transition.duration.500ms': '',
     'x-init': 'setTimeout(() => open = false, 5000);setTimeout(() => $el.remove(), 6000)',
   })
-    @!alert.info({ text: 'New message arrived.', icon: 'false' })
+    @!jrmc.alert.info({ text: 'New message arrived.', icon: 'false' })
   @end
 </div>

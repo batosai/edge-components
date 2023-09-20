@@ -13,7 +13,7 @@
           @slot('button')
             @jrmc.button.label({ class: 'btn-ghost btn-circle avatar' })
               <div class="w-10 rounded-full">
-                <img src="https://placeimg.com/80/80/people" />
+                <img src="https://picsum.photos/80/80" />
               </div>
             @end
           @end
@@ -57,7 +57,7 @@
           </div>
         </div>
 
-        @jrmc.table({ full: true })
+        @jrmc.table({ class: 'w-full' })
           @slot('header')
             <tr>
               <th>
@@ -65,15 +65,6 @@
                   <input type="checkbox" class="checkbox" />
                 </label>
               </th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
-              <th></th>
-            </tr>
-          @end
-          @slot('footer')
-            <tr>
-              <th></th>
               <th>Name</th>
               <th>Job</th>
               <th>Favorite Color</th>
