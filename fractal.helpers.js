@@ -67,8 +67,9 @@ const jrmc = {
 
     return option.selected ?? false
   },
-  getLabel: (props, context = { translator: { prefix: '' } }) => {
-    const t = defaultT
+  getLabel: (props, context = { translator: { prefix: '', t: (k) => k } }) => {
+    const t = context.translator.t
+
     let name = props.has('name') ? props.get('name') : ''
 
     if (props.has('translator.prefix')) {
@@ -123,5 +124,6 @@ module.exports = {
       getNextPageUrl: () => urls[currentPage+1].url,
     }
   },
-  flashMessages
+  flashMessages,
+  t: defaultT
 }
