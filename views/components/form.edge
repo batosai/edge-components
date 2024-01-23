@@ -1,6 +1,6 @@
 @inject({
   object: $props.get('object'),
-  translator: $props.has('translator') ? $props.get('translator') : null
+  translator: $props.has('translator') ? $props.get('translator') : { prefix: '', t: (k) => k }
 })
 
 <form method="{{ jrmc.getMethodForm($props, 'POST') }}" {{ $props.serializeExcept(['method', 'object', 'translator']) }}>
