@@ -7,6 +7,7 @@ Buttons allows user to take actions or make choices.
 | Class name    |   Type     |                                        |
 |---------------|------------|----------------------------------------|
 | btn           | Component  | Button                                 |
+| btn-neutral   | Modifier   | Button with `neutral` color            |
 | btn-primary   | Modifier   | Button with `primary` color            |
 | btn-secondary | Modifier   | Button with `secondary` color          |
 | btn-accent    | Modifier   | Button with `accent` color             |
@@ -20,7 +21,6 @@ Buttons allows user to take actions or make choices.
 | btn-active    | Modifier   | Force button to show active state      |
 | btn-disabled  | Modifier   | Force button to show disabled state    |
 | glass         | Modifier   | Button with a glass effect             |
-| loading       | Modifier   | Shows loading spinner                  |
 | no-animation  | Modifier   | Disables click animation               |
 | btn-lg        | Responsive | Large button                           |
 | btn-md        | Responsive | Medium button (default)                |

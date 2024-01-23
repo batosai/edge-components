@@ -1,3 +1,7 @@
-<div class="{{ jrmc.getCssClass($props, 'tabs') }}">
+@inject({
+  name: $props.has('name') ? $props.get('name') : 'my_tab',
+})
+
+<div role="tablist" class="{{ jrmc.getCssClass($props, 'tabs') }}">
   {{{ await $slots.main() || '' }}}
 </div>

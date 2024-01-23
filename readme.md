@@ -52,7 +52,6 @@ If your component becomes too complex, it may make more sense to use HTML direct
 - [x] page demo
 - [x] package adonisjs
 - [x] alpine.js support
-- [ ] cleave.js support
 
 
 ## Setup
