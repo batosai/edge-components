@@ -44,7 +44,7 @@ const obj = {
 
     if (props.has('translator.prefix')) {
       name = t(`${props.translator.prefix}${name}`)
-    } else if (context.translator.prefix) {
+    } else if (context?.translator?.prefix) {
       name = t(`${context.translator.prefix}${name}`)
     }
 
