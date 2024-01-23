@@ -1,6 +1,6 @@
 <div class="avatar{{ $props.has('status') ? ` ${$props.get('status')}` : '' }} {{ $props.has('placeholder') ? ' placeholder' : '' }}" {{ $props.serializeExcept(['class', 'url']) }}>
   @if($props.has('placeholder'))
-    <div class="{{ jrmc.getCssClass($props, '', 'w-24 bg-neutral-focus text-neutral-content') }}">
+    <div class="{{ jrmc.getCssClass($props, '', 'w-24 bg-neutral-content text-neutral') }}">
       <span>{{ $props.get('placeholder') }}</span>
     </div>
   @else

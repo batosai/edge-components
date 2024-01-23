@@ -1,6 +1,18 @@
-<a
-  {{ $props.serializeExcept(['text', 'class', 'active']) }}
-  class="{{ jrmc.getCssClass($props, ['tab', ($props.has('active') && active ? ' tab-active' : '')]) }}"
->
-  {{{ await $slots.main() || text }}}
-</a>
+
+
+@if($slots.main())~
+  <input type="radio" role="tab" class="tab" name="{{ $context.name }}" aria-label="{{ text }}" {{ $props.has('active') && active ? 'checked' : '' }} />
+  <div role="tabpanel" class="tab-content p-10">
+    {{{ await $slots.main() }}}
+  </div>
+@else~
+  <a
+    {{ $props.serializeExcept(['text', 'class', 'active']) }}
+    role="tab"
+    class="{{ jrmc.getCssClass($props, ['tab', ($props.has('active') && active ? ' tab-active' : '')]) }}"
+  >
+    @if($props.has('text'))~
+      {{ text }}
+    @end~
+  </a>
+@end~
