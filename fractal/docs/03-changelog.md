@@ -1,5 +1,6 @@
 # 1.7.0
 
+- Form label translator
 - Update daisyUI (4.6.0)
 - Update dependencies
 - Update button, avatar components

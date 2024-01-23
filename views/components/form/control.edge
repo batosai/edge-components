@@ -4,7 +4,7 @@
   required: jrmc.getRequired($props),
   hint: $props.get('hint'),
   error: flashMessages.get(`errors.${jrmc.getName($props)}`, false),
-  value: $context.object && $context.object[jrmc.getName($props)] ? $context.object[jrmc.getName($props)] : ''
+  value: $context.object && $context.object[jrmc.getName($props)] ? $context.object[jrmc.getName($props)] : '',
 })
 
 <{{jrmc.getTagName($props)}} class="{{ jrmc.getCssClass($props, 'form-control mb-5') }}" {{ $props.serializeExcept(['id', 'class', 'as', 'name', 'label', 'hint', 'required']) }}>
@@ -14,7 +14,7 @@
       @!jrmc.form.label({ text: $props.get('label'), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
     @end~
   @elseif($props.has('name'))~
-    @!jrmc.form.label({ text: jrmc.getLabel($props), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
+    @!jrmc.form.label({ text: jrmc.getLabel($props, $context, t= t ? t : k=>k ), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
   @end~
 
   {{{ await $slots.main() || '' }}}

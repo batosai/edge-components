@@ -19,6 +19,15 @@ const flashMessages = {
   }
 }
 
+const defaultT = key => {
+  const sample = {
+    'user.name': 'Nom',
+    'page.title': 'Titre',
+  }
+
+  return sample[key] ? sample[key] : key
+}
+
 const defaultFlash = {
   values:null,
   has: name => name ? false : false,
@@ -58,8 +67,16 @@ const jrmc = {
 
     return option.selected ?? false
   },
-  getLabel: props => {
-    const name = props.has('name') ? props.get('name') : ''
+  getLabel: (props, context = { translator: { prefix: '' } }) => {
+    const t = defaultT
+    let name = props.has('name') ? props.get('name') : ''
+
+    if (props.has('translator.prefix')) {
+      name = t(`${props.translator.prefix}${name}`)
+    } else if (context.translator.prefix) {
+      name = t(`${context.translator.prefix}${name}`)
+    }
+
     return `${string.capitalCase(string.noCase(name))}:`
   },
   getChecked: (props, context = { value: null }, flashMessages) => {
