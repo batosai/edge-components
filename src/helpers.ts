@@ -39,16 +39,8 @@ const obj = {
 
     return option.selected ?? false
   },
-  getLabel: (props, context = { translator: { prefix: '', t: (k) => k } }) => {
-    const t = context.translator.t
-
-    let name = props.has('name') ? props.get('name') : ''
-
-    if (props.has('translator.prefix')) {
-      name = t(`${props.translator.prefix}${name}`)
-    } else if (context?.translator?.prefix) {
-      name = t(`${context.translator.prefix}${name}`)
-    }
+  getLabel: (props) => {
+    const name = props.has('name') ? props.get('name') : ''
 
     return `${string.capitalCase(string.noCase(name))}:`
   },

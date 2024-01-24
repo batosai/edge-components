@@ -19,15 +19,6 @@ const flashMessages = {
   }
 }
 
-const defaultT = key => {
-  const sample = {
-    'user.name': 'Nom',
-    'page.title': 'Titre',
-  }
-
-  return sample[key] ? sample[key] : key
-}
-
 const defaultFlash = {
   values:null,
   has: name => name ? false : false,
@@ -67,16 +58,8 @@ const jrmc = {
 
     return option.selected ?? false
   },
-  getLabel: (props, context = { translator: { prefix: '', t: (k) => k } }) => {
-    const t = context.translator.t
-
-    let name = props.has('name') ? props.get('name') : ''
-
-    if (props.has('translator.prefix')) {
-      name = t(`${props.translator.prefix}${name}`)
-    } else if (context.translator.prefix) {
-      name = t(`${context.translator.prefix}${name}`)
-    }
+  getLabel: props => {
+    const name = props.has('name') ? props.get('name') : ''
 
     return `${string.capitalCase(string.noCase(name))}:`
   },
@@ -125,5 +108,4 @@ module.exports = {
     }
   },
   flashMessages,
-  t: defaultT
 }
