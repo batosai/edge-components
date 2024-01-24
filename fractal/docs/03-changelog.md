@@ -1,3 +1,7 @@
+# 1.8.0
+
+- Remove label translator, this was a bad idea. It is preferable and cleaner to use the label attribute of the control component
+
 # 1.7.0
 
 - Form label translator

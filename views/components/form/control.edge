@@ -14,7 +14,7 @@
       @!jrmc.form.label({ text: $props.get('label'), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
     @end~
   @elseif($props.has('name'))~
-    @!jrmc.form.label({ text: jrmc.getLabel($props, $context), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
+    @!jrmc.form.label({ text: jrmc.getLabel($props), class: 'cursor-pointer', for: jrmc.getId($props), required: jrmc.getRequired($props), })
   @end~
 
   {{{ await $slots.main() || '' }}}
