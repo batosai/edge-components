@@ -1,6 +1,6 @@
 {
   "name": "@jrmc/edge-components",
-  "version": "1.7.0alpha",
+  "version": "1.7.0",
   "description": "",
   "main": "build/index.js",
   "repository": {
