@@ -1,4 +1,4 @@
-# 1.7.0
+# 1.7.2
 
 - Update daisyUI (4.6.0)
 - Update dependencies
