@@ -1,5 +1,5 @@
 <label
   tabindex="0"
-  {{ $props.serializeExcept(['text', 'class']) }}
+  {{ $props.except(['text', 'class']).toAttrs() }}
   class="{{ jrmc.getCssClass($props, 'btn') }}"
 >{{{ await $slots.main() || text }}}</label>

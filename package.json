@@ -1,6 +1,7 @@
 {
   "name": "@jrmc/edge-components",
-  "version": "1.7.2",
+  "version": "2.0.0-alpha",
+  "type": "module",
   "description": "",
   "main": "build/index.js",
   "repository": {
@@ -14,20 +15,15 @@
     "edge-components"
   ],
   "scripts": {
-    "fractal:start": "fractal start --sync",
-    "fractal:build": "fractal build",
-    "ts:build": "tsc",
-    "prepublishOnly": "tsc"
+    "ts:build": "tsc --esModuleInterop",
+    "prepublishOnly": "tsc --esModuleInterop"
   },
   "devDependencies": {
-    "@frctl/fractal": "^1.5.15",
-    "@jrmc/fractal-edge-adapter": "^1.2.2",
+    "@adonisjs/tsconfig": "^1.2.1",
     "@poppinss/utils": "^5.0.0",
-    "adonis-preset-ts": "^2.1.0",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "@adonisjs/core": "^5.9.0",
     "alpinejs": "^3.13.0",
     "daisyui": "^4.6.0",
     "tailwindcss": "^3.4.1"

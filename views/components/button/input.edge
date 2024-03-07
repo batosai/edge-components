@@ -1,5 +1,5 @@
 <input
-  {{ $props.serializeExcept(['text', 'class', 'type']) }}
+  {{ $props.except(['text', 'class', 'type']).toAttrs() }}
   type="{{ $props.has('type') ? $props.get('type') : 'button' }}"
   class="{{ jrmc.getCssClass($props, 'btn') }}"
   value="{{ text }}"

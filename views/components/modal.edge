@@ -11,7 +11,7 @@
     {{ $props.button.text }}
   @end
   <template x-teleport="body">
-    <dialog class="modal modal-open {{ $props.mobile === true ? 'modal-bottom sm:modal-middle' : '' }}" x-show="open" {{{ $props.escape === false ? '' : '@keyup.escape.window="open = false"' }}} {{ $props.serializeExcept(['text', 'class', 'button', 'outside', 'escape', 'mobile']) }}>
+    <dialog class="modal modal-open {{ $props.mobile === true ? 'modal-bottom sm:modal-middle' : '' }}" x-show="open" {{{ $props.escape === false ? '' : '@keyup.escape.window="open = false"' }}} {{ $props.except(['text', 'class', 'button', 'outside', 'escape', 'mobile']).toAttrs() }}>
       <div class="{{ jrmc.getCssClass($props, 'modal-box') }}" {{{ $props.outside === false ? '' : '@click.outside="open = false"' }}}>
         {{{ await $slots.main() || '' }}}
         @if($slots.action !== undefined)

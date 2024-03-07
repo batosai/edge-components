@@ -1,5 +1,5 @@
 <div
-  {{ $props.serializeExcept(['class']) }}
+  {{ $props.except(['class']).toAttrs() }}
   class="{{ jrmc.getCssClass($props, 'toast') }}"
 >
   {{{ await $slots.main() }}}

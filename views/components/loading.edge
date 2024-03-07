@@ -1,1 +1,1 @@
-<span class="{{ jrmc.getCssClass($props, 'loading') }}" {{ $props.serializeExcept(['class']) }}></span>
+<span class="{{ jrmc.getCssClass($props, 'loading') }}" {{ $props.except(['class']).toAttrs() }}></span>

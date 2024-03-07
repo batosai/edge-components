@@ -1,4 +1,4 @@
-<div class="chat chat-{{ $props.has('position') ? $props.get('position') : 'start' }}" {{ $props.serializeExcept(['class', 'message']) }}>
+<div class="chat chat-{{ $props.has('position') ? $props.get('position') : 'start' }}" {{ $props.except(['class', 'message']).toAttrs() }}>
   @if($slots.avatar !== undefined)~
     <div class="chat-image avatar">
       <div class="w-10 rounded-full">

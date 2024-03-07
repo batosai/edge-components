@@ -7,7 +7,7 @@
   value: $context.object && $context.object[jrmc.getName($props)] ? $context.object[jrmc.getName($props)] : '',
 })
 
-<{{jrmc.getTagName($props)}} class="{{ jrmc.getCssClass($props, 'form-control mb-5') }}" {{ $props.serializeExcept(['id', 'class', 'as', 'name', 'label', 'hint', 'required']) }}>
+<{{jrmc.getTagName($props)}} class="{{ jrmc.getCssClass($props, 'form-control mb-5') }}" {{ $props.except(['id', 'class', 'as', 'name', 'label', 'hint', 'required']).toAttrs() }}>
 
   @if($props.has('label'))~
     @if($props.get('label') !== false)~

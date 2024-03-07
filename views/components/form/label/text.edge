@@ -1,4 +1,4 @@
-<{{jrmc.getTagName($props, 'span')}} class="{{ jrmc.getCssClass($props, 'label-text') }}" {{ $props.serializeExcept(['class', 'as', 'text', 'required']) }}>
+<{{jrmc.getTagName($props, 'span')}} class="{{ jrmc.getCssClass($props, 'label-text') }}" {{ $props.except(['class', 'as', 'text', 'required']).toAttrs() }}>
   {{{ await $slots.main() || text || '' }}}
   @if(jrmc.getRequired($props, $context))~
   *

@@ -1,4 +1,4 @@
-<div {{ $props.serializeExcept(['class', 'url']) }} class="{{ jrmc.getCssClass($props, 'carousel-item') }}">
+<div {{ $props.except(['class', 'url']).toAttrs() }} class="{{ jrmc.getCssClass($props, 'carousel-item') }}">
   @if($props.has('url'))~
     <img src="{{ url }}" alt="{{ alt || '' }}" />
   @else~

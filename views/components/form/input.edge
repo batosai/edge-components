@@ -4,6 +4,6 @@
   {{{ jrmc.getName($props, $context) ? ` name="${jrmc.getName($props, $context)}"` : '' }}}
   {{{ jrmc.getId($props, $context) ? ` id="${jrmc.getId($props, $context)}"` : '' }}}
   {{{ jrmc.getRequired($props, $context) ? ` required` : '' }}}
-  {{ $props.serializeExcept(['class', 'type', 'name', 'id', 'required', 'value']) }}
+  {{ $props.except(['class', 'type', 'name', 'id', 'required', 'value']).toAttrs() }}
   value="{{ jrmc.getValue($props, $context, flashMessages) }}"
 />

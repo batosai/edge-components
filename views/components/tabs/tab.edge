@@ -7,7 +7,7 @@
   </div>
 @else~
   <a
-    {{ $props.serializeExcept(['text', 'class', 'active']) }}
+    {{ $props.except(['text', 'class', 'active']).toAttrs() }}
     role="tab"
     class="{{ jrmc.getCssClass($props, ['tab', ($props.has('active') && active ? ' tab-active' : '')]) }}"
   >

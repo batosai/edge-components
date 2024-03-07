@@ -1,7 +1,7 @@
-import path from 'path'
-import helpers from './helpers'
+import helpers from './helpers.js'
 
-export default (edge) => {
-    edge.mount('jrmc', path.join(__dirname, '../views'))
+export default (edge: any) => {
+    edge.mount('jrmc', new URL('../views', import.meta.url))
+
     edge.global('jrmc', helpers)
 }

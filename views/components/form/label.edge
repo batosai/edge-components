@@ -1,4 +1,4 @@
-<{{jrmc.getTagName($props, 'label')}} class="{{ jrmc.getCssClass($props, 'label') }}" {{ $props.serializeExcept(['class', 'as', 'text', 'required']) }}>
+<{{jrmc.getTagName($props, 'label')}} class="{{ jrmc.getCssClass($props, 'label') }}" {{ $props.except(['class', 'as', 'text', 'required']).toAttrs() }}>
   @if($props.has('text'))
     @!jrmc.form.label.text({ text, required: jrmc.getRequired($props, $context) }) 
   @end~
