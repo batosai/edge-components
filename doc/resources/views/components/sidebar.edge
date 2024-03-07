@@ -1,0 +1,94 @@
+edge-components
+@!jrmc.badge({ text: '2.0', class: 'badge-primary' })
+
+<nav>
+  <ul class="menu menu-compact text-base-content rounded-box p-4">
+
+    <li>
+      <details open>
+        <summary>
+          @!svg('tabler:click')
+          Actions
+        </summary>
+        <ul>
+          <li>
+            <details open>
+              <summary>Button</summary>
+              <ul>
+                <li><a>Default</a></li>
+                <li><a>With brand colors</a></li>
+                <li><a>Active</a></li>
+                <li><a>With state colors</a></li>
+                <li><a>Outline</a></li>
+                <li><a>Size</a></li>
+                <li><a>Responsive</a></li>
+                <li><a>Wide</a></li>
+                <li><a>Glass</a></li>
+                <li><a>Block</a></li>
+                <li><a>No animation</a></li>
+                <li><a>Disabled</a></li>
+                <li><a>Square circle</a></li>
+                <li><a>Icon</a></li>
+                <li><a>Loading</a></li>
+                <li><a>Tag</a></li>
+                <li><a>Group</a></li>
+                <li><a>Tooltip</a></li>
+                <li><a>Badge</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </details>
+    </li>
+
+    {{-- <li>
+      @!sidebar.link({
+        class: request.matchesRoute(['root']) ? 'active' : null,
+        text: 'sidebar.dashboard',
+        icon: 'akar-icons:dashboard',
+        href: route('root')
+      })
+    </li> --}}
+    <li></li>
+    <li>
+      <details open>
+        <summary>
+          @!svg('tabler:input-check')
+          Form
+        </summary>
+      </details>
+    </li>
+    <li></li>
+    <li>
+      <details open>
+        <summary>
+          @!svg('tabler:link')
+          Navigation
+        </summary>
+      </details>
+    </li>
+    <li></li>
+    <li>
+      <details open>
+        <summary>
+          @!svg('tabler:brand-pagekit')
+          Pages
+        </summary>
+      </details>
+    </li>
+    <li></li>
+
+    <li>
+      <a>
+        @!svg('fa-solid:cog')
+        Installation
+      </a>
+    </li>
+    <li>
+      <a>
+        @!svg('fa-solid:cog')
+        Changelog
+      </a>
+    </li>
+  </ul>
+</nav>

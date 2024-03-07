@@ -1,0 +1,32 @@
+
+@layout()
+
+  @!breadcrumb({
+    items: [
+      { label: 'admin.sidebar.dashboard' }
+    ]
+  })
+
+
+
+    <h2 class="text-base font-semibold leading-7 px-4" ><a href="#button" class="text-primary">#</a> Button</h2>
+
+    <div id="button" role="tablist" class="tabs tabs-lifted m-4">
+      <input type="radio" name="my_tabs_1" role="tab" class="tab [--tab-bg:#282c34] [--tab-border-color:#282c34]" aria-label="Preview" />
+      <div role="tabpanel" class="tab-content bg-[#282c34] border-[#282c34] rounded-box p-6">
+        @!jrmc.button({ text: 'Tab 3' })
+      </div>
+
+      <input type="radio" name="my_tabs_1" role="tab" class="tab [--tab-bg:#282c34] [--tab-border-color:#282c34]" aria-label="Edge" />
+      <div role="tabpanel" class="tab-content bg-[#282c34] border-[#282c34] rounded-box p-6">
+        {{{ codeToHtml(`@!jrmc.button({ text: 'Tab 3' })`, { lang: 'Edge' }) }}}
+      </div>
+
+      <input type="radio" name="my_tabs_1" role="tab" class="tab [--tab-bg:#282c34] [--tab-border-color:#282c34]" aria-label="HTML" checked />
+      <div role="tabpanel" class="tab-content overflow-auto bg-[#282c34] border-[#282c34] rounded-box p-6">
+        {{{ codeToHtml(await renderRaw(`@!jrmc.button({ text: 'Tab 3' })`), { lang: 'html' }) }}}
+      </div>
+    </div>
+
+
+@end

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> AdonisJS - A fully featured web framework for Node.js </title>
+
+  @vite(['resources/js/app.js'])
+</head>
+<body>
+  @jrmc.drawer({ class: 'drawer-mobile lg:drawer-open' })
+    @jrmc.drawer.content()
+      <main>
+        <div class="flex flex-col {{ !up.isModal() ? 'min-h-screen' : '' }} {{ up.isDrawer() ? 'pb-safe-offset-4' : 'pb-safe-offset-16' }}">
+          @!bottomNavigation({ class: 'lg:hidden'})
+          {{{ await $slots.main() }}}
+        </div>
+      </main>
+
+    @end
+
+    @jrmc.drawer.side({ class: 'overflow-y-auto h-full w-80 bg-base-200 pt-safe' })
+      @!sidebar()
+      @!bottomNavigation({ class: 'hidden lg:flex'})
+    @end
+  @end
+
+</body>
+</html>
