@@ -3,30 +3,162 @@
 
   @!breadcrumb({
     items: [
-      { label: 'admin.sidebar.dashboard' }
+      { label: 'Components' },
+      { label: 'Button' }
     ]
   })
 
+  @!section({
+    title: 'Button',
+    template: `@!jrmc.button({ text: 'Button' })`
+  })
 
 
-    <h2 class="text-base font-semibold leading-7 px-4" ><a href="#button" class="text-primary">#</a> Button</h2>
+  @!section({
+    title: 'Buttons with brand colors',
+    template: `@!jrmc.button({ text: 'neutral', class: 'btn-neutral' })
+@!jrmc.button({ text: 'primary', class: 'btn-primary' })
+@!jrmc.button({ text: 'secondary', class: 'btn-secondary' })
+@!jrmc.button({ text: 'accent', class: 'btn-accent' })
+@!jrmc.button({ text: 'ghost', class: 'btn-ghost' })
+@!jrmc.button({ text: 'link', class: 'btn-link' })`
+  })
 
-    <div id="button" role="tablist" class="tabs tabs-lifted m-4">
-      <input type="radio" name="my_tabs_1" role="tab" class="tab [--tab-bg:#282c34] [--tab-border-color:#282c34]" aria-label="Preview" />
-      <div role="tabpanel" class="tab-content bg-[#282c34] border-[#282c34] rounded-box p-6">
-        @!jrmc.button({ text: 'Tab 3' })
-      </div>
+  @!section({
+    title: 'Active buttons',
+    template: `@!jrmc.button({ text: 'default', class: "btn-active" })
+@!jrmc.button({ text: 'default', class: "btn-active btn-neutral" })
+@!jrmc.button({ text: "primary", class: "btn-active btn-primary" })
+@!jrmc.button({ text: "secondary", class: "btn-active btn-secondary" })
+@!jrmc.button({ text: "accent", class: "btn-active btn-accent" })
+@!jrmc.button({ text: "ghost", class: "btn-active btn-ghost" })
+@!jrmc.button({ text: "link", class: "btn-active btn-link" })`
+  })
 
-      <input type="radio" name="my_tabs_1" role="tab" class="tab [--tab-bg:#282c34] [--tab-border-color:#282c34]" aria-label="Edge" />
-      <div role="tabpanel" class="tab-content bg-[#282c34] border-[#282c34] rounded-box p-6">
-        {{{ codeToHtml(`@!jrmc.button({ text: 'Tab 3' })`, { lang: 'Edge' }) }}}
-      </div>
+  @!section({
+    title: 'Buttons with state colors',
+    template: `@!jrmc.button({ text: 'info', class: 'btn-info' })
+@!jrmc.button({ text: 'success', class: 'btn-success' })
+@!jrmc.button({ text: 'warning', class: 'btn-warning' })
+@!jrmc.button({ text: 'error', class: 'btn-error' })`
+  })
 
-      <input type="radio" name="my_tabs_1" role="tab" class="tab [--tab-bg:#282c34] [--tab-border-color:#282c34]" aria-label="HTML" checked />
-      <div role="tabpanel" class="tab-content overflow-auto bg-[#282c34] border-[#282c34] rounded-box p-6">
-        {{{ codeToHtml(await renderRaw(`@!jrmc.button({ text: 'Tab 3' })`), { lang: 'html' }) }}}
-      </div>
-    </div>
+  @!section({
+    title: 'Outline buttons',
+    template: `@!jrmc.button({ text: 'default', class: 'btn-outline' })
+@!jrmc.button({ text: 'primary', class: 'btn-outline btn-primary' })
+@!jrmc.button({ text: 'secondary', class: 'btn-outline btn-secondary' })
+@!jrmc.button({ text: 'accent', class: 'btn-outline btn-accent' })`
+  })
+
+  @!section({
+    title: 'Outline buttons with state colors',
+    template: `@!jrmc.button({ text: 'info', class: 'btn-outline btn-info' })
+@!jrmc.button({ text: 'success', class: 'btn-outline btn-success' })
+@!jrmc.button({ text: 'warning', class: 'btn-outline btn-warning' })
+@!jrmc.button({ text: 'error', class: 'btn-outline btn-error' })`
+  })
+
+  @!section({
+    title: 'Button sizes',
+    template: `@!jrmc.button({ text: 'large', class: 'btn-lg' })
+@!jrmc.button({ text: 'Normal' })
+@!jrmc.button({ text: 'Small', class: 'btn-sm' })
+@!jrmc.button({ text: 'Tiny', class: 'btn-xs' })`
+  })
+
+
+  @!section({
+    title: 'Responsive button',
+    template: `@!jrmc.button({ text: 'responsive', class: 'btn-xs sm:btn-sm md:btn-md lg:btn-lg' })`
+  })
+
+  @!section({
+    title: 'Wide button',
+    template: `@!jrmc.button({ text: 'wide', class: 'btn-wide' })`
+  })
+
+  @!section({
+    title: 'Glass button',
+    template: `@!jrmc.button({ text: 'glass', class: 'glass' })`
+  })
+
+  @!section({
+    title: 'Buttons with different HTML tags',
+    template: `@!jrmc.button({ text: 'button', type: 'button' })
+@!jrmc.button({ text: 'button submit', type: 'submit' })
+@!jrmc.button.link({ text: 'link' })
+@!jrmc.button.input({ text: 'input' })
+@!jrmc.button.input({ text: 'submit', type: 'submit' })
+@!jrmc.button.input({ text: 'reset', type: 'reset' })
+@!jrmc.button.label({ text: 'label' })`
+  })
+
+  @!section({
+    title: 'Disabled buttons',
+    template: `@!jrmc.button({ text: 'button', disabled: true })`
+  })
+
+  @!section({
+    title: 'Square button',
+    template: `@jrmc.button({ class: 'btn-square' })
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+@end
+@jrmc.button({ class: 'btn-square btn-outline' })
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+@end`
+  })
+
+  @!section({
+    title: 'Circle button',
+    template: `@jrmc.button({ class: 'btn-circle' })
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+@end
+@jrmc.button({ class: 'btn-circle btn-outline' })
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+@end`
+  })
+
+  @!section({
+    title: 'Icon at start',
+    template: `@jrmc.button({ class: 'gap-2' })
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+  Button
+@end`
+  })
+
+  @!section({
+    title: 'Icon at end',
+    template: `@jrmc.button({ class: 'gap-2' })
+  Button
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+@end`
+  })
+
+  @!section({
+    title: 'Button block',
+    template: `@!jrmc.button({ text: 'block', class: 'btn-block' })`
+  })
+
+  @!section({
+    title: 'Button with loading spinner',
+    template: `@jrmc.button({ class: 'btn-square' })
+  @!jrmc.loading.spinner()
+@end`
+  })
+
+  @!section({
+    title: 'Button with loading spinner and text',
+    template: `@jrmc.button({ text: 'button' })
+  @!jrmc.loading.spinner()
+  Text
+@end`
+  })
+
+  @!section({
+    title: 'Button without click animation',
+    template: `@!jrmc.button({ text: 'no-animation', class: 'no-animation' })`
+  })
 
 
 @end

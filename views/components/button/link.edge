@@ -1,7 +1,3 @@
-<a
-  role="button"
-  {{ $props.except(['text', 'class']).toAttrs() }}
-  class="{{ jrmc.getCssClass($props, 'btn') }}"
->
+<a role="button" {{ $props.except(['text', 'class']).toAttrs() }} class="{{ jrmc.getCssClass($props, 'btn') }}">
   {{{ await $slots.main() || text }}}
 </a>

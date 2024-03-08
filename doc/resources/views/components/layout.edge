@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1">
   <title> AdonisJS - A fully featured web framework for Node.js </title>
 
   @vite(['resources/js/app.js'])
@@ -21,9 +21,10 @@
 
     @jrmc.drawer.side({ class: 'overflow-y-auto h-full w-80 bg-base-200 pt-safe' })
       @!sidebar()
-      @!bottomNavigation({ class: 'hidden lg:flex'})
     @end
   @end
+
+
 
 </body>
 </html>

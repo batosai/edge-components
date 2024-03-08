@@ -4,14 +4,9 @@
   data-tip="{{ tooltip.text }}"
 >
 @end~
-
-<button
-  {{ $props.except(['text', 'class', 'tooltip']).toAttrs() }}
-  class="{{ jrmc.getCssClass($props, 'btn') }}"
->
+<button {{ $props.except(['text', 'class', 'tooltip']).toAttrs() }} class="{{ jrmc.getCssClass($props, 'btn') }}">
   {{{ await $slots.main() || text || '' }}}
 </button>
-
 @if(tooltip)~
 </div>
 @end~

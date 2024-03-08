@@ -1,5 +1,28 @@
-edge-components
-@!jrmc.badge({ text: '2.0', class: 'badge-primary' })
+@jrmc.card({ class: 'bg-base-100 shadow-xl mx-4 mt-4 z-20 sticky top-5 left-0' })
+  @slot('top')
+  <ul class="flex flew-row items-center space-x-3 m-2 w-full">
+    <li class="avatar">
+      <div class="w-8 h-8">
+        <img src="/edge.jpeg" loading="lazy" alt="Edge" />
+      </div>
+      <div class="text-2xl mx-4">+</div>
+      <div class="w-8 h-8">
+        <img src="/daisyui.png" loading="lazy" alt="DaisyUI" />
+      </div>
+      <div class="text-2xl mx-4">=</div>
+    </li>
+    <li class="basis-1/2">
+      <div class="font-bold">
+        <a href="#" @click="open = false">Edge</a>
+        @!jrmc.badge({ text: '2.0', class: 'badge-primary badge-sm ml-2' })
+      </div>
+      <div class="text-sm opacity-50">
+        <a href="#" @click="open = false">components</a>
+      </div>
+    </li>
+  </ul>
+  @end
+@end
 
 <nav>
   <ul class="menu menu-compact text-base-content rounded-box p-4">
@@ -34,6 +57,32 @@ edge-components
                 <li><a>Group</a></li>
                 <li><a>Tooltip</a></li>
                 <li><a>Badge</a></li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </details>
+    </li>
+
+    <li>
+      <details>
+        <summary>
+          @!svg('tabler:heart-rate-monitor')
+          Display
+        </summary>
+        <ul>
+          <li>
+            <details>
+              <summary>Alert</summary>
+              <ul>
+                <li><a>Default</a></li>
+                <li><a>Icon</a></li>
+                <li><a>Info</a></li>
+                <li><a>Success</a></li>
+                <li><a>Warning</a></li>
+                <li><a>Error</a></li>
+                <li><a>Action</a></li>
+                <li><a>Multi text</a></li>
               </ul>
             </details>
           </li>
@@ -80,15 +129,18 @@ edge-components
 
     <li>
       <a>
-        @!svg('fa-solid:cog')
+        @!svg('tabler:brand-npm')
         Installation
       </a>
     </li>
     <li>
       <a>
-        @!svg('fa-solid:cog')
+        @!svg('tabler:status-change')
         Changelog
       </a>
     </li>
   </ul>
 </nav>
+
+@!bottomNavigation({ class: 'hidden lg:flex' })
+

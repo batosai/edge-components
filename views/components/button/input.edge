@@ -1,6 +1,4 @@
-<input
-  {{ $props.except(['text', 'class', 'type']).toAttrs() }}
+<input {{ $props.except(['text', 'class', 'type']).toAttrs() }}
   type="{{ $props.has('type') ? $props.get('type') : 'button' }}"
   class="{{ jrmc.getCssClass($props, 'btn') }}"
-  value="{{ text }}"
-/>
+  value="{{ text }}" />

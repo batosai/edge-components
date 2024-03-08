@@ -1,5 +1,3 @@
 <label
-  tabindex="0"
-  {{ $props.except(['text', 'class']).toAttrs() }}
-  class="{{ jrmc.getCssClass($props, 'btn') }}"
->{{{ await $slots.main() || text }}}</label>
+  tabindex="0" {{ $props.except(['text', 'class']).toAttrs() }}
+  class="{{ jrmc.getCssClass($props, 'btn') }}">{{{ await $slots.main() || text }}}</label>
