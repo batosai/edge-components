@@ -10,17 +10,17 @@
 
 <div id="{{ id }}" role="tablist" class="tabs tabs-lifted m-4">
   <input type="radio" name="{{ id }}" role="tab" class="tab [--tab-bg:#282c34] [--tab-border-color:#282c34]" aria-label="Preview" checked />
-  <div role="tabpanel" class="tab-content bg-[#282c34] border-[#282c34] rounded-box p-6">
+  <div role="tabpanel" class="tab-content bg-[#282c34] border-[#282c34] rounded-box p-6 overflow-x-scroll">
     {{{ await renderRaw(template) }}}
   </div>
 
   <input type="radio" name="{{ id }}" role="tab" class="tab [--tab-bg:#282c34] [--tab-border-color:#282c34]" aria-label="Edge" />
-  <div role="tabpanel" class="tab-content bg-[#282c34] border-[#282c34] rounded-box p-6">
+  <div role="tabpanel" class="tab-content bg-[#282c34] border-[#282c34] rounded-box p-6 overflow-x-scroll">
     {{{ codeToHtml(template, { lang: 'Edge' }) }}}
   </div>
 
   <input type="radio" name="{{ id }}" role="tab" class="tab [--tab-bg:#282c34] [--tab-border-color:#282c34]" aria-label="HTML" />
-  <div role="tabpanel" class="tab-content overflow-auto bg-[#282c34] border-[#282c34] rounded-box p-6">
+  <div role="tabpanel" class="tab-content overflow-auto bg-[#282c34] border-[#282c34] rounded-box p-6 overflow-x-scroll">
     {{{ codeToHtml(await renderRaw(template), { lang: 'html' }) }}}
   </div>
 </div>
