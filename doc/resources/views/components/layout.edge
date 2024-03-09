@@ -3,7 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1">
-  <title> AdonisJS - A fully featured web framework for Node.js </title>
+  @if($slots.head !== undefined)~
+    {{{ await $slots.head() }}}
+  @else~
+    <title>Edge compoents</title>
+    <meta name="description" content="" />
+  @end~
 
   @vite(['resources/js/app.js'])
 </head>
@@ -25,6 +30,9 @@
   @end
 
 
+  @if($slots.foot !== undefined)~
+    {{{ await $slots.foot() }}}
+  @end~
 
 </body>
 </html>

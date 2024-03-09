@@ -35,7 +35,16 @@
         </summary>
         <ul>
           <li>
-            @!sidebar.link({ text: 'Button', href: route('home') })
+            @!sidebar.link({ text: 'Button', href: route('button') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Drawer', href: route('drawer') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Dropdown', href: route('dropdown') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Modal', href: route('modal') })
           </li>
         </ul>
       </details>
@@ -49,45 +58,124 @@
         </summary>
         <ul>
           <li>
-            Alert
+            @!sidebar.link({ text: 'Alert', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Avatar', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Badge', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Card', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Carousel', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Chat', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Loading', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Progress', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Table', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Toast', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Tooltip', href: route('modal') })
           </li>
         </ul>
       </details>
     </li>
 
-    {{-- <li>
-      @!sidebar.link({
-        class: request.matchesRoute(['root']) ? 'active' : null,
-        text: 'sidebar.dashboard',
-        icon: 'akar-icons:dashboard',
-        href: route('root')
-      })
-    </li> --}}
     <li></li>
     <li>
-      <details open>
+      <details>
         <summary>
           @!svg('tabler:input-check')
           Form
         </summary>
+        <ul>
+          <li>
+            @!sidebar.link({ text: 'Form container', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Input', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Form default value', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Radio', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Checkbox', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Toggle', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Range', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Label', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Select', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Textarea', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Control', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Error', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Input file', href: route('modal') })
+          </li>
+        </ul>
       </details>
     </li>
     <li></li>
     <li>
-      <details open>
+      <details>
         <summary>
           @!svg('tabler:link')
           Navigation
         </summary>
+        <ul>
+          <li>
+            @!sidebar.link({ text: 'Pagination', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Tab', href: route('modal') })
+          </li>
+        </ul>
       </details>
     </li>
     <li></li>
     <li>
-      <details open>
+      <details>
         <summary>
           @!svg('tabler:brand-pagekit')
           Pages
         </summary>
+        <ul>
+          <li>
+            @!sidebar.link({ text: 'Login', href: route('modal') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'Admin', href: route('modal') })
+          </li>
+        </ul>
       </details>
     </li>
     <li></li>
@@ -99,10 +187,7 @@
       </a>
     </li>
     <li>
-      <a>
-        @!svg('tabler:status-change')
-        Changelog
-      </a>
+      @!sidebar.link({ text: 'Changelog', icon: 'tabler:status-change', href: route('changelog') })
     </li>
   </ul>
 </nav>
