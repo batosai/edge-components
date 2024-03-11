@@ -12,9 +12,113 @@
     ]
   })
 
+  TODO container, right bug
+  absolute is not good ideal, side class ???
+
   @!section({
-    title: 'Button',
-    template: `@!jrmc.button({ text: 'Button' })`
+    title: 'Drawer',
+    height: 'min-h-72',
+    template: `<div class="overflow-hidden h-72">
+@jrmc.drawer()
+  @jrmc.drawer.content()
+    @!jrmc.button({ text: 'Open drawer', ...$context.event.open })
+  @end
+
+  @jrmc.drawer.side()
+    <ul class="menu text-base-content">
+      <li><a>Sidebar Item 1</a></li>
+      <li><a>Sidebar Item 2</a></li>
+    </ul>
+  @end
+@end
+</div>`
+  })
+
+  @!section({
+    title: 'Drawer mobile',
+    height: 'min-h-72',
+    template: `@jrmc.drawer({ class: 'drawer-mobile' })
+  @jrmc.drawer.content()
+    @!jrmc.button({ text: 'Open drawer', class: 'lg:hidden', ...$context.event.open })
+  @end
+
+  @jrmc.drawer.side()
+    <ul class="menu text-base-content">
+      <li><a>Sidebar Item 1</a></li>
+      <li><a>Sidebar Item 2</a></li>
+    </ul>
+  @end
+@end`
+  })
+
+  @!section({
+    title: 'Drawer navbar desktop',
+    height: 'min-h-72',
+    template: `@jrmc.drawer()
+  @jrmc.drawer.content()
+
+    <!-- Navbar -->
+    <div class="w-full navbar bg-base-300">
+      <div class="flex-none lg:hidden">
+        @jrmc.button({ class: 'btn-square btn-ghost', ...$context.event.open })
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        @end
+      </div>
+      <div class="flex-1 px-2 mx-2">Navbar Title</div>
+      <div class="flex-none hidden lg:block">
+        <ul class="menu menu-horizontal">
+          <!-- Navbar menu content here -->
+          <li><a>Navbar Item 1</a></li>
+          <li><a>Navbar Item 2</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Page content here -->
+    Content
+
+  @end
+
+  @jrmc.drawer.side()
+    <ul class="menu text-base-content">
+      <li><a>Sidebar Item 1</a></li>
+      <li><a>Sidebar Item 2</a></li>
+    </ul>
+  @end
+@end`
+  })
+
+  @!section({
+    title: 'Drawer right',
+    height: 'min-h-72',
+    template: `@jrmc.drawer({ class: 'drawer-end' })
+  @jrmc.drawer.content()
+    @!jrmc.button({ text: 'Open drawer', ...$context.event.open })
+  @end
+
+  @jrmc.drawer.side()
+    <ul class="menu text-base-content">
+      <li><a>Sidebar Item 1</a></li>
+      <li><a>Sidebar Item 2</a></li>
+    </ul>
+  @end
+@end`
+  })
+
+  @!section({
+    title: 'Drawer size',
+    height: 'min-h-72',
+    template: `@jrmc.drawer()
+  @jrmc.drawer.content()
+    @!jrmc.button({ text: 'Open drawer', ...$context.event.open })
+  @end
+
+  @jrmc.drawer.side({ class: 'w-3/4' })
+    <ul class="menu text-base-content">
+      <li><a>Sidebar Item 1</a></li>
+      <li><a>Sidebar Item 2</a></li>
+    </ul>
+  @end
+@end`
   })
 
 @end
