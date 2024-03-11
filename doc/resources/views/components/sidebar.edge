@@ -13,11 +13,13 @@
     </li>
     <li class="basis-1/2">
       <div class="font-bold">
-        <a href="#" @click="open = false">Edge</a>
-        @!jrmc.badge({ text: '2.0', class: 'badge-primary badge-sm ml-2' })
+        <a href="/" @click="open = false">Edge</a>
+        <a href="{{ route('changelog') }}">
+          @!jrmc.badge({ text: '2.0', class: 'badge-primary badge-sm ml-2' })
+        </a>
       </div>
       <div class="text-sm opacity-50">
-        <a href="#" @click="open = false">components</a>
+        <a href="/" @click="open = false">components</a>
       </div>
     </li>
   </ul>
@@ -185,9 +187,6 @@
         @!svg('tabler:brand-npm')
         Installation
       </a>
-    </li>
-    <li>
-      @!sidebar.link({ text: 'Changelog', icon: 'tabler:status-change', href: route('changelog') })
     </li>
   </ul>
 </nav>
