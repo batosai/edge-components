@@ -1,0 +1,17 @@
+<input type="radio" name="{{ id }}" role="tab" class="tab [--tab-bg:#282c34] [--tab-border-color:#282c34]" aria-label="{{ label }}" {{ html.attrs({ checked }) }} />
+<div
+  role="tabpanel"
+  class="{{
+    html.classNames([
+      'tab-content',
+      'bg-[#282c34]',
+      'border-[#282c34]',
+      'rounded-box',
+      'p-6',
+      'overflow-x-scroll',
+      `${ $props.height }` ?? $props.height,
+    ])
+  }}"
+>
+  {{{ await $slots.main() }}}
+</div>

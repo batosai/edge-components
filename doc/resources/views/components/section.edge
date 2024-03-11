@@ -8,21 +8,31 @@
   @end
 </h1>
 
-<div id="{{ id }}" role="tablist" class="tabs tabs-lifted m-4">
-  <input type="radio" name="{{ id }}" role="tab" class="tab [--tab-bg:#282c34] [--tab-border-color:#282c34]" aria-label="Preview" checked />
-  <div role="tabpanel" class="tab-content bg-[#282c34] border-[#282c34] rounded-box p-6 overflow-x-scroll">
-    {{{ await renderRaw(template) }}}
-  </div>
+<div id="{{ id }}" role="tablist" class="{{
+  html.classNames([
+    'tabs',
+    'tabs-lifted',
+    'm-4',
+    `${ height }` ?? height,
+  ])
+}}">
+  @section.tab({ id, height, label: 'Preview', checked: true })
+    @if(center)~
+    <div class="flex justify-center">
+    @end~
+      {{{ await renderRaw(template) }}}
+    @if(center)~
+    </div>
+    @end~
+  @end
 
-  <input type="radio" name="{{ id }}" role="tab" class="tab [--tab-bg:#282c34] [--tab-border-color:#282c34]" aria-label="Edge" />
-  <div role="tabpanel" class="tab-content bg-[#282c34] border-[#282c34] rounded-box p-6 overflow-x-scroll">
+  @section.tab({ id, height, label: 'Edge', checked: false })
     {{{ codeToHtml(template, { lang: 'Edge' }) }}}
-  </div>
+  @end
 
-  <input type="radio" name="{{ id }}" role="tab" class="tab [--tab-bg:#282c34] [--tab-border-color:#282c34]" aria-label="HTML" />
-  <div role="tabpanel" class="tab-content overflow-auto bg-[#282c34] border-[#282c34] rounded-box p-6 overflow-x-scroll">
+  @section.tab({ id, height, label: 'HTML', checked: false })
     {{{ codeToHtml(await renderRaw(template), { lang: 'html' }) }}}
-  </div>
+  @end
 </div>
 
 <div class="divider"></div>
