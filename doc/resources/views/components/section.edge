@@ -17,13 +17,13 @@
   ])
 }}">
   @section.tab({ id, height, label: 'Preview', checked: true })
-    @if(center)~
-    <div class="flex justify-center">
-    @end~
+
+    @if($slots.main() !== '')~
+      {{{ await $slots.main() }}}
+    @else
       {{{ await renderRaw(template) }}}
-    @if(center)~
-    </div>
     @end~
+
   @end
 
   @section.tab({ id, height, label: 'Edge', checked: false })
