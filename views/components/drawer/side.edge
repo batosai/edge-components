@@ -1,6 +1,6 @@
-<div class="drawer-side z-50">
+<div class="drawer-side z-50 {{ ($props.container && $props.container.class) ? $props.container.class : '' }}">
   <label class="drawer-overlay" @click="open = false"></label>
   <div class="{{ jrmc.getCssClass($props, 'overflow-y-auto h-full', 'overflow-y-auto p-4 h-full w-80 bg-base-100') }}">
-    {{{ await $slots.main() || '' }}}
+{{{ await $slots.main() || '' }}}
   </div>
 </div>

@@ -1,0 +1,19 @@
+@layout()
+  @slot('head')
+    <title>Edge components loading</title>
+    <meta name="description" content="" />
+  @end
+
+  @!breadcrumb({
+    items: [
+      { label: 'Components' },
+      { label: 'Loading' }
+    ]
+  })
+
+  @!section({
+    title: 'Button',
+    template: `@!jrmc.button({ text: 'Button' })`
+  })
+
+@end

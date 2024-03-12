@@ -1,0 +1,19 @@
+@layout()
+  @slot('head')
+    <title>Edge components input file</title>
+    <meta name="description" content="" />
+  @end
+
+  @!breadcrumb({
+    items: [
+      { label: 'Components' },
+      { label: 'Input file' }
+    ]
+  })
+
+  @!section({
+    title: 'Button',
+    template: `@!jrmc.button({ text: 'Button' })`
+  })
+
+@end

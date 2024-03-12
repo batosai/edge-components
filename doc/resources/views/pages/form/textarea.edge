@@ -1,0 +1,19 @@
+@layout()
+  @slot('head')
+    <title>Edge components textarea</title>
+    <meta name="description" content="" />
+  @end
+
+  @!breadcrumb({
+    items: [
+      { label: 'Components' },
+      { label: 'Textarea' }
+    ]
+  })
+
+  @!section({
+    title: 'Button',
+    template: `@!jrmc.button({ text: 'Button' })`
+  })
+
+@end

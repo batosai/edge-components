@@ -1,0 +1,19 @@
+@layout()
+  @slot('head')
+    <title>Edge components pagination</title>
+    <meta name="description" content="" />
+  @end
+
+  @!breadcrumb({
+    items: [
+      { label: 'Components' },
+      { label: 'Pagination' }
+    ]
+  })
+
+  @!section({
+    title: 'Button',
+    template: `@!jrmc.button({ text: 'Button' })`
+  })
+
+@end

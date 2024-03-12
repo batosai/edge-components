@@ -1,0 +1,19 @@
+@layout()
+  @slot('head')
+    <title>Edge components form container</title>
+    <meta name="description" content="" />
+  @end
+
+  @!breadcrumb({
+    items: [
+      { label: 'Components' },
+      { label: 'Form Container' }
+    ]
+  })
+
+  @!section({
+    title: 'Button',
+    template: `@!jrmc.button({ text: 'Button' })`
+  })
+
+@end
