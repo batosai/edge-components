@@ -12,8 +12,185 @@
   })
 
   @!section({
-    title: 'Button',
-    template: `@!jrmc.button({ text: 'Button' })`
+    title: 'Card',
+    template: `@jrmc.card()
+  @slot('top')
+    <figure><img src="https://picsum.photos/400/225" alt="Shoes" /></figure>
+  @end
+  @jrmc.card.body()
+    @!jrmc.card.title({ text: 'Shoes!' })
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+
+    @jrmc.card.actions()
+      @!jrmc.button({ text: 'Buy Now', class: 'btn-primary' })
+    @end
+  @end
+@end`
+  })
+
+  @!section({
+    title: 'Card compact',
+    template: `@jrmc.card({ class: 'card-compact w-96 bg-base-100 shadow-xl' })
+  @slot('top')
+    <figure><img src="https://picsum.photos/400/225" alt="Shoes" /></figure>
+  @end
+  @jrmc.card.body()
+    @!jrmc.card.title({ text: 'Shoes!' })
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+
+    @jrmc.card.actions()
+      @!jrmc.button({ text: 'Buy Now', class: 'btn-primary' })
+    @end
+  @end
+@end`
+  })
+
+  @!section({
+    title: 'Card with badge',
+    template: `@jrmc.card()
+  @slot('top')
+    <figure><img src="https://picsum.photos/400/225" alt="Shoes" /></figure>
+  @end
+  @jrmc.card.body()
+    @jrmc.card.title()
+      Shoes!
+      @!jrmc.badge({ text: 'NEW', class: 'badge-secondary' })
+    @end
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+
+    @jrmc.card.actions()
+      @!jrmc.button({ text: 'Buy Now', class: 'btn-primary' })
+    @end
+  @end
+@end`
+  })
+
+  @!section({
+    title: 'Card with bottom image',
+    template: `@jrmc.card()
+  @jrmc.card.body()
+    @!jrmc.card.title({ text: 'Shoes!' })
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+
+    @jrmc.card.actions()
+      @!jrmc.button({ text: 'Buy Now', class: 'btn-primary' })
+    @end
+  @end
+  @slot('bottom')
+    <figure><img src="https://picsum.photos/400/225" alt="Shoes" /></figure>
+  @end
+@end`
+  })
+
+  @!section({
+    title: 'Card with center content',
+    template: `@jrmc.card()
+  @slot('top')
+    <figure class="px-10 pt-10"><img src="https://picsum.photos/400/225" alt="Shoes" /></figure>
+  @end
+  @jrmc.card.body({ class: 'items-center text-center' })
+    @!jrmc.card.title({ text: 'Shoes!' })
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+
+    @jrmc.card.actions()
+      @!jrmc.button({ text: 'Buy Now', class: 'btn-primary' })
+    @end
+  @end
+@end`
+  })
+
+  @!section({
+    title: 'Card with image overlay',
+    template: `@jrmc.card({ class: 'w-96 bg-base-100 shadow-xl image-full'})
+  @slot('top')
+    <figure><img src="https://picsum.photos/400/225" alt="Shoes" /></figure>
+  @end
+  @jrmc.card.body()
+    @!jrmc.card.title({ text: 'Shoes!' })
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+
+    @jrmc.card.actions()
+      @!jrmc.button({ text: 'Buy Now', class: 'btn-primary' })
+    @end
+  @end
+@end`
+  })
+
+  @!section({
+    title: 'Card no image',
+    template: `@jrmc.card()
+  @jrmc.card.body()
+    @!jrmc.card.title({ text: 'Shoes!' })
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+
+    @jrmc.card.actions()
+      @!jrmc.button({ text: 'Buy Now', class: 'btn-primary' })
+    @end
+  @end
+@end`
+  })
+
+  @!section({
+    title: 'Card primary',
+    template: `@jrmc.card({ class: 'w-96 bg-primary text-primary-content' })
+  @jrmc.card.body()
+    @!jrmc.card.title({ text: 'Shoes!' })
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+
+    @jrmc.card.actions()
+      @!jrmc.button({ text: 'Buy Now' })
+    @end
+  @end
+@end`
+  })
+
+  @!section({
+    title: 'Card center whith neutral color',
+    template: `@jrmc.card({ class: 'w-96 bg-neutral text-neutral-content' })
+  @jrmc.card.body({ class: 'items-center text-center' })
+    @!jrmc.card.title({ text: 'Cookies!' })
+    <p>If a dog chews shoes whose shoes does he choose?</p>
+
+    @jrmc.card.actions()
+      @!jrmc.button({ text: 'Accept', class: 'btn-primary' })
+      @!jrmc.button({ text: 'Deny' })
+    @end
+  @end
+@end`
+  })
+
+  @!section({
+    title: 'Card with image on side',
+    template: `@jrmc.card({ class: 'card-side bg-base-100 shadow-xl' })
+  @slot('top')
+    <figure><img src="https://picsum.photos/200/280" alt="Movie"></figure>
+  @end
+  @jrmc.card.body()
+    @!jrmc.card.title({ text: 'New movie is released!' })
+    <p>Click the button to watch on Jetflix app.</p>
+
+    @jrmc.card.actions()
+      @!jrmc.button({ text: 'Watch', class: 'btn-primary' })
+    @end
+  @end
+@end`
+  })
+
+  @!section({
+    title: 'Card with image on side vertical on small screen and horizontal on large screen edge',
+    template: `@jrmc.card({ class: 'lg:card-side bg-base-100 shadow-xl' })
+  @slot('top')
+    <figure><img src="https://picsum.photos/400/400" alt="Movie"></figure>
+  @end
+  @jrmc.card.body()
+    @!jrmc.card.title({ text: 'New movie is released!' })
+    <p>Click the button to watch on Jetflix app.</p>
+
+    @jrmc.card.actions()
+      @!jrmc.button({ text: 'Watch', class: 'btn-primary' })
+    @end
+  @end
+@end`
   })
 
 @end

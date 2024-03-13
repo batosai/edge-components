@@ -12,8 +12,68 @@
   })
 
   @!section({
-    title: 'Button',
-    template: `@!jrmc.button({ text: 'Button' })`
+    title: 'Avatar',
+    template: `@!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192' })
+@jrmc.avatar()
+  <img src="https://picsum.photos/id/64/192/192" alt="Text alt" />
+@end`
+  })
+
+  @!section({
+    title: 'Avatar size',
+    template: `@!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192', class: 'w-32 rounded' })
+@!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192', class: 'w-20 rounded' })
+@!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192', class: 'w-16 rounded' })
+@!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192', class: 'w-8 rounded' })`
+  })
+
+  @!section({
+    title: 'Avatar rounded',
+    template: `@!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192', class: 'w-24 rounded-xl' })
+@!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192', class: 'w-24 rounded-full' })`
+  })
+
+  @!section({
+    title: 'Avatar mask',
+    template: `@!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192', class: 'w-24 mask mask-squircle' })
+@!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192', class: 'w-24 mask mask-hexagon' })
+@!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192', class: 'w-24 mask mask-triangle' })`
+  })
+
+  @!section({
+    title: 'Avatar group',
+    template: `@jrmc.avatar.group()
+  @!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192', class: 'w-12' })
+  @!jrmc.avatar({ url: 'https://picsum.photos/id/65/192/192', class: 'w-12' })
+  @!jrmc.avatar({ url: 'https://picsum.photos/id/338/192/192', class: 'w-12' })
+@end`
+  })
+
+  @!section({
+    title: 'Avatar group2',
+    template: `@jrmc.avatar.group({ class: '-space-x-12' })
+  @!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192' })
+  @!jrmc.avatar({ url: 'https://picsum.photos/id/65/192/192' })
+  @!jrmc.avatar({ placeholder: '+99' })
+@end`
+  })
+
+  @!section({
+    title: 'Avatar ring',
+    template: `@!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192', class: ['w-24', 'rounded-full', 'ring', 'ring-primary', 'ring-offset-base-100', 'ring-offset-2'] })`
+  })
+
+  @!section({
+    title: 'Avatar status',
+    template: `@!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192', status: 'online', class: 'w-24 rounded-full' })
+@!jrmc.avatar({ url: 'https://picsum.photos/id/64/192/192', status: 'offline', class: 'w-24 rounded-full' })`
+  })
+
+  @!section({
+    title: 'Avatar placeholder',
+    template: `@!jrmc.avatar({ placeholder: 'K' })
+@!jrmc.avatar({ placeholder: 'JO', status: 'online', class: ['bg-neutral', 'text-neutral-content', 'rounded-full', 'w-16'] })
+@!jrmc.avatar({ placeholder: 'AA', class: ['bg-primary', 'text-neutral-content', 'mask', 'mask-hexagon', 'w-8'] })`
   })
 
 @end

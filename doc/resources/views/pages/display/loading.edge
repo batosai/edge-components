@@ -12,8 +12,58 @@
   })
 
   @!section({
-    title: 'Button',
-    template: `@!jrmc.button({ text: 'Button' })`
+    title: 'Loading',
+    template: `@!jrmc.loading({ class: 'loading-spinner' })`
+  })
+
+  @!section({
+    title: 'Loading spinner',
+    template: `@!jrmc.loading.spinner()`
+  })
+
+  @!section({
+    title: 'Loading dots',
+    template: `@!jrmc.loading.dots()`
+  })
+
+  @!section({
+    title: 'Loading ring',
+    template: `@!jrmc.loading.ring()`
+  })
+
+  @!section({
+    title: 'Loading ball',
+    template: `@!jrmc.loading.ball()`
+  })
+
+  @!section({
+    title: 'Loading bars',
+    template: `@!jrmc.loading.bars()`
+  })
+
+  @!section({
+    title: 'Loading infinity',
+    template: `@!jrmc.loading.infinity()`
+  })
+
+  @!section({
+    title: 'Loading size',
+    template: `@!jrmc.loading.ring({ class: 'loading-xs' })
+@!jrmc.loading.ring({ class: 'loading-sm' })
+@!jrmc.loading.ring({ class: 'loading-md' })
+@!jrmc.loading.ring({ class: 'loading-lg' })`
+  })
+
+  @!section({
+    title: 'Loading color',
+    template: `@!jrmc.loading.infinity({ class: 'text-primary' })
+@!jrmc.loading.infinity({ class: 'text-secondary' })
+@!jrmc.loading.infinity({ class: 'text-accent' })
+@!jrmc.loading.infinity({ class: 'text-neutral' })
+@!jrmc.loading.infinity({ class: 'text-info' })
+@!jrmc.loading.infinity({ class: 'text-success' })
+@!jrmc.loading.infinity({ class: 'text-warning' })
+@!jrmc.loading.infinity({ class: 'text-error' })`
   })
 
 @end

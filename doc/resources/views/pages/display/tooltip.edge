@@ -11,9 +11,55 @@
     ]
   })
 
-  @!section({
-    title: 'Button',
-    template: `@!jrmc.button({ text: 'Button' })`
+  @section({
+    title: 'Tooltip',
+    template: `@jrmc.tooltip({ text: 'hello' })
+  <img src="https://picsum.photos/64/64" />
+@end`
   })
+  <div class="mt-10">
+    @jrmc.tooltip({ text: 'hello' })
+      <img src="https://picsum.photos/64/64" />
+    @end
+  </div>
+  @end
+
+  @section({
+    title: 'Tooltip open',
+    template: `@jrmc.tooltip({ text: 'hello', class: 'tooltip-open' })
+  <img src="https://picsum.photos/64/64" />
+@end`
+  })
+  <div class="mt-10">
+    @jrmc.tooltip({ text: 'hello', class: 'tooltip-open' })
+      <img src="https://picsum.photos/64/64" />
+    @end
+  </div>
+  @end
+
+  @section({
+    title: 'Tooltip position',
+    template: `@jrmc.tooltip({ text: 'hello', class: 'tooltip-open tooltip-left tooltip-primary' })
+  <img src="https://picsum.photos/64/64" />
+@end
+@jrmc.tooltip({ text: 'hello', class: 'tooltip-open tooltip-bottom tooltip-secondary' })
+  <img src="https://picsum.photos/64/64" />
+@end
+@jrmc.tooltip({ text: 'hello', class: 'tooltip-open tooltip-right tooltip-accent' })
+  <img src="https://picsum.photos/64/64" />
+@end`
+  })
+  <div class="ml-20 mt-10">
+    @jrmc.tooltip({ text: 'hello', class: 'tooltip-open tooltip-left tooltip-primary' })
+      <img src="https://picsum.photos/64/64" />
+    @end
+    @jrmc.tooltip({ text: 'hello', class: 'tooltip-open tooltip-bottom tooltip-secondary' })
+      <img src="https://picsum.photos/64/64" />
+    @end
+    @jrmc.tooltip({ text: 'hello', class: 'tooltip-open tooltip-right tooltip-accent' })
+      <img src="https://picsum.photos/64/64" />
+    @end
+  </div>
+  @end
 
 @end

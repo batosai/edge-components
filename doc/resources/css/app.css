@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* override for include in tab component */
+/* solution inspired by daisyui.com */
+
+.chat-start {
+  grid-template-columns: auto 1fr;
+}

@@ -12,25 +12,22 @@
   html.classNames([
     'tabs',
     'tabs-lifted',
-    'm-4',
-    `${ height }` ?? height,
+    'm-4'
   ])
 }}">
-  @section.tab({ id, height, label: 'Preview', checked: true })
-
+  @section.tab({ id, label: 'Preview', checked: true })
     @if($slots.main() !== '')~
       {{{ await $slots.main() }}}
     @else
       {{{ await renderRaw(template) }}}
     @end~
-
   @end
 
-  @section.tab({ id, height, label: 'Edge', checked: false })
+  @section.tab({ id, label: 'Edge', checked: false })
     {{{ codeToHtml(template, { lang: 'Edge' }) }}}
   @end
 
-  @section.tab({ id, height, label: 'HTML', checked: false })
+  @section.tab({ id, label: 'HTML', checked: false })
     {{{ codeToHtml(await renderRaw(template), { lang: 'html' }) }}}
   @end
 </div>
