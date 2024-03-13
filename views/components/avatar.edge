@@ -4,7 +4,7 @@
       <span>{{ $props.get('placeholder') }}</span>
     </div>
   @else
-    <div class="{{ $props.has('class') ? $props.get('class') : 'w-24' }}">
+    <div class="{{ jrmc.getCssClass($props, '', 'w-24') }}">
       {{{ await $slots.main() || `<img src="${url}" alt="" />` || '' }}}
     </div>
   @end
