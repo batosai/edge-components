@@ -20,12 +20,13 @@
   },
   "devDependencies": {
     "@adonisjs/tsconfig": "^1.2.1",
+    "@types/node": "^20.11.27",
     "@poppinss/utils": "^5.0.0",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {
-    "alpinejs": "^3.13.0",
-    "daisyui": "^4.6.0",
+    "alpinejs": "^3.13.7",
+    "daisyui": "^4.7.3",
     "tailwindcss": "^3.4.1"
   },
   "volta": {

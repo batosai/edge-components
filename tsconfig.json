@@ -2,6 +2,8 @@
   "extends": "@adonisjs/tsconfig/tsconfig.app.json",
   "include": ["./src/**/*"],
   "compilerOptions": {
+    "module": "es2022",
+    "moduleResolution": "Node",
     "rootDir": "./src",
     "outDir": "./build",
     "sourceMap": true,
