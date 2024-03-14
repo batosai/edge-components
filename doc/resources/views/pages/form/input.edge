@@ -12,8 +12,73 @@
   })
 
   @!section({
-    title: 'Button',
-    template: `@!jrmc.button({ text: 'Button' })`
+    title: 'Input',
+    template: `@!jrmc.form.input({ placeholder: 'Default', class: 'w-full' })
+<br /><br />
+@!jrmc.form.input({ type: 'number', placeholder: '0', class: 'w-full' })
+<br /><br />
+@!jrmc.form.input({ type: 'email', placeholder: 'john.snow@got.com', class: 'w-full' })
+<br /><br />
+@!jrmc.form.input({ type: 'date', class: 'w-full' })
+<br /><br />
+@!jrmc.form.input({ type: 'datetime-local', class: 'w-full' })
+<br /><br />
+@!jrmc.form.input({ type: 'color', class: 'w-full' })
+<br /><br />
+@!jrmc.form.input({ type: 'hidden', value: 'true', class: 'w-full' })`
+  })
+
+  @!section({
+    title: 'Input bordered',
+    template: `@!jrmc.form.input({ placeholder: 'Bordered', class: 'input-bordered' })`
+  })
+
+  @!section({
+    title: 'Input color',
+    template: `@!jrmc.form.input({ placeholder: 'Color',  class: 'input-primary' })
+  <br /><br />
+  @!jrmc.form.input({ placeholder: 'Color',  class: 'input-secondary' })
+  <br /><br />
+  @!jrmc.form.input({ placeholder: 'Color',  class: 'input-accent' })
+  <br /><br />
+  @!jrmc.form.input({ placeholder: 'Color',  class: 'input-info' })
+  <br /><br />
+  @!jrmc.form.input({ placeholder: 'Color',  class: 'input-success' })
+  <br /><br />
+  @!jrmc.form.input({ placeholder: 'Color',  class: 'input-warning' })
+  <br /><br />
+  @!jrmc.form.input({ placeholder: 'Color',  class: 'input-error' })`
+  })
+
+  @!section({
+    title: 'Input size',
+    template: `@!jrmc.form.input({ placeholder: 'Size xs',  class: 'input-xs' })
+<br /><br />
+@!jrmc.form.input({ placeholder: 'Size sm',  class: 'input-sm' })
+<br /><br />
+@!jrmc.form.input({ placeholder: 'Size md',  class: 'input-md' })
+<br /><br />
+@!jrmc.form.input({ placeholder: 'Size lg',  class: 'input-lg' })`
+  })
+
+  @!section({
+    title: 'Input disabled',
+    template: `@!jrmc.form.input({ placeholder: 'Disabled',  disabled: true })`
+  })
+
+  @!section({
+    title: 'Input ghost',
+    template: `@!jrmc.form.input({ placeholder: 'Ghost',  class: 'input-ghost' })`
+  })
+
+  @!section({
+    title: 'Input control',
+    template: ``
+  })
+
+  @!section({
+    title: 'Input hint',
+    template: ``
   })
 
 @end
