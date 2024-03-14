@@ -12,8 +12,6 @@ export default class AppProvider {
    * The container bindings have booted
    */
   async boot() {
-    // await import('./Shiki/index.js')
-    // TODO conflit, creer un autre provider pour voir cela corrige
     await import('./Up/index.js')
   }
 
