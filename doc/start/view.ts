@@ -9,6 +9,3 @@ addCollection(tablerIcons)
 
 edge.use(jrmc)
 edge.use(edgeIconify)
-
-// edge.use(migrate)
-edge.use(jrmc)
