@@ -15,6 +15,6 @@ export default class EdgeComponentProvider {
    * Adding edge tags (if edge is installed)
    */
   async boot() {
-    // await this.registerEdgePlugin()
+    await this.registerEdgePlugin()
   }
 }
