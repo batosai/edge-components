@@ -12,8 +12,12 @@
   })
 
   @!section({
-    title: 'Button',
-    template: `@!jrmc.button({ text: 'Button' })`
+    title: 'Container',
+    template: `@jrmc.form({ id: 'my_form', method: 'get', error: false})
+  @jrmc.form.control({ name: 'lastname', hint: '3 characters minimum' })
+    @!jrmc.form.input()
+  @end
+@end`
   })
 
 @end

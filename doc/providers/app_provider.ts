@@ -11,9 +11,7 @@ export default class AppProvider {
   /**
    * The container bindings have booted
    */
-  async boot() {
-    await import('./Up/index.js')
-  }
+  async boot() {}
 
   /**
    * The application has been booted

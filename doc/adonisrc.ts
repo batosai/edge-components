@@ -35,7 +35,9 @@ export default defineConfig({
     () => import('@adonisjs/shield/shield_provider'),
     () => import('@adonisjs/static/static_provider'),
     () => import('#providers/app_provider'),
-    () => import('#providers/shiki_provider')
+    () => import('#providers/shiki_provider'),
+    () => import('#providers/edge_component_provider'),
+    () => import('#providers/unpoly_provider')
   ],
 
   /*

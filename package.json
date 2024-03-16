@@ -20,8 +20,9 @@
   },
   "devDependencies": {
     "@adonisjs/tsconfig": "^1.2.1",
-    "@types/node": "^20.11.27",
     "@poppinss/utils": "^5.0.0",
+    "@types/node": "^20.11.27",
+    "edge.js": "^6.0.1",
     "typescript": "^5.3.3"
   },
   "peerDependencies": {

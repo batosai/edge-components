@@ -15,7 +15,10 @@ export default class ContainerBindingsMiddleware {
     ctx.containerResolver.bindValue(Logger, ctx.logger)
 
     if ('view' in ctx) {
-      ctx.view.share({ up: ctx.up })
+      ctx.view.share({
+        up: ctx.up,
+        renderRaw: async (template: string) => await ctx.view.renderRaw(template)
+      })
     }
 
     return next()
