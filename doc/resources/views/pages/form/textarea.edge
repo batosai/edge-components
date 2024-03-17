@@ -12,8 +12,49 @@
   })
 
   @!section({
-    title: 'Button',
-    template: `@!jrmc.button({ text: 'Button' })`
+    title: 'Textarea bordered',
+    template: `@!jrmc.form.textarea({ placeholder: 'placeholder', class: 'textarea-bordered' })`
+  })
+
+  @!section({
+    title: 'Textarea ghost',
+    template: `@!jrmc.form.textarea({ placeholder: 'placeholder', class: 'textarea-ghost' })`
+  })
+
+  @!section({
+    title: 'Textarea disabled',
+    template: `@!jrmc.form.textarea({ placeholder: 'placeholder', disabled })`
+  })
+
+  @!section({
+    title: 'Textarea color',
+    template: `@!jrmc.form.textarea({ placeholder: 'placeholder', class: 'textarea-primary' })
+@!jrmc.form.textarea({ placeholder: 'placeholder', class: 'textarea-secondary' })
+@!jrmc.form.textarea({ placeholder: 'placeholder', class: 'textarea-accent' })
+@!jrmc.form.textarea({ placeholder: 'placeholder', class: 'textarea-info' })
+@!jrmc.form.textarea({ placeholder: 'placeholder', class: 'textarea-success' })
+@!jrmc.form.textarea({ placeholder: 'placeholder', class: 'textarea-warning' })
+@!jrmc.form.textarea({ placeholder: 'placeholder', class: 'textarea-error' })`
+  })
+
+  @!section({
+    title: 'Textarea control',
+    template: `@jrmc.form.control({ name: 'description', class: 'w-full max-w-xs', label: 'Description' })
+  @!jrmc.form.textarea({ placeholder: 'Description', class: 'textarea-bordered' })
+@end
+
+@jrmc.form.control({ class: 'w-full max-w-xs' })
+  @jrmc.form.label({ text: 'Description' })
+    @!jrmc.form.textarea({ placeholder: 'Bio', class: 'textarea-bordered' })
+  @end
+@end`
+  })
+
+  @!section({
+    title: 'Textarea hint',
+    template: `@jrmc.form.control({ name: 'bio', class: 'w-full max-w-xs', label: 'Your bio', hint: 'Short description' })
+  @!jrmc.form.textarea({ placeholder: 'Bio', class: ['textarea-bordered', 'h-24'] })
+@end`
   })
 
 @end

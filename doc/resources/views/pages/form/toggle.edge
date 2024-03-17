@@ -12,8 +12,39 @@
   })
 
   @!section({
-    title: 'Button',
-    template: `@!jrmc.button({ text: 'Button' })`
+    title: 'Toggle',
+    template: `@!jrmc.form.toggle({ name: 'my_name'  })`
   })
+
+  @!section({
+    title: 'Toggle color',
+    template: `@!jrmc.form.toggle({ class: 'toggle-primary', checked: true })
+@!jrmc.form.toggle({ class: 'toggle-secondary', checked: true })
+@!jrmc.form.toggle({ class: 'toggle-accent', checked: true })`
+  })
+
+  @!section({
+    title: 'Toggle size',
+    template: `@!jrmc.form.toggle({ class: 'toggle-lg', checked: true })
+@!jrmc.form.toggle({ class: 'toggle-md', checked: true })
+@!jrmc.form.toggle({ class: 'toggle-sm', checked: true })
+@!jrmc.form.toggle({ class: 'toggle-xs', checked: true })`
+  })
+
+  @!section({
+    title: 'Toggle disabled',
+    template: `@!jrmc.form.toggle({ disabled: true, checked: true })`
+  })
+
+  @!section({
+    title: 'Toggle control',
+    template: `@jrmc.form.control({ label: false, class: ['w-full', 'max-w-xs'] })
+  @jrmc.form.label({ class: 'cursor-pointer', text: 'Are you sure?' })
+    @!jrmc.form.toggle({ checked: true })
+  @end
+@end`
+  })
+
+
 
 @end

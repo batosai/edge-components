@@ -12,8 +12,44 @@
   })
 
   @!section({
-    title: 'Button',
-    template: `@!jrmc.button({ text: 'Button' })`
+    title: 'Radio',
+    template: `@!jrmc.form.input({ type: 'radio', name: 'my_name', checked: true })
+@!jrmc.form.radio({ name: 'my_name', checked: true })`
+  })
+
+  @!section({
+    title: 'Radio color',
+    template: `@!jrmc.form.radio({ name: 'my_name', class: 'radio-primary', checked: true })
+@!jrmc.form.radio({ name: 'my_name', class: 'radio-secondary' })
+@!jrmc.form.radio({ name: 'my_name', class: 'radio-accent' })`
+  })
+
+  @!section({
+    title: 'Radio size',
+    template: `@!jrmc.form.radio({ name: 'my_name', class: 'radio-lg', checked: true })
+@!jrmc.form.radio({ name: 'my_name', class: 'radio-md' })
+@!jrmc.form.radio({ name: 'my_name', class: 'radio-sm' })
+@!jrmc.form.radio({ name: 'my_name', class: 'radio-xs' })`
+  })
+
+  @!section({
+    title: 'Radio disabled',
+    template: `@!jrmc.form.radio({ class: 'radio-accent', disabled: true, checked: true })`
+  })
+
+  @!section({
+    title: 'Radio control',
+    template: `@jrmc.form.control({ name: 'lastname', label: 'Are you sure?', class: ['w-full', 'max-w-xs'] })
+  @jrmc.form.label({ class: 'cursor-pointer' })
+    @!jrmc.form.label.text({ text: 'Yes' })
+    @!jrmc.form.radio({ ckecd: true })
+  @end
+
+  @jrmc.form.label({ class: 'cursor-pointer' })
+    @!jrmc.form.label.text({ text: 'No' })
+    @!jrmc.form.radio()
+  @end
+@end`
   })
 
 @end

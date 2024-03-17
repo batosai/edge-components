@@ -12,8 +12,73 @@
   })
 
   @!section({
-    title: 'Button',
-    template: `@!jrmc.button({ text: 'Button' })`
+    title: 'Tab',
+    template: `@jrmc.tabs()
+  @!jrmc.tabs.tab({ text: 'Tab 1', href: '#' })
+  @!jrmc.tabs.tab({ text: 'Tab 2', href: '#', active: true })
+  @!jrmc.tabs.tab({ text: 'Tab 3', href: '#' })
+@end`
+  })
+
+  @!section({
+    title: 'Tab bordered',
+    template: `@jrmc.tabs({ class: 'tabs-bordered' })
+  @!jrmc.tabs.tab({ text: 'Tab 1' })
+  @!jrmc.tabs.tab({ text: 'Tab 2', active: true })
+  @!jrmc.tabs.tab({ text: 'Tab 3' })
+@end`
+  })
+
+  @!section({
+    title: 'Tab lifted',
+    template: `@jrmc.tabs({ class: 'tabs-lifted' })
+  @!jrmc.tabs.tab({ text: 'Tab 1' })
+  @!jrmc.tabs.tab({ text: 'Tab 2', active: true })
+  @!jrmc.tabs.tab({ text: 'Tab 3' })
+@end`
+  })
+
+  @!section({
+    title: 'Tab boxed',
+    template: `@jrmc.tabs({ class: 'tabs-boxed' })
+  @!jrmc.tabs.tab({ text: 'Tab 1' })
+  @!jrmc.tabs.tab({ text: 'Tab 2', active: true })
+  @!jrmc.tabs.tab({ text: 'Tab 3' })
+@end`
+  })
+
+  @!section({
+    title: 'Tab sizes',
+    template: `<!-- xs -->
+@jrmc.tabs({ class: 'tabs-boxed tabs-xs' })
+  @!jrmc.tabs.tab({ text: 'Tab 1' })
+  @!jrmc.tabs.tab({ text: 'Tab 2',  active: true })
+  @!jrmc.tabs.tab({ text: 'Tab 3' })
+@end
+<br />
+
+<!-- sm -->
+@jrmc.tabs({ class: 'tabs-boxed tabs-sm' })
+  @!jrmc.tabs.tab({ text: 'Tab 1' })
+  @!jrmc.tabs.tab({ text: 'Tab 2', active: true })
+  @!jrmc.tabs.tab({ text: 'Tab 3' })
+@end
+<br />
+
+<!-- md -->
+@jrmc.tabs({ class: 'tabs-boxed'})
+  @!jrmc.tabs.tab({ text: 'Tab 1' })
+  @!jrmc.tabs.tab({ text: 'Tab 2', active: true })
+  @!jrmc.tabs.tab({ text: 'Tab 3' })
+@end
+<br />
+
+<!-- lg -->
+@jrmc.tabs({ class: 'tabs-boxed tabs-lg' })
+  @!jrmc.tabs.tab({ text: 'Tab 1' })
+  @!jrmc.tabs.tab({ text: 'Tab 2', active: true })
+  @!jrmc.tabs.tab({ text: 'Tab 3' })
+@end`
   })
 
 @end
