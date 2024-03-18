@@ -1,0 +1,23 @@
+@layout()
+  @slot('head')
+    <title>Edge components sample admin page</title>
+    <meta name="description" content="" />
+  @end
+
+  @!breadcrumb({
+  items: [
+    { label: 'Components' },
+    { label: 'Admin page' }
+  ]
+  })
+
+  @section({
+    title: 'Admin page',
+    template: readFile('pages/samples/partials/admin')
+  })
+    @mokup()
+      @include('pages/samples/partials/admin')
+    @end
+  @end
+
+@end

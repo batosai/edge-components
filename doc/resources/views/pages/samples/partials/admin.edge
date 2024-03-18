@@ -1,0 +1,207 @@
+@jrmc.drawer({ class: 'drawer-mobile lg:drawer-open' })
+  @jrmc.drawer.content()
+
+    {{--  navbar  --}}
+    <div class="navbar bg-base-200">
+      <div class="flex-1">
+        @jrmc.button({ class: 'lg:hidden btn-square btn-ghost', ...$context.event.open })
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        @end
+      </div>
+      <div class="flex-none gap-2">
+        @jrmc.dropdown({ class: 'dropdown-end' })
+          @slot('button')
+            @jrmc.button.label({ class: 'btn-ghost btn-circle avatar' })
+              <div class="w-10 rounded-full">
+                <img src="https://picsum.photos/80/80" />
+              </div>
+            @end
+          @end
+          <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-200 rounded-box w-52">
+            <li>
+              <a class="justify-between">
+                Profile
+                @!jrmc.badge({ text: 'New'})
+              </a>
+            </li>
+            <li><a>Settings</a></li>
+            <li><a>Logout</a></li>
+          </ul>
+        @end
+      </div>
+    </div>
+    {{--  end navbar  --}}
+
+
+
+    <div class="flex flex-col justify-center px-4">
+
+      {{--  breadcrumbs  --}}
+      <div class="text-sm breadcrumbs">
+        <ul>
+          <li><a>Dashboard</a></li>
+          <li>Users</li>
+        </ul>
+      </div>
+      {{--  end breadcrumbs  --}}
+
+
+      <div class="w-full my-5">
+
+        <div class="navbar bg-base-100">
+          <div class="flex-1"></div>
+          <div class="flex-none gap-2">
+            <div class="form-control">
+              @!jrmc.form.input({ placeholder: 'Search', class: 'input input-bordered' })
+            </div>
+          </div>
+        </div>
+
+        @jrmc.table({ class: 'w-full' })
+          @slot('header')
+            <tr>
+              <th>
+                <label>
+                  @!jrmc.form.input({ type: 'checkbox', name: 'my_name' })
+                </label>
+              </th>
+              <th>Name</th>
+              <th>Job</th>
+              <th>Favorite Color</th>
+              <th></th>
+            </tr>
+          @end
+          @slot('body')
+            <!-- row 1 -->
+            <tr>
+              <th>
+                <label>
+                  @!jrmc.form.input({ type: 'checkbox', name: 'my_name', checked: true })
+                </label>
+              </th>
+              <td>
+                <div class="flex items-center space-x-3">
+                  @!jrmc.avatar({ url: 'https://daisyui.com/tailwind-css-component-profile-2@56w.png', class: 'w-12 mask mask-squircle' })
+                  <div>
+                    <div class="font-bold">Hart Hagerty</div>
+                    <div class="text-sm opacity-50">United States</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Zemlak, Daniel and Leannon
+                <br>
+                @!jrmc.badge({ text: 'Desktop Support Technician', class: 'badge-primary' })
+              </td>
+              <td>Purple</td>
+              <th>
+                @!jrmc.button({ text: 'details', class: 'btn-neutral' })
+              </th>
+            </tr>
+            <!-- row 2 -->
+            <tr>
+              <th>
+                <label>
+                  @!jrmc.form.input({ type: 'checkbox', name: 'my_name' })
+                </label>
+              </th>
+              <td>
+                <div class="flex items-center space-x-3">
+                  @!jrmc.avatar({ url: 'https://daisyui.com/tailwind-css-component-profile-3@56w.png', class: 'w-12 mask mask-squircle' })
+                  <div>
+                    <div class="font-bold">Brice Swyre</div>
+                    <div class="text-sm opacity-50">China</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Carroll Group
+                <br>
+                @!jrmc.badge({ text: 'Tax Accountant', class: 'badge-warning' })
+              </td>
+              <td>Red</td>
+              <th>
+                @!jrmc.button({ text: 'details', class: 'btn-neutral' })
+              </th>
+            </tr>
+            <!-- row 3 -->
+            <tr>
+              <th>
+                <label>
+                  @!jrmc.form.input({ type: 'checkbox', name: 'my_name' })
+                </label>
+              </th>
+              <td>
+                <div class="flex items-center space-x-3">
+                  @!jrmc.avatar({ url: 'https://daisyui.com/tailwind-css-component-profile-4@56w.png', class: 'w-12 mask mask-squircle' })
+                  <div>
+                    <div class="font-bold">Marjy Ferencz</div>
+                    <div class="text-sm opacity-50">Russia</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Rowe-Schoen
+                <br>
+                @!jrmc.badge({ text: 'Office Assistant I', class: 'badge-info' })
+              </td>
+              <td>Crimson</td>
+              <th>
+                @!jrmc.button({ text: 'details', class: 'btn-neutral' })
+              </th>
+            </tr>
+            <!-- row 4 -->
+            <tr>
+              <th>
+                <label>
+                  @!jrmc.form.input({ type: 'checkbox', name: 'my_name' })
+                </label>
+              </th>
+              <td>
+                <div class="flex items-center space-x-3">
+                  @!jrmc.avatar({ url: 'https://daisyui.com/tailwind-css-component-profile-5@56w.png', class: 'w-12 mask mask-squircle' })
+                  <div>
+                    <div class="font-bold">Yancy Tear</div>
+                    <div class="text-sm opacity-50">Brazil</div>
+                  </div>
+                </div>
+              </td>
+              <td>
+                Wyman-Ledner
+                <br>
+                @!jrmc.badge({ text: 'Community Outreach Specialist', class: 'badge-error' })
+              </td>
+              <td>Indigo</td>
+              <th>
+                @!jrmc.button({ text: 'details', class: 'btn-neutral' })
+              </th>
+            </tr>
+          @end
+        @end
+      </div>
+
+      <div class="w-full text-center my-5 hidden sm:block">
+        @!jrmc.pagination({ object: fakeUsers({ currentPage: 40, total: 99 }) })
+      </div>
+      <div class="w-full text-center my-5 sm:hidden">
+        @!jrmc.pagination.light({ object: fakeUsers({ currentPage: 40, total: 99 }) })
+      </div>
+    </div>
+
+  @end
+
+  @jrmc.drawer.side({ class: 'overflow-y-auto w-80 bg-base-200' })
+    <div class="z-20 bg-base-200 bg-opacity-90 backdrop-blur sticky top-0 items-center justify-center gap-2 mb-10 px-4 py-2 flex shadow-sm">
+      <a href="/" aria-current="page" aria-label="Homepage" class="flex-0 btn btn-ghost px-2">
+        <div class="font-title text-accent inline-flex text-lg transition-all duration-200 text-3xl">
+          <span class="lowercase">Edge</span> <span class="text-base-content uppercase">Component</span>
+        </div>
+      </a>
+    </div>
+
+    <ul class="menu text-base-content p-2 rounded-box">
+      <li><a href="#">Item 1</a></li>
+      <li><a href="#">Item 2</a></li>
+    </ul>
+  @end
+@end

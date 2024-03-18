@@ -1,6 +1,8 @@
 import { Logger } from '@adonisjs/core/logger'
 import { HttpContext } from '@adonisjs/core/http'
 import { NextFn } from '@adonisjs/core/types/http'
+import app from '@adonisjs/core/services/app'
+import fs from 'node:fs'
 
 /**
  * The container bindings middleware binds classes to their request
@@ -32,7 +34,8 @@ export default class ContainerBindingsMiddleware {
             getPreviousPageUrl: () => urls[currentPage-1].url,
             getNextPageUrl: () => urls[currentPage+1].url,
           }
-        }
+        },
+        readFile: (path: string) => fs.readFileSync(app.viewsPath(`${path}.edge`)).toString()
       })
     }
 

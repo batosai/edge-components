@@ -45,3 +45,6 @@ router.on('/toggle').render('pages/form/toggle').as('toggle')
 
 router.on('/pagination').render('pages/navigation/pagination').as('pagination')
 router.on('/tab').render('pages/navigation/tab').as('tab')
+
+router.on('/login').render('pages/samples/login').as('login')
+router.on('/admin').render('pages/samples/admin').as('admin')
