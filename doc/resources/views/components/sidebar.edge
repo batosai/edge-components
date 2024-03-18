@@ -30,7 +30,7 @@
   <ul class="menu menu-compact text-base-content rounded-box p-4">
 
     <li>
-      <details open>
+      <details {{ html.classNames([ { 'open' : request.matchesRoute(['button', 'drawer', 'dropdown', 'modal']) }]) }}>
         <summary>
           @!svg('tabler:click')
           Actions
@@ -51,9 +51,10 @@
         </ul>
       </details>
     </li>
+    <li></li>
 
     <li>
-      <details>
+      <details {{ html.classNames([ { 'open' : request.matchesRoute(['alert', 'avatar', 'badge', 'card', 'carousel', 'chat', 'loading', 'progress', 'table', 'toast', 'tooltip']) }]) }}>
         <summary>
           @!svg('tabler:heart-rate-monitor')
           Display
@@ -98,7 +99,7 @@
 
     <li></li>
     <li>
-      <details>
+      <details {{ html.classNames([ { 'open' : request.matchesRoute(['container', 'input', 'default-value', 'radio', 'checkbox', 'toggle', 'range', 'label', 'select', 'textarea', 'control', 'error', 'file']) }]) }}>
         <summary>
           @!svg('tabler:input-check')
           Form
@@ -148,7 +149,7 @@
     </li>
     <li></li>
     <li>
-      <details>
+      <details {{ html.classNames([ { 'open' : request.matchesRoute(['pagination', 'tab']) }]) }}>
         <summary>
           @!svg('tabler:link')
           Navigation
@@ -165,28 +166,20 @@
     </li>
     <li></li>
     <li>
-      <details>
+      <details {{ html.classNames([ { 'open' : request.matchesRoute(['login', 'admin']) }]) }}>
         <summary>
           @!svg('tabler:brand-pagekit')
           Pages
         </summary>
         <ul>
           <li>
-            @!sidebar.link({ text: 'Login', href: route('modal') })
+            @!sidebar.link({ text: 'Login', href: route('login') })
           </li>
           <li>
-            @!sidebar.link({ text: 'Admin', href: route('modal') })
+            @!sidebar.link({ text: 'Admin', href: route('admin') })
           </li>
         </ul>
       </details>
-    </li>
-    <li></li>
-
-    <li>
-      <a>
-        @!svg('tabler:brand-npm')
-        Installation
-      </a>
     </li>
   </ul>
 </nav>
