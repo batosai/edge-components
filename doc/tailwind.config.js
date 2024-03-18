@@ -12,6 +12,7 @@ export default {
   },
   plugins: [
     ...edgeComponent.plugins,
+    require('@tailwindcss/typography')
   ],
 }
 

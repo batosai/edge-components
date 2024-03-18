@@ -36,6 +36,7 @@
     "@adonisjs/prettier-config": "^1.2.1",
     "@adonisjs/tsconfig": "^1.2.1",
     "@swc/core": "^1.3.105",
+    "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20.11.6",
     "alpinejs": "^3.13.7",
     "autoprefixer": "^10.4.17",

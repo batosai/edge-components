@@ -14,7 +14,7 @@ export default class ShikiProvider {
 
       const highlighter = await getHighlighter({
         themes: ['one-dark-pro'],
-        langs: ['html']
+        langs: ['html', 'sh', 'javascript']
       })
       await highlighter.loadLanguage(myLanguage)
 
