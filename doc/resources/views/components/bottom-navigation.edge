@@ -6,9 +6,47 @@
     <button class="hover:bg-base-100 active:bg-base-100">
       @!svg('tabler:search')
     </button>
-    <button class="hover:bg-base-100 active:bg-base-100">
-      @!svg('tabler:color-filter')
-    </button>
+
+    @jrmc.modal({ button: { class: 'btn-ghost rounded-none p-0 hover:bg-base-100 active:bg-base-100 shrink' } })
+      <h3 class="font-bold text-lg mb-4">Theme</h3>
+
+      @!button.theme({ theme: 'light' })
+      @!button.theme({ theme: 'dark' })
+      @!button.theme({ theme: 'bumblebee' })
+      @!button.theme({ theme: 'emerald' })
+      @!button.theme({ theme: 'corporate' })
+      @!button.theme({ theme: 'synthwave' })
+      @!button.theme({ theme: 'cyberpunk' })
+      @!button.theme({ theme: 'valentine' })
+      @!button.theme({ theme: 'halloween' })
+      @!button.theme({ theme: 'garden' })
+      @!button.theme({ theme: 'forest' })
+      @!button.theme({ theme: 'aqua' })
+      @!button.theme({ theme: 'lofi' })
+      @!button.theme({ theme: 'pastel' })
+      @!button.theme({ theme: 'fantasy' })
+      @!button.theme({ theme: 'wireframe' })
+      @!button.theme({ theme: 'black' })
+      @!button.theme({ theme: 'luxury' })
+      @!button.theme({ theme: 'dracula' })
+      @!button.theme({ theme: 'cmyk' })
+      @!button.theme({ theme: 'autumn' })
+      @!button.theme({ theme: 'business' })
+      @!button.theme({ theme: 'acid' })
+      @!button.theme({ theme: 'lemonade' })
+      @!button.theme({ theme: 'night' })
+      @!button.theme({ theme: 'coffee' })
+      @!button.theme({ theme: 'winter' })
+      @!button.theme({ theme: 'dim' })
+      @!button.theme({ theme: 'nord' })
+      @!button.theme({ theme: 'sunset' })
+
+
+      @slot('button')
+        @!svg('tabler:color-filter')
+      @end
+    @end
+
     <button class="hover:bg-base-100 active:bg-base-100">
       @!svg('tabler:settings-cog')
     </button>

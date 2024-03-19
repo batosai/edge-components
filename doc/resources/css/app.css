@@ -21,3 +21,8 @@
 .tabs-bordered .tab:first-child:not(.tab-active) {
   border-bottom-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-border-opacity)));
 }
+
+/* override */
+.tab:not(input:checked) {
+  color: gray;
+}

@@ -1,14 +1,24 @@
-<input type="radio" name="{{ id }}" role="tab" class="tab [--tab-bg:#282c34] [--tab-border-color:#282c34]" aria-label="{{ label }}" {{ html.attrs({ checked }) }} />
+<input type="radio" name="{{ id }}" role="tab" class="{{ html.classNames([
+  'tab',
+  {
+    '[--tab-bg:#282c34]': dark,
+    '[--tab-color:var(--fallback-nc,oklch(var(--nc)))]': dark,
+  }
+]) }}" aria-label="{{ label }}" {{ html.attrs({ checked }) }} />
 <div
   role="tabpanel"
   class="{{
     html.classNames([
       'tab-content',
-      'bg-[#282c34]',
-      'border-[#282c34]',
       'rounded-box',
+      'border-base-300',
+      '[border-width:var(--tab-border)]',
       'p-6',
-      'overflow-x-scroll'
+      'overflow-x-scroll',
+      {
+        'bg-[#282c34]': dark,
+        'border-[#282c34]': dark,
+      }
     ])
   }}"
 >

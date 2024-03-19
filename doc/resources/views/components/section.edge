@@ -15,7 +15,7 @@
     'm-4'
   ])
 }}">
-  @section.tab({ id, label: 'Preview', checked: true })
+  @section.tab({ id, label: 'Preview', dark: false, checked: true })
     @if($slots.main() !== '')~
       {{{ await $slots.main() }}}
     @else
@@ -23,11 +23,11 @@
     @end~
   @end
 
-  @section.tab({ id, label: 'Edge', checked: false })
+  @section.tab({ id, label: 'Edge', dark: true, checked: false })
     {{{ codeToHtml(template, { lang: 'Edge' }) }}}
   @end
 
-  @section.tab({ id, label: 'HTML', checked: false })
+  @section.tab({ id, label: 'HTML', dark: true, checked: false })
     {{{ codeToHtml(await renderRaw(template), { lang: 'html' }) }}}
   @end
 </div>

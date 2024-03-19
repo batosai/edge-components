@@ -63,6 +63,7 @@
     @jrmc.drawer({ class: 'drawer-mobile' })
       @jrmc.drawer.content()
         @!jrmc.button({ text: 'Open drawer', class: 'lg:hidden', ...$context.event.open })
+        <p>This example only works on mobile</p>
       @end
 
       @jrmc.drawer.side({ container: { class: 'absolute' } })

@@ -4,6 +4,9 @@ import 'unpoly/unpoly.css'
 import 'unpoly'
 import Alpine from 'alpinejs'
 
+import { themeChange } from 'theme-change'
+themeChange()
+
 
 // Unpoly
 up.link.config.followSelectors.push('a[href]')
