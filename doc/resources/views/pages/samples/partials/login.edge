@@ -6,7 +6,7 @@
         <figure><img src="https://picsum.photos/500/500" class="h-full lg:!max-w-fit" alt="" /></figure>
       @end
       @jrmc.card.body()
-        @jrmc.form({ csrf: false })
+        @jrmc.form({ action: '/login' })
           @jrmc.form.control({ name: 'email', error: false })
             @!jrmc.form.input({ class: 'input-bordered' })
           @end
