@@ -2,6 +2,7 @@
   'tab',
   {
     '[--tab-bg:#282c34]': dark,
+    '[--tab-bg:oklch(var(--b2))]': !dark,
     '[--tab-color:var(--fallback-nc,oklch(var(--nc)))]': dark,
   }
 ]) }}" aria-label="{{ label }}" {{ html.attrs({ checked }) }} />
@@ -17,6 +18,7 @@
       'overflow-x-scroll',
       {
         'bg-[#282c34]': dark,
+        'bg-base-200': !dark,
         'border-[#282c34]': dark,
       }
     ])
