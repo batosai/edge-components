@@ -1,4 +1,4 @@
-@if(flashMessages.all())
+@if(flashMessages.all() && flashMessages.all().errors)
   @jrmc.alert.error($props)
     <ul>
     @each((error, index) in flashMessages.all().errors)
@@ -7,3 +7,4 @@
     </ul>
   @end
 @end
+

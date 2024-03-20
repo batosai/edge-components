@@ -8,6 +8,7 @@
 */
 
 import router from '@adonisjs/core/services/router'
+import vine from '@vinejs/vine'
 
 router.on('/').render('pages/home').as('home')
 router.on('/changelog').render('pages/changelog').as('changelog')
@@ -33,7 +34,6 @@ router.on('/checkbox').render('pages/form/checkbox').as('checkbox')
 router.on('/container').render('pages/form/container').as('container')
 router.on('/control').render('pages/form/control').as('control')
 router.on('/default-value').render('pages/form/default-value').as('default-value')
-router.on('/error').render('pages/form/error').as('error')
 router.on('/file').render('pages/form/file').as('file')
 router.on('/input').render('pages/form/input').as('input')
 router.on('/label').render('pages/form/label').as('label')
@@ -42,9 +42,34 @@ router.on('/range').render('pages/form/range').as('range')
 router.on('/select').render('pages/form/select').as('select')
 router.on('/textarea').render('pages/form/textarea').as('textarea')
 router.on('/toggle').render('pages/form/toggle').as('toggle')
+router.get('/error', async ({ view, session }) => {
+  session.flash({
+    errors: {
+      sampleError: 'this field is required',
+      sample2Error: 'this field is required',
+    }
+  })
+
+  return view.render('pages/form/error')
+}).as('error')
 
 router.on('/pagination').render('pages/navigation/pagination').as('pagination')
 router.on('/tab').render('pages/navigation/tab').as('tab')
 
 router.on('/login').render('pages/samples/login').as('login')
+router.post('/login', async ({ response, request }) => {
+  const schema = vine.object({
+    email: vine.string().email(),
+    password: vine
+    .string()
+    .minLength(8)
+    .maxLength(32)
+  })
+
+  const data = request.all()
+  await vine.validate({ schema, data })
+
+  return response.redirect().toPath('/login')
+})
+
 router.on('/admin').render('pages/samples/admin').as('admin')

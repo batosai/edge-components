@@ -3,7 +3,6 @@
 })
 
 <form method="{{ jrmc.getMethodForm($props, 'POST') }}" {{ $props.except(['method', 'object']).toAttrs() }}>
-
   @if(csrfField && $props.get('csrf') !== false)~
     {{ csrfField() }}
   @end~
