@@ -42,7 +42,8 @@ router.on('/range').render('pages/form/range').as('range')
 router.on('/select').render('pages/form/select').as('select')
 router.on('/textarea').render('pages/form/textarea').as('textarea')
 router.on('/toggle').render('pages/form/toggle').as('toggle')
-router.get('/error', async ({ view, session }) => {
+router.on('/error').render('pages/form/error').as('error')
+router.post('/error', async ({ response, session }) => {
   session.flash({
     errors: {
       sampleError: 'this field is required',
@@ -50,8 +51,8 @@ router.get('/error', async ({ view, session }) => {
     }
   })
 
-  return view.render('pages/form/error')
-}).as('error')
+  return response.redirect().back()
+})
 
 router.on('/pagination').render('pages/navigation/pagination').as('pagination')
 router.on('/tab').render('pages/navigation/tab').as('tab')

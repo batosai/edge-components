@@ -13,7 +13,7 @@
 
   @!section({
     title: 'Error',
-    template: `@jrmc.form({ method: 'get'})
+    template: `@jrmc.form()
   @jrmc.form.control({ name: 'sampleError', error: false })
     @!jrmc.form.input({ class: 'input-bordered' })
   @end
@@ -21,12 +21,16 @@
   @jrmc.form.control({ name: 'sample2Error', error: false })
     @!jrmc.form.input({ class: 'input-bordered' })
   @end
+
+  @jrmc.form.control({ label: false, error: false })
+    @!jrmc.button.input({ text: 'Login', type: 'submit', class: 'btn-primary' })
+  @end
 @end`
   })
 
   @section({
     title: 'Error inline',
-    template: `@jrmc.form({ method: 'get', error: false})
+    template: `@jrmc.form({ error: false })
   @jrmc.form.control({ name: 'sampleError' })
     @!jrmc.form.input({ class: 'input-bordered' })
   @end
@@ -34,15 +38,23 @@
   @jrmc.form.control({ name: 'sample2Error' })
     @!jrmc.form.input({ class: 'input-bordered' })
   @end
+
+  @jrmc.form.control({ label: false, error: false })
+    @!jrmc.button.input({ text: 'Login', type: 'submit', class: 'btn-primary' })
+  @end
 @end`
   })
-    @jrmc.form({ method: 'get', error: false})
+    @jrmc.form({ error: false})
       @jrmc.form.control({ name: 'sampleError' })
         @!jrmc.form.input({ class: 'input-bordered' })
       @end
 
       @jrmc.form.control({ name: 'sample2Error' })
         @!jrmc.form.input({ class: 'input-bordered' })
+      @end
+
+      @jrmc.form.control({ label: false, error: false })
+        @!jrmc.button.input({ text: 'Login', type: 'submit', class: 'btn-primary' })
       @end
     @end
   @end
@@ -51,7 +63,7 @@
 
   @!section({
     title: 'Error disabled',
-    template: `@jrmc.form({ method: 'get', error: false})
+    template: `@jrmc.form({ error: false })
   @jrmc.form.control({ name: 'sampleError', error: false })
     @!jrmc.form.input({ class: 'input-bordered' })
   @end
@@ -59,18 +71,27 @@
   @jrmc.form.control({ name: 'sample2Error', error: false })
     @!jrmc.form.input({ class: 'input-bordered' })
   @end
+
+  @jrmc.form.control({ label: false, error: false })
+    @!jrmc.button.input({ text: 'Login', type: 'submit', class: 'btn-primary' })
+  @end
+
 @end`
   })
 
   @!section({
     title: 'Error manual',
-    template: `@jrmc.form({ method: 'get', error: false})
+    template: `@jrmc.form({ error: false })
   @jrmc.form.control({ name: 'sampleError', error: false })
     @!jrmc.form.input({ class: 'input-bordered' })
   @end
 
   @jrmc.form.control({ name: 'sample2Error', error: false })
     @!jrmc.form.input({ class: 'input-bordered' })
+  @end
+
+  @jrmc.form.control({ label: false, error: false })
+    @!jrmc.button.input({ text: 'Login', type: 'submit', class: 'btn-primary' })
   @end
 
   @!jrmc.form.error.all({ class: 'mt-5'})
