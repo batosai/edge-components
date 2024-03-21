@@ -4,18 +4,18 @@ import { HttpContext } from '@adonisjs/core/http'
  * A list of supported unpoly headers
  */
 const UNPOLY_HEADERS = [
+  'Last-Modified',
   'X-Up-Accept-Layer',
-  'X-Up-Clear-Cache',
   'X-Up-Context',
   'X-Up-Dismiss-Layer',
   'X-Up-Events',
+  'X-Up-Expire-Cache',
   'X-Up-Fail-Context',
   'X-Up-Fail-Mode',
   'X-Up-Fail-Target',
   'X-Up-Location',
   'X-Up-Method',
   'X-Up-Mode',
-  'X-Up-Reload-From-Time',
   'X-Up-Target',
   'X-Full-Reload',
 ]
@@ -98,7 +98,7 @@ export default class Up {
   }
 
   public getCache() {
-    return this.getProperty('X-Up-Clear-Cache')
+    return this.getProperty('X-Up-Expire-Cache')
   }
 
   public getContext() {
@@ -138,7 +138,7 @@ export default class Up {
   }
 
   public getReloadFromTime() {
-    return this.getProperty('X-Up-Reload-From-Time')
+    return this.getProperty('Last-Modified')
   }
 
   public getTarget() {
@@ -169,7 +169,7 @@ export default class Up {
   }
 
   public setCache(value: string) {
-    return this.setProperty('X-Up-Clear-Cache', value)
+    return this.setProperty('X-Up-Expire-Cache', value)
   }
 
   public setContext(value: string) {
@@ -209,7 +209,7 @@ export default class Up {
   }
 
   public setReloadFromTime(value: string) {
-    return this.setProperty('X-Up-Reload-From-Time', value)
+    return this.setProperty('Last-Modified', value)
   }
 
   public setTarget(value: string) {
