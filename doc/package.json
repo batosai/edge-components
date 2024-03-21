@@ -57,6 +57,7 @@
     "@adonisjs/static": "^1.1.1",
     "@adonisjs/vite": "^2.0.2",
     "@dimerapp/markdown": "^8.0.1",
+    "@iconify-json/fluent": "^1.1.50",
     "@iconify-json/tabler": "^1.1.106",
     "@vinejs/vine": "^1.8.0",
     "edge-iconify": "^2.0.1",
