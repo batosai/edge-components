@@ -14,6 +14,7 @@
 
   @section({
     title: 'Drawer',
+    about: route('about-drawer'),
     template: `@jrmc.drawer()
   @jrmc.drawer.content()
     @!jrmc.button({ text: 'Open drawer', ...$context.event.open })
@@ -45,7 +46,7 @@
 
   @section({
     title: 'Drawer mobile',
-    height: 'min-h-72',
+    about: route('about-drawer'),
     template: `@jrmc.drawer({ class: 'drawer-mobile' })
   @jrmc.drawer.content()
     @!jrmc.button({ text: 'Open drawer', class: 'lg:hidden', ...$context.event.open })
@@ -78,6 +79,7 @@
 
   @section({
     title: 'Drawer navbar desktop',
+    about: route('about-drawer'),
     template: `@jrmc.drawer()
   @jrmc.drawer.content()
 
@@ -147,6 +149,7 @@
 
   @!section({
     title: 'Drawer right',
+    about: route('about-drawer'),
     template: `@jrmc.drawer({ class: 'drawer-end' })
   @jrmc.drawer.content()
     @!jrmc.button({ text: 'Open drawer', ...$context.event.open })
@@ -163,6 +166,7 @@
 
   @section({
     title: 'Drawer color',
+    about: route('about-drawer'),
     template: `@jrmc.drawer()
   @jrmc.drawer.content()
     @!jrmc.button({ text: 'Open drawer', ...$context.event.open })
@@ -194,6 +198,7 @@
 
   @section({
     title: 'Drawer size',
+    about: route('about-drawer'),
     template: `@jrmc.drawer()
   @jrmc.drawer.content()
     @!jrmc.button({ text: 'Open drawer', ...$context.event.open })

@@ -13,21 +13,25 @@
 
   @!section({
     title: 'Textarea bordered',
+    about: route('about-textarea'),
     template: `@!jrmc.form.textarea({ placeholder: 'placeholder', class: 'textarea-bordered' })`
   })
 
   @!section({
     title: 'Textarea ghost',
+    about: route('about-textarea'),
     template: `@!jrmc.form.textarea({ placeholder: 'placeholder', class: 'textarea-ghost' })`
   })
 
   @!section({
     title: 'Textarea disabled',
+    about: route('about-textarea'),
     template: `@!jrmc.form.textarea({ placeholder: 'placeholder', disabled })`
   })
 
   @!section({
     title: 'Textarea color',
+    about: route('about-textarea'),
     template: `@!jrmc.form.textarea({ placeholder: 'placeholder', class: 'textarea-primary' })
 @!jrmc.form.textarea({ placeholder: 'placeholder', class: 'textarea-secondary' })
 @!jrmc.form.textarea({ placeholder: 'placeholder', class: 'textarea-accent' })
@@ -39,6 +43,7 @@
 
   @!section({
     title: 'Textarea control',
+    about: route('about-textarea'),
     template: `@jrmc.form.control({ name: 'description', class: 'w-full max-w-xs', label: 'Description' })
   @!jrmc.form.textarea({ placeholder: 'Description', class: 'textarea-bordered' })
 @end
@@ -52,6 +57,7 @@
 
   @!section({
     title: 'Textarea hint',
+    about: route('about-textarea'),
     template: `@jrmc.form.control({ name: 'bio', class: 'w-full max-w-xs', label: 'Your bio', hint: 'Short description' })
   @!jrmc.form.textarea({ placeholder: 'Bio', class: ['textarea-bordered', 'h-24'] })
 @end`

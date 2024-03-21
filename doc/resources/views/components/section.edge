@@ -3,8 +3,10 @@
 <h1 class="text-base font-semibold leading-7 px-4" >
   <a href="#{{ id }}" class="text-primary">#</a>
   {{ title }}
-  @jrmc.button.label({ class: 'btn-ghost btn-circle btn-xs text-info' })
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+  @if(about)
+    @jrmc.button.link({ class: 'btn-ghost btn-circle btn-xs text-info', href: about, 'up-layer': 'new', 'up-mode': 'drawer' })
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+    @end
   @end
 </h1>
 

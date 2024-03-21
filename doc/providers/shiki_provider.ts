@@ -6,7 +6,10 @@ import fs from 'node:fs'
 export default class ShikiProvider {
   constructor(protected app: ApplicationService) {}
 
-  protected async registerEdgePlugin() {
+  /**
+   * The container bindings have booted
+   */
+  async boot() {
     if (this.app.usingEdgeJS) {
       const edge = await import('edge.js')
 
@@ -19,14 +22,6 @@ export default class ShikiProvider {
       await highlighter.loadLanguage(myLanguage)
 
       edge.default.global('codeToHtml', (code: string, opt: CodeToHastOptions) => highlighter.codeToHtml(code, { theme: 'one-dark-pro', ...opt }))
-
     }
-  }
-
-  /**
-   * The container bindings have booted
-   */
-  async boot() {
-    await this.registerEdgePlugin()
   }
 }

@@ -13,6 +13,7 @@
 
   @!section({
     title: 'Chat',
+    about: route('about-chat'),
     template: `@jrmc.chat()
   It was said that you would, destroy the Sith, not join them.
 @end
@@ -22,6 +23,7 @@
 
   @!section({
     title: 'Chat with avatar',
+    about: route('about-chat'),
     template: `@jrmc.chat()
   @slot('avatar')
     <img src="https://picsum.photos/192/192" />
@@ -32,6 +34,7 @@
 
   @!section({
     title: 'Chat with header',
+    about: route('about-chat'),
     template: `@jrmc.chat()
   @slot('header')
     Obi-Wan Kenobi
@@ -43,6 +46,7 @@
 
   @!section({
     title: 'Chat with footer',
+    about: route('about-chat'),
     template: `@jrmc.chat()
   @slot('footer')
     Delivered
@@ -53,6 +57,7 @@
 
   @!section({
     title: 'Chat position',
+    about: route('about-chat'),
     template: `@jrmc.chat({ position: 'end' })
   @slot('avatar')
     <img src="https://picsum.photos/192/192" />
@@ -70,6 +75,7 @@
 
   @!section({
     title: 'Chat color',
+    about: route('about-chat'),
     template: `@!jrmc.chat({ message: 'Color primary', class: 'chat-bubble-primary' })
 @!jrmc.chat({ message: 'Color secondary', class: 'chat-bubble-secondary' })
 @!jrmc.chat({ message: 'Color accent', class: 'chat-bubble-accent' })
@@ -81,6 +87,7 @@
 
   @!section({
     title: 'Chat sample',
+    about: route('about-chat'),
     template: `@jrmc.chat()
   @slot('avatar')
     <img src="https://picsum.photos/192/192" />

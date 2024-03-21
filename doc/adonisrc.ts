@@ -37,7 +37,8 @@ export default defineConfig({
     () => import('#providers/app_provider'),
     () => import('#providers/shiki_provider'),
     () => import('#providers/edge_component_provider'),
-    () => import('#providers/unpoly_provider')
+    () => import('#providers/unpoly_provider'),
+    () => import('#providers/markdown_provider')
   ],
 
   /*

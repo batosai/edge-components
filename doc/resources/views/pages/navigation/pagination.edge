@@ -13,11 +13,13 @@
 
   @!section({
     title: 'Pagination',
+    about: route('about-pagination'),
     template: `@!jrmc.pagination({ object: fakeUsers({ currentPage: 4, total: 10 }) })`
   })
 
   @!section({
     title: 'Pagination size',
+    about: route('about-pagination'),
     template: `{{--  fake object users  --}}
 @let(users = fakeUsers({ currentPage: 4, total: 10 }))
 
@@ -31,11 +33,13 @@
 
   @!section({
     title: 'Pagination 99 pages',
+    about: route('about-pagination'),
     template: `@!jrmc.pagination({ object: fakeUsers({ currentPage: 40, total: 99 }) })`
   })
 
   @section({
     title: 'Pagination light',
+    about: route('about-pagination'),
     template: `@!jrmc.pagination.light({ object: fakeUsers({ currentPage: 4, total: 10 }) })
 @!jrmc.pagination.light({ object: fakeUsers({ currentPage: 1, total: 1 }) })
 @!jrmc.pagination.light({ object: fakeUsers({ currentPage: 1, total: 1 }), size: 'xs' })

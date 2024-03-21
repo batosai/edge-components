@@ -13,6 +13,7 @@
 
   @!section({
     title: 'Card',
+    about: route('about-card'),
     template: `@jrmc.card()
   @slot('top')
     <figure><img src="https://picsum.photos/400/225" alt="Shoes" /></figure>
@@ -30,6 +31,7 @@
 
   @!section({
     title: 'Card compact',
+    about: route('about-card'),
     template: `@jrmc.card({ class: 'card-compact w-96 bg-base-100 shadow-xl' })
   @slot('top')
     <figure><img src="https://picsum.photos/400/225" alt="Shoes" /></figure>
@@ -47,6 +49,7 @@
 
   @!section({
     title: 'Card with badge',
+    about: route('about-card'),
     template: `@jrmc.card()
   @slot('top')
     <figure><img src="https://picsum.photos/400/225" alt="Shoes" /></figure>
@@ -67,6 +70,7 @@
 
   @!section({
     title: 'Card with bottom image',
+    about: route('about-card'),
     template: `@jrmc.card()
   @jrmc.card.body()
     @!jrmc.card.title({ text: 'Shoes!' })
@@ -84,6 +88,7 @@
 
   @!section({
     title: 'Card with center content',
+    about: route('about-card'),
     template: `@jrmc.card()
   @slot('top')
     <figure class="px-10 pt-10"><img src="https://picsum.photos/400/225" alt="Shoes" /></figure>
@@ -101,6 +106,7 @@
 
   @!section({
     title: 'Card with image overlay',
+    about: route('about-card'),
     template: `@jrmc.card({ class: 'w-96 bg-base-100 shadow-xl image-full'})
   @slot('top')
     <figure><img src="https://picsum.photos/400/225" alt="Shoes" /></figure>
@@ -118,6 +124,7 @@
 
   @!section({
     title: 'Card no image',
+    about: route('about-card'),
     template: `@jrmc.card()
   @jrmc.card.body()
     @!jrmc.card.title({ text: 'Shoes!' })
@@ -132,6 +139,7 @@
 
   @!section({
     title: 'Card primary',
+    about: route('about-card'),
     template: `@jrmc.card({ class: 'w-96 bg-primary text-primary-content' })
   @jrmc.card.body()
     @!jrmc.card.title({ text: 'Shoes!' })
@@ -146,6 +154,7 @@
 
   @!section({
     title: 'Card center whith neutral color',
+    about: route('about-card'),
     template: `@jrmc.card({ class: 'w-96 bg-neutral text-neutral-content' })
   @jrmc.card.body({ class: 'items-center text-center' })
     @!jrmc.card.title({ text: 'Cookies!' })
@@ -161,6 +170,7 @@
 
   @!section({
     title: 'Card with image on side',
+    about: route('about-card'),
     template: `@jrmc.card({ class: 'card-side bg-base-100 shadow-xl' })
   @slot('top')
     <figure><img src="https://picsum.photos/200/280" alt="Movie"></figure>
@@ -178,6 +188,7 @@
 
   @!section({
     title: 'Card with image on side vertical on small screen and horizontal on large screen edge',
+    about: route('about-card'),
     template: `@jrmc.card({ class: 'lg:card-side bg-base-100 shadow-xl' })
   @slot('top')
     <figure><img src="https://picsum.photos/400/400" alt="Movie"></figure>

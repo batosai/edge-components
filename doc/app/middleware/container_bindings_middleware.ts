@@ -35,7 +35,7 @@ export default class ContainerBindingsMiddleware {
             getNextPageUrl: () => urls[currentPage+1].url,
           }
         },
-        readFile: (path: string) => fs.readFileSync(app.viewsPath(`${path}.edge`)).toString()
+        readFile: (path: string) => fs.readFileSync(app.viewsPath(`${path}`)).toString()
       })
     }
 

@@ -13,11 +13,13 @@
 
   @!section({
     title: 'Alert',
+    about: route('about-alert'),
     template: `@!jrmc.alert({ text: '12 unread messages. Tap to see.' })`
   })
 
   @!section({
     title: 'Alert with icon',
+    about: route('about-alert'),
     template: `@jrmc.alert({ text: '12 unread messages. Tap to see.' })
   @slot('icon')
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -27,26 +29,31 @@
 
   @!section({
     title: 'Alert info',
+    about: route('about-alert'),
     template: `@!jrmc.alert.info({ text: 'New software update available.' })`
   })
 
   @!section({
     title: 'Alert success',
+    about: route('about-alert'),
     template: `@!jrmc.alert.success({ text: 'Your purchase has been confirmed!' })`
   })
 
   @!section({
     title: 'Alert warning',
+    about: route('about-alert'),
     template: `@!jrmc.alert.warning({ text: 'Warning: Invalid email address!' })`
   })
 
   @!section({
     title: 'Alert error',
+    about: route('about-alert'),
     template: `@!jrmc.alert.error({ text: 'Error! Task failed successfully.' })`
   })
 
   @!section({
     title: 'Alert with actions',
+    about: route('about-alert'),
     template: `@jrmc.alert({ text: 'we use cookies for no reason.' })
   @slot('actions')
     @!jrmc.button({ text: "ghost", class: "btn-ghost btn-sm" })
@@ -57,6 +64,7 @@
 
   @!section({
     title: 'Alert with title and description',
+    about: route('about-alert'),
     template: `@jrmc.alert()
   @slot('main')
     <h3 class="font-bold">New message!</h3>

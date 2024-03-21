@@ -13,6 +13,7 @@
 
   @!section({
     title: 'Carousel',
+    about: route('about-carousel'),
     template: `@!jrmc.carousel({ items: [
   { url: 'https://picsum.photos/id/400/400/300', alt: 'text alt' },
   { url: 'https://picsum.photos/id/401/400/300' },
@@ -24,6 +25,7 @@
 
   @!section({
     title: 'Carousel snap to center',
+    about: route('about-carousel'),
     template: `@!jrmc.carousel({ items: [
   { url: 'https://picsum.photos/id/400/400/300' },
   { url: 'https://picsum.photos/id/401/400/300' },
@@ -35,6 +37,7 @@
 
   @!section({
     title: 'Carousel snap to end',
+    about: route('about-carousel'),
     template: `@jrmc.carousel({ class: 'carousel-end rounded-box' })
   @!jrmc.carousel.item({ url: 'https://picsum.photos/id/400/256/400'})
   @!jrmc.carousel.item({ url: 'https://picsum.photos/id/401/256/400' })
@@ -48,6 +51,7 @@
 
   @!section({
     title: 'Carousel with full width items',
+    about: route('about-carousel'),
     template: `@jrmc.carousel({ class: 'w-64 rounded-box' })
   @jrmc.carousel.item({ class: 'w-full' })
     <img src="https://picsum.photos/id/400/256/400" class="w-full" alt="" />
@@ -63,6 +67,7 @@
 
   @!section({
     title: 'Carousel vertical',
+    about: route('about-carousel'),
     template: `@!jrmc.carousel({ items: [
   { url: 'https://picsum.photos/id/301/400/300', class: 'h-full' },
   { url: 'https://picsum.photos/id/302/400/300', class: 'h-full' },
@@ -74,6 +79,7 @@
 
   @!section({
     title: 'Carousel with half width items',
+    about: route('about-carousel'),
     template: `@jrmc.carousel({ class: 'rounded-box w-96' })
   @jrmc.carousel.item({ class: 'w-1/2' })
     <img src="https://picsum.photos/id/400/256/400" class="w-full" alt="" />
@@ -95,6 +101,7 @@
 
   @!section({
     title: 'Carousel full bleed',
+    about: route('about-carousel'),
     template: `@jrmc.carousel({ class: 'carousel-center max-w-md p-4 space-x-4 bg-neutral rounded-box' })
   @jrmc.carousel.item()
     <img src="https://picsum.photos/id/400/250/180" class="rounded-box" alt="" />
@@ -113,6 +120,7 @@
 
   @!section({
     title: 'Carousel with indicator button',
+    about: route('about-carousel'),
     template: `@jrmc.carousel({ class: 'w-full' })
   @jrmc.carousel.item({ id: 'item1', class: 'w-full' })
     <img src="https://picsum.photos/id/400/800/200" class="w-full" alt="" />
@@ -138,6 +146,7 @@
 
   @!section({
     title: 'Carousel with next prev buttons',
+    about: route('about-carousel'),
     template: `@jrmc.carousel({ class: 'w-full' })
   @jrmc.carousel.item({ id: 'slide1', class: 'relative w-full' })
     <img src="https://picsum.photos/id/400/800/200" class="w-full" />

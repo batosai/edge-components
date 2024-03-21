@@ -1,0 +1,11 @@
+@layout()
+  @slot('head')
+    <title>Edge components about {{ name }}</title>
+    <meta name="description" content="" />
+  @end
+
+  <div class="m-4 max-w-none prose">
+    {{{ await markdownToHtml(readFile(`pages/${group}/${name}.md`)) }}}
+  </div>
+
+@end

@@ -13,11 +13,13 @@
 
   @!section({
     title: 'Badge',
+    about: route('about-badge'),
     template: `@!jrmc.badge({ text: 'Badge' })`
   })
 
   @!section({
     title: 'Badge color',
+    about: route('about-badge'),
     template: `@!jrmc.badge({ text: 'neutral' })
 @!jrmc.badge({ text: 'primary', class: 'badge-primary' })
 @!jrmc.badge({ text: 'secondary', class: 'badge-secondary' })
@@ -31,6 +33,7 @@
 
   @!section({
     title: 'Badge outline',
+    about: route('about-badge'),
     template: `@!jrmc.badge({ text: 'neutral', class: 'badge-outline' })
 @!jrmc.badge({ text: 'primary', class: 'badge-primary badge-outline' })
 @!jrmc.badge({ text: 'secondary', class: 'badge-secondary badge-outline' })
@@ -44,6 +47,7 @@
 
   @!section({
     title: 'Badge size',
+    about: route('about-badge'),
     template: `@!jrmc.badge({ text: '987,654', class: 'badge-lg' })
 @!jrmc.badge({ text: '987,654', class: 'badge-md' })
 @!jrmc.badge({ text: '987,654', class: 'badge-sm' })
@@ -52,6 +56,7 @@
 
   @!section({
     title: 'Badge empty',
+    about: route('about-badge'),
     template: `@!jrmc.badge({ class: 'badge-lg' })
 @!jrmc.badge({ class: 'badge-md' })
 @!jrmc.badge({ class: 'badge-sm' })
@@ -60,6 +65,7 @@
 
   @!section({
     title: 'Badge icon',
+    about: route('about-badge'),
     template: `@jrmc.badge({ as: 'div' })
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-4 h-4 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
   Badge

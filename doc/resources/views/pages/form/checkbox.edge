@@ -13,12 +13,14 @@
 
   @!section({
     title: 'Checkbox',
+    about: route('about-checkbox'),
     template: `@!jrmc.form.input({ type: 'checkbox', name: 'my_name', checked: true })
 @!jrmc.form.checkbox({ name: 'my_name' })`
   })
 
   @!section({
     title: 'Checkbox color',
+    about: route('about-checkbox'),
     template: `@!jrmc.form.checkbox({ class: 'checkbox-primary', checked: true })
 @!jrmc.form.checkbox({ class: 'checkbox-secondary', checked: true })
 @!jrmc.form.checkbox({ class: 'checkbox-accent', checked: true })`
@@ -26,6 +28,7 @@
 
   @!section({
     title: 'Checkbox size',
+    about: route('about-checkbox'),
     template: `@!jrmc.form.checkbox({ class: 'checkbox-lg', checked: true })
 @!jrmc.form.checkbox({ class: 'checkbox-md', checked: true })
 @!jrmc.form.checkbox({ class: 'checkbox-sm', checked: true })
@@ -34,11 +37,13 @@
 
   @!section({
     title: 'Checkbox disabled',
+    about: route('about-checkbox'),
     template: `@!jrmc.form.checkbox({ class: 'checkbox-accent', disabled: true, checked: true })`
   })
 
   @!section({
     title: 'Checkbox control',
+    about: route('about-checkbox'),
     template: `@jrmc.form.control({ label: false, class: ['w-full', 'max-w-xs'] })
   @jrmc.form.label({ class: 'cursor-pointer', text: 'Are you sure?' })
     @!jrmc.form.checkbox({ checked: true })

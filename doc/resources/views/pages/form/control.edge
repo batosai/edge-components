@@ -13,6 +13,7 @@
 
   @!section({
     title: 'Control simple',
+    about: route('about-control'),
     template: `@jrmc.form.control({ name: 'name', class: 'w-full max-w-xs', label: 'Your name', hint: 'Hint' })
   @!jrmc.form.input({placeholder: 'My name', class: 'input-bordered' })
 @end`
@@ -20,6 +21,7 @@
 
   @!section({
     title: 'Control inline',
+    about: route('about-control'),
     template: `@jrmc.form.control()
   @jrmc.form.label({ class: 'cursor-pointer' })
     @!jrmc.form.label.text({ text: 'Remember me' })
@@ -42,6 +44,7 @@
 
   @!section({
     title: 'Control extended',
+    about: route('about-control'),
     template: `@jrmc.form.control()
   @!jrmc.form.label({ text: 'What is your name?', for: 'my_name' })
   @!jrmc.form.input({ name: 'my_name', placeholder: 'My name', id: 'my_name', class: ['input-bordered', 'w-full', 'max-w-xs'] })
@@ -60,6 +63,7 @@
 
   @!section({
     title: 'Control required',
+    about: route('about-control'),
     template: `@jrmc.form.control({ name: 'name', class: 'w-full max-w-xs', label: 'Your name', hint: 'Hint', required: true })
   @!jrmc.form.input({placeholder: 'My name', class: 'input-bordered' })
 @end`
@@ -67,6 +71,7 @@
 
   @!section({
     title: 'Control error',
+    about: route('about-control'),
     template: `@jrmc.form.control({ name: 'sampleError', label: 'Your name' })
   @!jrmc.form.input({placeholder: 'My name', class: 'input-bordered' })
 @end`
@@ -74,6 +79,7 @@
 
   @!section({
     title: 'Control error extended',
+    about: route('about-control'),
     template: `@jrmc.form.control({ name: 'sampleError', label: 'Your name', error: false })
   @!jrmc.form.input({placeholder: 'My name', class: 'input-bordered' })
   @!jrmc.form.error()
@@ -96,6 +102,7 @@
 
   @!section({
     title: 'Control default label',
+    about: route('about-control'),
     template: `@jrmc.form.control({ name: 'complexNameForLabel', class: 'w-full max-w-xs', hint: 'Hint' })
   @!jrmc.form.input({placeholder: 'My name', class: 'input-bordered' })
 @end`

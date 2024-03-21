@@ -13,12 +13,14 @@
 
   @!section({
     title: 'Range',
+    about: route('about-range'),
     template: `@!jrmc.form.input({ type: 'range', min: 0, max: 100, value: 40 })
 @!jrmc.form.range({ min: 0, max: 100, value: 40 })`
   })
 
   @!section({
     title: 'Range color',
+    about: route('about-range'),
     template: `@!jrmc.form.range({ class: 'range-primary', min: 0, max: 100, value: 10})
 @!jrmc.form.range({ class: 'range-secondary', min: 0, max: 100, value: 50 })
 @!jrmc.form.range({ class: 'range-accent', min: 0, max: 100, value: 100 })`
@@ -26,6 +28,7 @@
 
   @!section({
     title: 'Range size',
+    about: route('about-range'),
     template: `@!jrmc.form.range({ min: 0, max: 100, value: 40, class: 'range-xs' })
 @!jrmc.form.range({ min: 0, max: 100, value: 40, class: 'range-sm' })
 @!jrmc.form.range({ min: 0, max: 100, value: 40, class: 'range-md' })
@@ -34,11 +37,13 @@
 
   @!section({
     title: 'Range disabled',
+    about: route('about-range'),
     template: `@!jrmc.form.range({ min: 0, max: 100, value: 40, disabled: true })`
   })
 
   @!section({
     title: 'Range step',
+    about: route('about-range'),
     template: `<div>
 @!jrmc.form.range({ min: 0, max: 100, value: 25, step: 25, class: 'range-primary' })
 <div class="w-full flex justify-between text-xs px-2">
@@ -53,6 +58,7 @@
 
   @!section({
     title: 'Range control',
+    about: route('about-range'),
     template: `@jrmc.form.control({ name: 'lastname', hint: 'Help', class: 'w-full max-w-xs', label: 'Lastname' })
   @!jrmc.form.range({ min: 0, max: 100, value: 40 })
 @end`
