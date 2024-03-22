@@ -104,8 +104,13 @@ router.post('/login', async ({ response, request }) => {
 router.on('/admin').render('pages/samples/admin').as('admin')
 
 
-router.on('/gdpr').render('pages/gdpr').as('gdpr')
-router.post('/gdpr', async ({ response }) => {
+router.get('/gdpr', async ({ request, view }) => {
+  const cookies = request.cookie('_gdpr', { umami: true })
 
-  return response.redirect().toPath('/gdpr')
+  return view.render('pages/gdpr', { cookies })
+}).as('gdpr')
+router.post('/gdpr', async ({ request, response }) => {
+  response.cookie('_gdpr', { umami: request.input('umami', false) })
+
+  response.noContent()
 })
