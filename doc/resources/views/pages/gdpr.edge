@@ -15,10 +15,10 @@
   <div class="m-4 max-w-none prose">
     <div class="border-b py-10">
       <h1 class="pt-5 text-3xl font-semibold md:text-5xl">
-        Gestion de vos préférences sur les cookies
+        Managing your cookie preferences
       </h1>
       <p class="pt-3 font-light">
-        Certaines fonctionnalités de ce site reposent sur l’usage de cookies.Le bandeau cookies ne s’affiche pas sur la page d’accueil lors de votre navigation car seuls des cookies nécessaires au fonctionnement du site sont déposés (vous pouvez cependant vous y opposer en cliquant sur le bouton « Interdire » ci-dessous).
+        Some features of this site rely on the use of cookies. The cookie banner does not appear on the homepage during your browsing because only cookies necessary for the functioning of the site are deposited (however, you can object to this by clicking on the 'Disallow' button below).
       </p>
     </div>
 
@@ -26,12 +26,12 @@
       @jrmc.form({ action: route('gdpr'), error: false })~
         <div class="py-10">
           <div class="flex">
-            <h2 class="grow m-0 mb-4">Mesure d'audience : Unami</h2>
+            <h2 class="grow m-0 mb-4">Measuring audience: Unami</h2>
             @!jrmc.form.toggle({ name: 'umami', value: 'true', checked: cookies.umami, 'up-autosubmit': 'up-autosubmit' })
           </div>
 
-          <p>Les services de mesure d'audience sont nécessaires au fonctionnement du site en permettant sa bonne administration. Vous avez cependant la possibilité de vous opposer à leur usage.</p>
-          <a href="https://umami.is/" target="_blank">Site officiel</a>
+          <p>The audience measurement services are necessary for the operation of the site by enabling its proper administration. However, you have the option to oppose their use.</p>
+          <a href="https://umami.is/" target="_blank">Official website</a>
         </div>
       @end~
     </div>
