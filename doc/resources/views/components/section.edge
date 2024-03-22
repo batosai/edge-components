@@ -26,7 +26,13 @@
   @end
 
   @section.tab({ id, label: 'Edge', dark: true, checked: false })
-    {{{ codeToHtml(template, { lang: 'Edge' }) }}}
+    @jrmc.button({ class: 'btn-sm btn-clipboard absolute top-0 right-0', 'aria-label': 'Code copy', 'data-clipboard-target': `#container-${ id }`  })
+      @!svg('tabler:copy')
+    @end
+
+    <div id="container-{{ id }}">
+      {{{ codeToHtml(template, { lang: 'Edge' }) }}}
+    </div>
   @end
 
   @section.tab({ id, label: 'HTML', dark: true, checked: false })

@@ -5,7 +5,10 @@ import 'unpoly'
 import Alpine from 'alpinejs'
 
 import { themeChange } from 'theme-change'
+import ClipboardJS from 'clipboard'
+
 themeChange()
+new ClipboardJS('.btn-clipboard')
 
 
 // Unpoly
