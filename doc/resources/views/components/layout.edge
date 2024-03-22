@@ -10,6 +10,12 @@
     <meta name="description" content="" />
   @end~
 
+  @if(env.get('NODE_ENV') === 'production')~
+    @if(request.cookie('_gdpr', { umami: true }).umami !== false)~
+      <script async src="https://umami.jrmc.dev/script.js" data-website-id="{{ env.get('UMAMI_KEY') }}"></script>
+    @end~
+  @end~
+
   @vite(['resources/js/app.js'])
 </head>
 <body>

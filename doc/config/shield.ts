@@ -1,4 +1,5 @@
 import { defineConfig } from '@adonisjs/shield'
+import env from '#start/env'
 
 const shieldConfig = defineConfig({
   /**
@@ -6,8 +7,13 @@ const shieldConfig = defineConfig({
    * to learn more
    */
   csp: {
-    enabled: false,
-    directives: {},
+    enabled: env.get('NODE_ENV') === 'production',
+    directives: {
+      defaultSrc: ["'self'", 'https://umami.jrmc.dev'],
+      styleSrc: ["'self'", "'unsafe-inline'"],
+      scriptSrc: ["'self'", "'unsafe-eval'", "'unsafe-inline'", 'https://umami.jrmc.dev'],
+      // connectSrc: ["*"]
+    },
     reportOnly: false,
   },
 
