@@ -102,3 +102,10 @@ router.post('/login', async ({ response, request }) => {
 })
 
 router.on('/admin').render('pages/samples/admin').as('admin')
+
+
+router.on('/gdpr').render('pages/gdpr').as('gdpr')
+router.post('/gdpr', async ({ response }) => {
+
+  return response.redirect().toPath('/gdpr')
+})
