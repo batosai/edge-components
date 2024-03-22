@@ -169,7 +169,7 @@
       <details {{ html.classNames([ { 'open' : request.matchesRoute(['login', 'admin']) }]) }}>
         <summary>
           @!svg('tabler:brand-pagekit')
-          Pages
+          Examples
         </summary>
         <ul>
           <li>
@@ -177,6 +177,9 @@
           </li>
           <li>
             @!sidebar.link({ text: 'Admin', href: route('admin') })
+          </li>
+          <li>
+            @!sidebar.link({ text: 'This site', icon: 'tabler:external-link', href: 'https://github.com/batosai/edge-components/tree/main/doc', target: '_blank' })
           </li>
         </ul>
       </details>
