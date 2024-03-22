@@ -15,7 +15,7 @@
       <div class="font-bold">
         <a href="/" @click="open = false">Edge</a>
         <a href="{{ route('changelog') }}">
-          @!jrmc.badge({ text: '2.0', class: 'badge-primary badge-sm ml-2' })
+          @!jrmc.badge({ text: appVersion(), class: 'badge-primary badge-sm ml-2' })
         </a>
       </div>
       <div class="text-sm opacity-50">
