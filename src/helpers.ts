@@ -1,7 +1,7 @@
 import { string } from '@poppinss/utils/build/helpers.js'
 
 const defaultFlash = {
-  values:null,
+  values:{},
   has: (name: boolean) => name ? false : false,
   get: (name: string) => name
 }
@@ -29,7 +29,7 @@ const obj = {
       values = Array.isArray(value) ? value : [value]
     }
 
-    if (flashMessages.values) {
+    if (Object.keys(flashMessages.values).length !== 0) {
       values = flashMessages.get(name)
     }
 
@@ -45,7 +45,7 @@ const obj = {
     return `${string.capitalCase(string.noCase(name))}:`
   },
   getChecked: (props: any, context = { value: null, name: false }, flashMessages: any) => {
-    if (flashMessages.values) {
+    if (Object.keys(flashMessages.values).length !== 0) {
       const name = obj.getName(props, context)
       const value = flashMessages.get(name)
       return props.value === value
