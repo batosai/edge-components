@@ -114,3 +114,14 @@ router.post('/gdpr', async ({ request, response }) => {
 
   response.noContent()
 })
+
+router.get('/robots.txt', async ({ response, view }) => {
+  response.header('Content-type', 'text/plain')
+
+  return view.render('pages/robots')
+}).as('robots')
+router.get('/sitemap.xml', async ({ response, view }) => {
+  response.header('Content-type', 'application/xml')
+
+  return view.render('pages/sitemap', { routes: router.toJSON().root })
+}).as('sitemap')
