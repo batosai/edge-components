@@ -1,14 +1,8 @@
 {
-  "extends": "@adonisjs/tsconfig/tsconfig.app.json",
-  "include": ["./src/**/*"],
+  "extends": "@adonisjs/tsconfig/tsconfig.package.json",
+  "include": ["./src/**/*", "./providers/*", "index.ts"],
   "compilerOptions": {
-    "module": "es2022",
-    "moduleResolution": "Node",
-    "rootDir": "./src",
+    "rootDir": "./",
     "outDir": "./build",
-    "sourceMap": true,
-    "skipLibCheck": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
   },
 }
