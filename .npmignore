@@ -1,9 +1,9 @@
-node_modules
 .editorconfig
-ecosystem.config.js
-fractal
+.github
+node_modules
 src
+doc
 
-fractal.config.js
+ecosystem.config.js
 tsconfig.json
 tsconfig.tsbuildinfo
