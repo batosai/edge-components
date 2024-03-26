@@ -1,9 +1,0 @@
-{{--  fake object users  --}}
-@set('users', fakeUsers({ currentPage: 4, total: 10 }))
-
-<div class="grid grid-cols-1 gap-2">
-  @!jrmc.pagination({ object: users, size: 'xs' })
-  @!jrmc.pagination({ object: users, size: 'sm' })
-  @!jrmc.pagination({ object: users, size: 'md' })
-  @!jrmc.pagination({ object: users, size: 'lg' })
-</div>
