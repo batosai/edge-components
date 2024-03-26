@@ -1,8 +1,12 @@
 # edge components
 
-The most popular, free and open-source Tailwind CSS component library in edge template engine with daisyUI and Alpine.js
+The most popular, free and open-source Tailwind CSS component library in edge template engine 6 with daisyUI and Alpine.js for adonisJS 6
+
+For adonisJS 5 used version < 2.
 
 [Documentation](https://edge-components.jrmc.dev)
+
+[Documentation for adonisJS 5](https://edge-components.jrmc.dev)
 
 [Github](https://github.com/batosai/edge-components)
 
