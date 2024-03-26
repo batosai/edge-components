@@ -1,4 +1,4 @@
-import { string } from '@poppinss/utils/build/helpers.js'
+import string from '@poppinss/utils/string'
 
 const defaultFlash = {
   values:{},

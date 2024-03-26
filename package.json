@@ -1,6 +1,6 @@
 {
   "name": "@jrmc/edge-components",
-  "version": "2.0.0-alpha",
+  "version": "2.0.1-alpha",
   "type": "module",
   "description": "",
   "engines": {
@@ -35,12 +35,12 @@
   },
   "devDependencies": {
     "@adonisjs/assembler": "^7.2.3",
-    "@adonisjs/core": "^6.2.1",
-    "@adonisjs/tsconfig": "^1.2.1",
-    "@poppinss/utils": "^5.0.0",
-    "@types/node": "^20.11.27",
-    "edge.js": "^6.0.1",
-    "typescript": "^5.3.3"
+    "@adonisjs/core": "^6.3.1",
+    "@adonisjs/tsconfig": "^1.3.0",
+    "@poppinss/utils": "^6.7.2",
+    "@types/node": "^20.11.30",
+    "edge.js": "^6.0.2",
+    "typescript": "^5.4.3"
   },
   "peerDependencies": {
     "alpinejs": "^3.13.7",
