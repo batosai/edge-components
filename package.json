@@ -1,6 +1,6 @@
 {
   "name": "@jrmc/edge-components",
-  "version": "2.0.1-alpha",
+  "version": "2.0.4-alpha",
   "type": "module",
   "description": "",
   "engines": {
@@ -21,15 +21,15 @@
     "adonisjs"
   ],
   "files": [
-    "build/providers",
-    "build/src"
+    "build",
+    "views"
   ],
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
   "exports": {
-    ".": "./build/index.js",
+    ".": "./build/src/index.js",
     "./edge_components_provider": "./build/providers/edge_components_provider.js",
     "./tailwind.config": "./build/src/tailwind.config.js"
   },
@@ -57,6 +57,6 @@
     "tag": "next"
   },
   "volta": {
-    "node": "20.6.0"
+    "node": "20.12.0"
   }
 }
