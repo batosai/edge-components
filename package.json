@@ -1,6 +1,6 @@
 {
   "name": "@jrmc/edge-components",
-  "version": "2.0.4-alpha",
+  "version": "2.0.5-alpha",
   "type": "module",
   "description": "",
   "engines": {
@@ -22,7 +22,8 @@
   ],
   "files": [
     "build",
-    "views"
+    "views",
+    "changelog.md"
   ],
   "scripts": {
     "build": "tsc",
