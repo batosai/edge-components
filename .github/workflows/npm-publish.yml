@@ -10,7 +10,7 @@ env:
   failure: 🔴
   cancelled: ❌
   skipped: ⭕
-  node_version: 18
+  node_version: 20
   true: ✅
   false: 🔴
 
@@ -52,7 +52,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
           registry-url: https://registry.npmjs.org/
 
       - run: npm ci
