@@ -1,6 +1,6 @@
 {
   "name": "@jrmc/edge-components",
-  "version": "2.0.5-alpha",
+  "version": "2.0.0-beta",
   "type": "module",
   "description": "",
   "engines": {
