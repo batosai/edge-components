@@ -6,7 +6,7 @@ For adonisJS 5 used version < 2.
 
 [Documentation](https://edge-components.jrmc.dev)
 
-[Documentation for adonisJS 5](https://edge-components.jrmc.dev)
+[Documentation for adonisJS 5](https://v1-edge-components.jrmc.dev/docs/installation.html)
 
 [Github](https://github.com/batosai/edge-components)
 
