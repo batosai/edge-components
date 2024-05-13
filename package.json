@@ -1,6 +1,6 @@
 {
   "name": "@jrmc/edge-components",
-  "version": "2.0.0-beta",
+  "version": "2.0.1-beta",
   "type": "module",
   "description": "",
   "engines": {
@@ -30,7 +30,7 @@
     "prepublishOnly": "npm run build"
   },
   "exports": {
-    ".": "./build/src/index.js",
+    ".": "./build/index.js",
     "./edge_components_provider": "./build/providers/edge_components_provider.js",
     "./tailwind.config": "./build/src/tailwind.config.js"
   },
