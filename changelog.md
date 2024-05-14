@@ -1,6 +1,9 @@
 # Changelog
 
-## 2.0.0
+## 2.0.1-beta
+- Fix ace configure
+
+## 2.0.0-beta
 - Update Edge 5 > 6
 - Update daisyUI (4.9.0)
 - Fix scroll page if modal component it use
