@@ -1,6 +1,6 @@
 {
   "name": "@jrmc/edge-components",
-  "version": "2.0.1-beta",
+  "version": "2.0.0",
   "type": "module",
   "description": "",
   "engines": {
@@ -55,7 +55,7 @@
   },
   "publishConfig": {
     "access": "public",
-    "tag": "next"
+    "tag": "latest"
   },
   "volta": {
     "node": "20.12.0"
