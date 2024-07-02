@@ -21,6 +21,6 @@ If your component becomes too complex, it may make more sense to use HTML direct
 The first step is to install the package from the npm registry.
 
 ```sh
-node ace add @jrmc/edge-components@next
+node ace add @jrmc/edge-components
 ```
 
