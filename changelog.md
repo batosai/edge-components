@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.1.0
+- Add password component
+- Add clipboard component
+- Update dependencies
+
 ## 2.0.0
 - Update Edge 5 > 6
 - Update daisyUI (4.9.0)
