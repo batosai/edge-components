@@ -6,7 +6,6 @@ export default class EdgeComponentsProvider {
 
   protected async registerEdgePlugin() {
     if (this.app.usingEdgeJS) {
-      // const edge = await import('edge.js')
       const { edgePluginComponent } = await import('../src/index.js')
       edge.use(edgePluginComponent)
     }
