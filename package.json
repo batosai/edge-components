@@ -36,12 +36,12 @@
   },
   "devDependencies": {
     "@adonisjs/assembler": "^7.8.2",
-    "@adonisjs/core": "^6.13.0",
+    "@adonisjs/core": "^6.17.1",
     "@adonisjs/tsconfig": "^1.4.0",
     "@poppinss/utils": "^6.7.3",
-    "@types/node": "^22.5.4",
-    "edge.js": "^6.0.2",
-    "typescript": "^5.6.2"
+    "@types/node": "^22.10.7",
+    "edge.js": "^6.2.0",
+    "typescript": "^5.7.3"
   },
   "peerDependencies": {
     "alpinejs": "^3.13.0",
