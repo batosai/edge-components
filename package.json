@@ -44,7 +44,7 @@
   },
   "peerDependencies": {
     "alpinejs": "^3.13.0",
-    "daisyui": "^5.0.0",
+    "daisyui": "^5.0.0-beta.7",
     "tailwindcss": "^4.0.0"
   },
   "peerDependenciesMeta": {
